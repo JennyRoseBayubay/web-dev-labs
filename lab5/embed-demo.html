@@ -18,18 +18,18 @@
             color: #333;
         }
 
-        .content-section {
-            text-align: center;
+        main {
+            width: 90%;
+            max-width: 700px;
             background-color: #ffffff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
             margin-bottom: 20px;
-            width: 90%;
-            max-width: 700px;
         }
 
-        h1 {
+        header h1 {
             color: #00796b;
             margin-bottom: 10px;
         }
@@ -65,22 +65,31 @@
 </head>
 <body>
 
-    <div class="content-section">
-        <h1>Media Showcase</h1>
-        <p>Explore different types of embedded media including a local video, a YouTube video, and a location map.</p>
+    <main>
+        <header>
+            <h1>Media Showcase</h1>
+            <p>Explore different types of embedded media including a local video, a YouTube video, and a location map.</p>
+        </header>
 
-        <h2>🎬 Local Video</h2>
-        <embed type="video/webm" src="video.mp4" width="400" height="300">
-        <p>If the video doesn't play, your browser may not support the WebM format or the file may be missing.</p>
+        <section>
+            <h2>🎬 Local Video</h2>
+            <embed type="video/webm" src="video.mp4" width="400" height="300">
+            <p>If the video doesn't play, your browser may not support the WebM format or the file may be missing.</p>
+        </section>
 
-        <h2>📺 YouTube Video</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/nirSkf7xzJo?si=LwpcfcRbQVFEzkxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <p>This embedded YouTube video provides additional content for learning and entertainment.</p>
+        <section>
+            <h2>📺 YouTube Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nirSkf7xzJo?si=LwpcfcRbQVFEzkxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>This embedded YouTube video provides additional content for learning and entertainment.</p>
+        </section>
 
-        <h2>📍 Location on Google Maps</h2>
-        <p>Check out this example location for a Sample Cafe on Google Maps:</p>
-        <a href="https://share.google/i82hn1adELgifZPcu" target="_blank">Google Map: Sample Cafe</a>
-    </div>
+        <section>
+            <h2>📍 Location on Google Maps</h2>
+            <p>Check out this example location for a Sample Cafe on Google Maps:</p>
+            <a href="https://share.google/i82hn1adELgifZPcu" target="_blank">Google Map: Sample Cafe</a>
+        </section>
+    </main>
 
 </body>
 </html>
+
