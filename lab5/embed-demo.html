@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded Map and Video</title>
+    <title>Embedded Video</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+        .video-container {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <!-- Content will be added here -->
+    <div class="video-container">
+        <h1>Embedded Video</h1>
+        <embed type="video/webm" src="video.mp4" width="400" height="300">
+        <p>If the video doesn't play, your browser may not support the WebM format.</p>
+    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/nirSkf7xzJo?si=LwpcfcRbQVFEzkxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br>  <a href="https://share.google/i82hn1adELgifZPcu" target="_blank">Google map Sample Cafe</a>
 </body>
 </html>
