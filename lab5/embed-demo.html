@@ -12,11 +12,44 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
-            background-color: #f9f9f9;
+            background-color: #e0f7fa; /* Light blue background */
+            color: #333;
         }
+
         .video-container {
             text-align: center;
+            background-color: #ffffff; /* White box */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #00796b; /* Teal heading */
+        }
+
+        p {
+            color: #555;
+        }
+
+        iframe {
+            margin-bottom: 20px;
+            border: 4px solid #00796b;
+            border-radius: 8px;
+        }
+
+        a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #004d40;
         }
     </style>
 </head>
@@ -26,7 +59,11 @@
         <embed type="video/webm" src="video.mp4" width="400" height="300">
         <p>If the video doesn't play, your browser may not support the WebM format.</p>
     </div>
+
     <iframe width="560" height="315" src="https://www.youtube.com/embed/nirSkf7xzJo?si=LwpcfcRbQVFEzkxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <br>  <a href="https://share.google/i82hn1adELgifZPcu" target="_blank">Google map Sample Cafe</a>
+
+    <br>
+    <a href="https://share.google/i82hn1adELgifZPcu" target="_blank">📍 Google Map: Sample Cafe</a>
 </body>
 </html>
+
