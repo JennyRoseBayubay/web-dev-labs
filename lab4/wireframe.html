@@ -1,139 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Wireframe Layout</title>
+  <meta charset="UTF-8" />
+  <title>Wireframe Overview</title>
   <style>
     body {
+      font-family: sans-serif;
+      background-color: #f2f2f2;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ee82ee 25%, #ffc0cb 25%, #00bfff 50%, #ffff00 50%);
-      background-size: 400% 400%;
-      animation: gradientShift 15s ease infinite;
-      color: #333;
     }
 
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    header, section, footer {
-      background-color: rgba(255, 255, 255, 0.8);
-      margin: 10px auto;
+    header, nav, main, footer {
       padding: 20px;
-      max-width: 960px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      margin: 10px;
+      border-radius: 10px;
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      margin: 0;
-      color: #800080; /* deep purple for logo */
+      background-color: #dcd0ff;
+      text-align: center;
     }
 
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 15px;
+    nav {
+      background-color: #c0e8d5;
+      text-align: center;
     }
 
     nav a {
+      margin: 0 15px;
       text-decoration: none;
-      color: #00008B; /* dark blue/navy links */
+      color: #333;
       font-weight: bold;
     }
 
-    section h2, section h3 {
-      color: #ff1493; /* vibrant pink headings */
+    main {
+      background-color: #fff;
+      padding: 40px;
+      min-height: 300px;
     }
 
-    button {
-      background-color: #00bfff; /* bright blue button */
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1em;
-    }
-
-    button:hover {
-      background-color: #1e90ff; /* hover effect */
-    }
-
-    footer p {
-      margin: 0;
+    footer {
+      background-color: #ffe0e9;
       text-align: center;
-      color: #8B008B; /* dark magenta for footer text */
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
-
-  <!-- Header Section -->
   <header>
-    <div><h1>Logo</h1></div>
-    <nav>
-      <ul>
-        <li><a href="#">Nav Item 1</a></li>
-        <li><a href="#">Nav Item 2</a></li>
-        <li><a href="#">Nav Item 3</a></li>
-        <li><a href="#">Nav Item 4</a></li>
-      </ul>
-    </nav>
+    <h1>My Website Wireframe</h1>
   </header>
 
-  <hr>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="favorites.html">Favorites</a>
+  </nav>
 
-  <!-- Hero Image Section -->
-  <section>
-    <h2>Hero Image</h2>
-  </section>
+  <main>
+    <h2>Overview</h2>
+    <p>This wireframe demonstrates the basic structure of the website, with a consistent layout: a header, navigation bar, main content area, and footer.</p>
+    <p>Each page follows this structure for visual and navigational consistency.</p>
+  </main>
 
-  <hr>
-
-  <!-- Sub Banners Section -->
-  <section>
-    <h3>Sub Banners</h3>
-    <div style="display:flex; gap:10px;">
-      <div><p>Sub Banner</p></div>
-      <div><p>Sub Banner</p></div>
-      <div><p>Sub Banner</p></div>
-    </div>
-  </section>
-
-  <hr>
-
-  <!-- Featured Section -->
-  <section>
-    <div><h3>Featured Section Banner</h3></div>
-    <div>
-      <h2>Featured Section Heading</h2>
-      <p>
-        Lorem ipsum dolor sit amet, eu vis alia enim qualisque, quo vitae tamquam ne.
-        Illud tantas decore ei quo, maiorum nusquam et vim. Duis quaestio perpetua vix cu.
-        Blandit euripidis cum cu, oblique definiebas ei usu. Eum eu dolorum propriae mentitum,
-        eum minim discere moderatius ea.
-      </p>
-      <button>Call To Action</button>
-    </div>
-  </section>
-
-  <hr>
-
-  <!-- Footer / Bottom Full Width Banner -->
   <footer>
-    <p>Footer Section</p>
+    &copy; 2025 My Website Layout
   </footer>
-
 </body>
 </html>
+
