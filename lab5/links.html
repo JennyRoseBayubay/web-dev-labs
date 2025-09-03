@@ -5,22 +5,23 @@
   <title>Internal Link Example</title>
   <style>
     html {
-      scroll-behavior: smooth; /* Enables smooth scrolling */
+      scroll-behavior: smooth;
     }
 
     body {
-      background-color: #f0f8ff; /* Light blue background */
+      background-color: #f0f8ff;
       font-family: Arial, sans-serif;
-      font-size: 16px; /* Base font size */
+      font-size: 16px;
       margin: 0;
       padding: 20px;
+      text-align: center; /* Center align all content */
     }
 
     a {
       font-size: 18px;
       color: #0066cc;
       text-decoration: none;
-      margin-bottom: 20px;
+      margin: 20px 0;
       display: inline-block;
     }
 
@@ -34,15 +35,31 @@
     }
 
     section {
-      margin-top: 100vh; /* Push section down for demonstration */
-      background-color: #e6f2ff; /* Slightly darker blue for contrast */
+      margin-top: 100vh;
+      background-color: #e6f2ff;
       padding: 40px;
       border-radius: 8px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
     }
 
-    h2 {
-      font-size: 24px;
+    h2, h3, h4 {
       margin-bottom: 10px;
+      margin-top: 20px;
+    }
+
+    #external-links {
+      margin-top: 40px;
+    }
+
+    /* Optional: Style the h3 and h4 links for better consistency */
+    #external-links a {
+      display: block;
+      margin: 10px auto;
+      max-width: 90%;
+      word-break: break-word;
     }
   </style>
 </head>
@@ -58,8 +75,24 @@
   <!-- Target Section -->
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>Gmail:<strong>jennyrosebayubay01@gmail.com</strong><br>Phone: <strong>09289306592</strong></p>
+    <p><strong>Gmail:</strong> jennyrosebayubay01@gmail.com</p>
+    <p><strong>Phone:</strong> 09289306592</p>
   </section>
+
+  <!-- External Links Section -->
+  <div id="external-links">
+    <!-- GitHub Link -->
+    <a href="https://github.com/JennyRoseBayubay/web-dev-labs" target="_blank" id="github-link">
+      <h3>GitHub Repository</h3>
+      <p>https://github.com/JennyRoseBayubay/web-dev-labs</p>
+    </a>
+
+    <!-- Localhost Link -->
+    <a href="http://127.0.0.1:5500/mini-cafe-site/index.html" target="_blank" id="local-link">
+      <h4>Localhost Project Preview</h4>
+      <p>http://127.0.0.1:5500/mini-cafe-site/index.html</p>
+    </a>
+  </div>
 
 </body>
 </html>
