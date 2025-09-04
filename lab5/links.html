@@ -13,8 +13,8 @@
       font-family: Arial, sans-serif;
       font-size: 16px;
       margin: 0;
-      padding: 20px;
-      text-align: center; /* Center align all content */
+      padding: 40px 20px;
+      text-align: center;
     }
 
     a {
@@ -37,12 +37,13 @@
     section {
       margin-top: 100vh;
       background-color: #e6f2ff;
-      padding: 40px;
+      padding: 40px 30px;
       border-radius: 8px;
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
       text-align: left;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     }
 
     h2, h3, h4 {
@@ -51,14 +52,37 @@
     }
 
     #external-links {
-      margin-top: 40px;
+      margin-top: 60px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
     }
 
-    /* Optional: Style the h3 and h4 links for better consistency */
     #external-links a {
       display: block;
-      margin: 10px auto;
-      max-width: 90%;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin: 20px 0;
+      text-align: left;
+      transition: background-color 0.2s ease;
+    }
+
+    #external-links a:hover {
+      background-color: #f9f9f9;
+    }
+
+    #external-links h3,
+    #external-links h4 {
+      margin: 0 0 8px;
+    }
+
+    #external-links p {
+      margin: 0;
+      color: #444;
+      font-size: 14px;
       word-break: break-word;
     }
   </style>
@@ -70,7 +94,7 @@
 
   <!-- Spacer for scrolling effect -->
   <p>Scroll down to see the effect.</p>
-  <p style="margin-top: 800px;"></p>
+  <div style="height: 800px;"></div>
 
   <!-- Target Section -->
   <section id="contact">
