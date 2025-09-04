@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Internal Link Example</title>
   <style>
     html {
@@ -40,7 +41,7 @@
       padding: 40px 30px;
       border-radius: 8px;
       max-width: 600px;
-      margin-inline: auto; /* Short for margin-left and right */
+      margin-inline: auto;
       text-align: left;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     }
@@ -75,6 +76,7 @@
     #external-links h3,
     #external-links h4 {
       margin: 0 0 8px;
+      color: #333;
     }
 
     #external-links p {
@@ -87,35 +89,34 @@
 </head>
 <body>
 
-  <!-- Internal Link -->
+  <!-- Internal Navigation -->
   <a href="#contact">Go to Contact Section</a>
   <p>Scroll down to see the effect.</p>
 
-  <!-- Spacer for scrolling effect -->
+  <!-- Spacer for scrolling -->
   <div style="height: 800px;"></div>
 
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
-    <p><strong>Email:</strong> jennyrosebayubay01@gmail.com</p>
-    <p><strong>Phone:</strong> 09289306592</p>
+    <p><strong>Email:</strong> <a href="mailto:jennyrosebayubay01@gmail.com">jennyrosebayubay01@gmail.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+639289306592">0928 930 6592</a></p>
   </section>
 
   <!-- External Links Section -->
   <div id="external-links">
-    <!-- GitHub Link -->
+    <!-- GitHub -->
     <a href="https://github.com/JennyRoseBayubay/web-dev-labs" target="_blank">
       <h3>GitHub Repository</h3>
       <p>https://github.com/JennyRoseBayubay/web-dev-labs</p>
     </a>
 
-    <!-- Localhost Link -->
+    <!-- Localhost Preview -->
     <a href="http://127.0.0.1:5500/mini-cafe-site/index.html" target="_blank">
-      <h4>mini-cafe-site</h4>
+      <h4>Mini Cafe Site (Localhost Preview)</h4>
       <p>http://127.0.0.1:5500/mini-cafe-site/index.html</p>
     </a>
   </div>
 
 </body>
 </html>
-
