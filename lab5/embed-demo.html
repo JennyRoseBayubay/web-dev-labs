@@ -1,89 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded Demo</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            background-color: #e0f7fa;
-            color: #333;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Embedded Demo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      background-color: #e0f7fa;
+      color: #333;
+    }
 
-        main {
-            width: 90%;
-            max-width: 700px;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            margin-bottom: 20px;
-        }
+    main {
+      width: 90%;
+      max-width: 700px;
+      background-color: #ffffff;
+      padding: 30px 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin: 20px;
+    }
 
-        header h1 {
-            color: #00796b;
-            margin-bottom: 10px;
-        }
+    header h1 {
+      color: #00796b;
+      margin-bottom: 10px;
+    }
 
-        h2 {
-            color: #00695c;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
+    h2 {
+      color: #00695c;
+      margin: 25px 0 10px;
+    }
 
-        p {
-            color: #555;
-            margin-bottom: 15px;
-        }
+    p {
+      color: #555;
+      margin: 10px 0 20px;
+    }
 
-        iframe {
-            margin-bottom: 20px;
-            border: 4px solid #00796b;
-            border-radius: 8px;
-        }
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      margin: 0 auto 20px;
+      border: 4px solid #00796b;
+      border-radius: 8px;
+    }
 
-        a {
-            color: #00796b;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    a {
+      color: #00796b;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        a:hover {
-            text-decoration: underline;
-            color: #004d40;
-        }
-    </style>
+    a:hover {
+      text-decoration: underline;
+      color: #004d40;
+    }
+  </style>
 </head>
 <body>
 
-    <main>
-        <header>
-            <h1>Media Showcase</h1>
-            <p>Explore different types of embedded media including a local video, a YouTube video, and a location map.</p>
-        </header>
+  <main>
+    <header>
+      <h1>Media Showcase</h1>
+      <p>Explore different types of embedded media including a local video, a YouTube video, and a location map.</p>
+    </header>
 
-        <section>
-            <h2>📺 YouTube Video</h2>
-            <iframe width="560" height="315" src="<iframe width="560" height="315" src="https://www.youtube.com/embed/GMAhxjEG6sc?si=1bJpEUNY4WiXuFmj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <p>This embedded YouTube video provides additional content for learning and entertainment.</p>
-        </section>
+    <section>
+      <h2>📺 YouTube Video</h2>
+      <iframe 
+        src="https://www.youtube.com/embed/GMAhxjEG6sc?si=1bJpEUNY4WiXuFmj" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+      </iframe>
+      <p>This embedded YouTube video provides additional content for learning and entertainment.</p>
+    </section>
 
-        <section>
-            <h2>📍 Location on Google Maps</h2>
-            <p>Check out this example location for a Sample Cafe on Google Maps:</p>
-            <a href="https://share.google/i82hn1adELgifZPcu" target="_blank">Google Map: Sample Cafe</a>
-        </section>
-    </main>
+    <section>
+      <h2>📍 Location on Google Maps</h2>
+      <p>Check out this example location for a Sample Cafe on Google Maps:</p>
+      <a href="https://share.google/i82hn1adELgifZPcu" target="_blank">Google Map: Sample Cafe</a>
+    </section>
+  </main>
 
 </body>
 </html>
-
