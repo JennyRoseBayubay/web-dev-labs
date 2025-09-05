@@ -1,100 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Internal Link Example</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aesthetic Internal Link Example</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     html {
       scroll-behavior: smooth;
     }
 
     body {
-      background-color: #f0f8ff;
-      font-family: Arial, sans-serif;
-      font-size: 16px;
       margin: 0;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    a {
-      font-size: 18px;
-      color: #0066cc;
-      text-decoration: none;
-      margin: 20px 0;
-      display: inline-block;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    p {
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #dfe9f3 0%, #ffffff 100%);
+      color: #333;
       font-size: 16px;
-      margin: 10px 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+
+    header a {
+      font-size: 20px;
+      font-weight: 600;
+      color: #4a90e2;
+      text-decoration: none;
+      border: 2px solid #4a90e2;
+      padding: 12px 25px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+
+    header a:hover {
+      background-color: #4a90e2;
+      color: white;
+    }
+
+    header p {
+      margin-top: 15px;
+      font-size: 15px;
+      color: #555;
+    }
+
+    .spacer {
+      height: 80vh;
     }
 
     section {
-      margin-top: 100vh;
-      background-color: #e6f2ff;
+      max-width: 700px;
+      margin: auto;
+      background-color: #ffffff;
+      border-radius: 15px;
       padding: 40px 30px;
-      border-radius: 8px;
-      max-width: 600px;
-      margin-inline: auto;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
       text-align: left;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      margin-bottom: 60px;
     }
 
-    h2, h3, h4 {
-      margin-bottom: 10px;
-      margin-top: 20px;
+    section h2 {
+      font-size: 28px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      font-size: 16px;
+      margin: 12px 0;
+      color: #444;
+    }
+
+    section a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    section a:hover {
+      text-decoration: underline;
     }
 
     #external-links {
-      margin-top: 60px;
-      max-width: 600px;
-      margin-inline: auto;
-      text-align: left;
+      max-width: 700px;
+      margin: auto;
+      padding: 0 20px 60px;
     }
 
     #external-links a {
       display: block;
-      padding: 20px;
       background-color: #ffffff;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      margin: 20px 0;
-      text-align: left;
-      transition: background-color 0.2s ease;
+      border-left: 5px solid #4a90e2;
+      padding: 20px 25px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #333;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s ease, background-color 0.3s ease;
     }
 
     #external-links a:hover {
-      background-color: #f9f9f9;
+      background-color: #f0f8ff;
+      transform: translateY(-4px);
     }
 
     #external-links h3,
     #external-links h4 {
       margin: 0 0 8px;
-      color: #333;
+      color: #2c3e50;
+      font-weight: 600;
     }
 
     #external-links p {
       margin: 0;
-      color: #444;
+      color: #666;
       font-size: 14px;
       word-break: break-word;
+    }
+
+    @media (max-width: 600px) {
+      header a {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+
+      section, #external-links {
+        padding: 20px;
+      }
+
+      section h2 {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
 <body>
 
   <!-- Internal Navigation -->
-  <a href="#contact">Go to Contact Section</a>
-  <p>Scroll down to see the effect.</p>
+  <header>
+    <a href="#contact">📨 Go to Contact Section</a>
+    <p>Scroll or click the button above to smoothly jump to the contact section below.</p>
+  </header>
 
-  <!-- Spacer for scrolling -->
-  <div style="height: 800px;"></div>
+  <div class="spacer"></div>
 
   <!-- Contact Section -->
   <section id="contact">
@@ -105,15 +155,13 @@
 
   <!-- External Links Section -->
   <div id="external-links">
-    <!-- GitHub -->
     <a href="https://github.com/JennyRoseBayubay/web-dev-labs" target="_blank">
-      <h3>GitHub Repository</h3>
+      <h3>🌐 GitHub Repository</h3>
       <p>https://github.com/JennyRoseBayubay/web-dev-labs</p>
     </a>
 
-    <!-- Localhost Preview -->
     <a href="http://127.0.0.1:5500/mini-cafe-site/index.html" target="_blank">
-      <h4>Mini Cafe Site</h4>
+      <h4>☕ Mini Cafe Site</h4>
       <p>http://127.0.0.1:5500/mini-cafe-site/index.html</p>
     </a>
   </div>
