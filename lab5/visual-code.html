@@ -1,76 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jenings Cafe</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        header {
-            background-color: #f8f8f8;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #ddd;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #333;
-        }
-        .content {
-            padding: 20px;
-        }
-        .footer {
-            background-color: #f8f8f8;
-            padding: 10px;
-            text-align: center;
-            border-top: 1px solid #ddd;
-        }
-        .reasons {
-            padding-left: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jenings Cafe</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffdf8;
+      color: #333;
+    }
+
+    header {
+      background-color: #f8f8f8;
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 2.5rem;
+      color: #3e2723;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #5d4037;
+    }
+
+    nav {
+      background-color: #d7ccc8;
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #3e2723;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #6d4c41;
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .reasons {
+      padding-left: 20px;
+    }
+
+    .reasons li {
+      margin-bottom: 8px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact h2 {
+      margin: 10px 0 5px;
+      color: #4e342e;
+    }
+
+    .contact a {
+      font-size: 18px;
+      text-decoration: none;
+      color: #0066cc;
+    }
+
+    footer {
+      background-color: #f8f8f8;
+      padding: 15px 10px;
+      text-align: center;
+      border-top: 1px solid #ddd;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-    <h1>WIREFRAME</h1>
 
-    <header>
-        <h1>Jenings Cafe</h1>
-        <p>Your daily dose of comfort.</p>
-    </header>
+  <!-- Optional Page Label -->
+  <h1 style="text-align:center; font-size: 1rem; color: #999; margin: 10px 0;">WIREFRAME</h1>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
+  <!-- Header -->
+  <header>
+    <h1>Jenings Cafe</h1>
+    <p>Your daily dose of comfort.</p>
+  </header>
 
-    <section class="content">
-        <h2>Welcome to Our Cafe</h2>
-        <p>We serve freshly brewed coffee, homemade pastries, and good vibes all day long.</p>
+  <!-- Navigation -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#why">Why Choose Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Section -->
+    <section id="about">
+      <h2>Welcome to Our Cafe</h2>
+      <p>We serve freshly brewed coffee, homemade pastries, and good vibes all day long.</p>
     </section>
 
-    <section class="content">
-        <h2>Why Choose Us</h2>
-        <ul class="reasons">
-            <li>Locally roasted beans</li>
-            <li>Friendly baristas</li>
-            <li>Cozy environment</li>
-        </ul>
+    <!-- Why Choose Us -->
+    <section id="why">
+      <h2>Why Choose Us</h2>
+      <ul class="reasons">
+        <li>Locally roasted beans</li>
+        <li>Friendly baristas</li>
+        <li>Cozy environment</li>
+      </ul>
     </section>
 
-    <footer class="footer">
-        © 2025 Jenings Cafe. All rights reserved.
-    </footer>
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p><strong>Phone:</strong> <a href="tel:+639289306592">0928 930 6592</a></p>
+      <p><strong>Email:</strong> <a href="mailto:info@jeningscafe.com">info@jeningscafe.com</a></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Jenings Cafe. All rights reserved.
+  </footer>
 
 </body>
 </html>
