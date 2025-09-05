@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Homepage</title>
+  <title>Travel Destination - Kyoto</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    /* Reset */
     * {
       margin: 0;
       padding: 0;
@@ -21,7 +20,7 @@
     }
 
     header {
-      background: linear-gradient(to right, #6a11cb, #2575fc);
+      background: linear-gradient(to right, #43cea2, #185a9d);
       color: #fff;
       padding: 40px 20px;
       text-align: center;
@@ -53,7 +52,7 @@
     }
 
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
@@ -63,17 +62,41 @@
       padding: 30px;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin-bottom: 40px;
     }
 
     article h2 {
-      font-size: 1.8rem;
-      color: #333;
+      font-size: 2rem;
       margin-bottom: 15px;
+      color: #222;
     }
 
     article p {
       font-size: 1rem;
       color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .media-embed {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    iframe {
+      max-width: 100%;
+      border: none;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-home a {
+      color: #185a9d;
+      font-weight: 600;
+      text-decoration: underline;
+      font-size: 1.1rem;
     }
 
     footer {
@@ -98,7 +121,6 @@
       text-decoration: underline;
     }
 
-    /* Responsive */
     @media (max-width: 600px) {
       nav ul {
         flex-direction: column;
@@ -117,14 +139,14 @@
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header and Navigation -->
   <header>
-    <h1>Main Heading</h1>
+    <h1>Explore Destinations</h1>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Destinations</a></li>
+        <li><a href="#">Gallery</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
@@ -132,29 +154,60 @@
 
   <!-- Main Content -->
   <main>
+    <!-- Destination Info -->
     <article>
-      <h2>Blog Introduction</h2>
-      <p>This is the main content of the blog introduction. It's written to show how clean design can make your content easier to read and more enjoyable to explore. Keep things simple, spacious, and easy on the eyes.</p>
+      <h2>Kyoto, Japan</h2>
+      <p>
+        Nestled in the heart of Japan, Kyoto is a city where ancient traditions meet serene beauty. Famous for its historic temples, peaceful gardens, and vibrant geisha culture, Kyoto offers a truly timeless travel experience.
+      </p>
+      <p>
+        Wander through the bamboo forest of Arashiyama, admire the golden elegance of Kinkaku-ji (Golden Pavilion), and enjoy a traditional tea ceremony in Gion. Whether you're strolling through the cherry blossoms in spring or enjoying the crimson maple leaves in autumn, Kyoto enchants visitors year-round.
+      </p>
+      <p>
+        Don’t forget to try the local cuisine — from matcha sweets to kaiseki dinners, your taste buds will thank you.
+      </p>
     </article>
+
+    <!-- YouTube Video -->
+    <div class="media-embed">
+      <h3>Watch: Discover Kyoto</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/qrUKrAq8BtI?si=8t50u8j4tUlYAkrZ"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Google Map -->
+    <div class="media-embed">
+      <h3>Map: Kyoto, Japan</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13146.080772137057!2d135.7520744554199!3d35.011636798207774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001088e8f338c8d%3A0xd0a5f3bfe8f4a40a!2sKyoto%2C%20Japan!5e0!3m2!1sen!2sph!4v1694520972895!5m2!1sen!2sph"
+        width="600" height="450" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <!-- Back Home Link -->
+    <div class="back-home">
+      <a href="index.html">← Back to Home</a>
+    </div>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Copyright and contact information</p>
-
+    <p>© 2025 Travel Blog. All rights reserved.</p>
     <p>
-      📧 Email: 
+      📧 Email:
       <a href="mailto:jennyrosebayubay01@gmail.com">jennyrosebayubay01@gmail.com</a>
     </p>
-
     <p>
-      📱 Phone: 
+      📱 Phone:
       <a href="tel:+639289306592">+63 928 930 6592</a>
     </p>
-
     <p>
-      🔗 <a href="https://www.instagram.com/travels_by_me" target="_blank">Mock Social Media Page</a>
+      🔗 <a href="https://www.instagram.com/jhing_01_?igsh=MzZlOHc3dGluYThj" target="_blank">Mock Instagram Page</a>
     </p>
   </footer>
+
 </body>
 </html>
