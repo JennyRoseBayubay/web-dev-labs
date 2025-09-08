@@ -1,0 +1,14 @@
+/* Styles for the button */
+.styled-button {
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.styled-button:hover {
+  background-color: darkorange;
+}
