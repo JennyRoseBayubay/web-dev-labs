@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Three Styled Boxes</title>
+
+  <!-- Internal styles for the boxes -->
+  <style>
+    .box-container {
+      display: flex;
+      gap: 20px;
+      margin: 20px;
+    }
+
+    .box {
+      padding: 20px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      width: 30%;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .box1 {
+      background-color: #007BFF; /* Blue */
+    }
+
+    .box2 {
+      background-color: #28A745; /* Green */
+    }
+
+    .box3 {
+      background-color: #FFC107; /* Yellow */
+      color: black;
+    }
+  </style>
+
+  <!-- External CSS for other elements (like buttons, optional) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Styled Content Boxes</h1>
+
+  <div class="box-container">
+    <div class="box box1">
+      <h2>Box 1</h2>
+      <p>This is the first styled box. It's blue and contains some text.</p>
+    </div>
+
+    <div class="box box2">
+      <h2>Box 2</h2>
+      <p>This is the second styled box. It's green and also contains some content.</p>
+    </div>
+
+    <div class="box box3">
+      <h2>Box 3</h2>
+      <p>This is the third styled box. It's yellow with black text for contrast.</p>
+    </div>
+  </div>
+
+</body>
+</html>

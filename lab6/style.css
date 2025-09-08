@@ -1,7 +1,7 @@
 /* Styles for the button */
 .styled-button {
   background-color: orange;
-  color: white;
+  color: rgb(226, 73, 73);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
