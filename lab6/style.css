@@ -1,99 +1,83 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* wireframe-style.css */
-
+/* Body Styling */
 body {
-
-    font-family: Arial, sans-serif;
-
-    margin: 0;
-
-    padding: 0;
-
-    background-color: #f4f4f4;
-
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fffaf3;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
 }
 
-
+/* Container */
 .container {
-
-    width: 80%;
-
-    margin: auto;
-
-    background-color: #fff;
-
-    padding: 20px;
-
-    border-radius: 8px;
-
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fefefe;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Header Section */
 header {
-
-    text-align: center;
-
-    padding-bottom: 20px;
-
-    border-bottom: 1px solid #ddd;
-
+  text-align: center;
+  margin-bottom: 30px;
 }
-
 
 header h1 {
-
-    color: #333;
-
+  font-size: 2.5em;
+  color: #5c3d2e;
+  margin-bottom: 10px;
 }
-
 
 header p {
-
-    color: #666;
-
+  font-size: 1.2em;
+  color: #7a5c4b;
 }
 
+/* Section Titles */
+section h2 {
+  font-size: 1.8em;
+  color: #4a3225;
+  border-bottom: 2px solid #c9a97c;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
 
+/* Our Story Section */
 .our-story {
-
-    padding: 20px 0;
-
-    border-bottom: 1px solid #ddd;
-
+  margin-bottom: 30px;
 }
 
-
-.our-story h2, .menu-preview h2 {
-
-    color: #333;
-
+.our-story p {
+  font-size: 1.1em;
+  color: #444;
 }
 
-
-.menu-preview {
-
-    padding: 20px 0;
-
-}
-
-
+/* Menu Preview Section */
 .menu-preview ul {
-
-    list-style-type: square;
-
-    padding-left: 20px;
-
+  list-style-type: square;
+  padding-left: 20px;
 }
 
+.menu-preview li {
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  color: #333;
+}
 
+/* Footer */
 footer {
-
-    margin-top: 20px;
-
-    text-align: center;
-
-    color: #777;
-
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #777;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
 }
