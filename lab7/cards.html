@@ -1,3 +1,5 @@
+
+You sent
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,46 +7,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Cards</title>
     <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
         .container {
             display: flex;
-            justify-content: space-around; /* Distribute cards evenly */
-            padding: 20px;
+            justify-content: space-around;
+            padding: 40px;
+            max-width: 1200px;
+            width: 100%;
         }
         .card {
             width: 300px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px;
-            background-color: #f9f9f9;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
         }
         .card img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            color: #333;
             margin-bottom: 10px;
+        }
+        .card p {
+            color: #666;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
-    <h1>Profile Cards</h1>
     <div class="container">
         <div class="card">
-            <img src="https://via.placeholder.com/150" alt="Profile 1">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228247?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwcG9ydHJhaXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Profile 1">
             <h2>John Doe</h2>
-            <p>A short paragraph about John Doe. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>A passionate developer with a keen interest in creating innovative solutions.</p>
         </div>
         <div class="card">
-            <img src="https://via.placeholder.com/150" alt="Profile 2">
+            <img src="https://images.unsplash.com/photo-1552058544-f0b427500ca4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW4lMjBwb3J0cmFpdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Profile 2">
             <h2>Jane Smith</h2>
-            <p>A short paragraph about Jane Smith. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>A creative designer specializing in user interface and user experience design.</p>
         </div>
         <div class="card">
-            <img src="https://via.placeholder.com/150" alt="Profile 3">
+            <img src="https://images.unsplash.com/photo-1618044988624-c9b995554513?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1hbiUyMHBvcnRyYWl0fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Profile 3">
             <h2>Peter Jones</h2>
-            <p>A short paragraph about Peter Jones. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>A dedicated project manager focused on delivering high-quality results on time.</p>
         </div>
     </div>
 </body>
