@@ -2,30 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Three Boxes in a Row</title>
+  <title>Aesthetic Three Boxes</title>
   <style>
-    /* Container holding the boxes */
-    .box-container {
-      display: flex;              /* Make children go in a row */
-      justify-content: center;    /* Center the row horizontally */
-      gap: 30px;                  /* Add space between boxes */
-      padding: 50px;
-      background-color: #f5f5f5;
+    /* Apply some global styling */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
-    /* Style for each box */
+    /* Container for the boxes */
+    .box-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px; /* space between boxes */
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Each individual box */
     .box {
-      width: 120px;
-      height: 120px;
-      background-color: #007BFF;
-      color: white;
+      width: 150px;
+      height: 150px;
+      background-color: #6C63FF;
+      color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
-      font-family: sans-serif;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      font-size: 20px;
+      font-weight: 500;
+      border-radius: 12px;
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    /* Hover effect */
+    .box:hover {
+      background-color: #574fd6;
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
     }
   </style>
 </head>
