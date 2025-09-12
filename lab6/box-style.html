@@ -1,63 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Three Styled Boxes</title>
-
-  <!-- Internal styles for the boxes -->
-  <style>
-    .box-container {
-      display: flex;
-      gap: 20px;
-      margin: 20px;
-    }
-
-    .box {
-      padding: 20px;
-      border: 2px solid #333;
-      border-radius: 10px;
-      width: 30%;
-      color: white;
-      font-family: Arial, sans-serif;
-    }
-
-    .box1 {
-      background-color: #fffb00; /* Blue */
-    }
-
-    .box2 {
-      background-color: #3128a7; /* Green */
-    }
-
-    .box3 {
-      background-color: #ff0766; /* Yellow */
-      color: black;
-    }
-  </style>
-
-  <!-- External CSS for other elements (like buttons, optional) -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Boxes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .box {
+            background-color: #f0f0f0;
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .box:nth-child(1) {
+            background-color: #e6f7ff;
+            border: 3px dashed #7ad1ff;
+        }
+        .box:nth-child(2) {
+            background-color: #ffe6e6;
+            border: 4px dotted #ff7a7a;
+        }
+        .box:nth-child(3) {
+            background-color: #e6ffe6;
+            border: 5px double #7aff7a;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-
-  <h1>Styled Content Boxes</h1>
-
-  <div class="box-container">
-    <div class="box box1">
-      <h2>Box 1</h2>
-      <p>This is the first styled box. It's blue and contains some text.</p>
+    <h1>Styled Content Boxes</h1>
+    <div class="container">
+        <div class="box">
+            <h2>Box 1</h2>
+            <p>This is the first styled content box with a dashed border and light blue background.</p>
+        </div>
+        <div class="box">
+            <h2>Box 2</h2>
+            <p>This is the second styled content box with a dotted border and light red background.</p>
+        </div>
+        <div class="box">
+            <h2>Box 3</h2>
+            <p>This is the third styled content box with a double border and light green background.</p>
+        </div>
     </div>
-
-    <div class="box box2">
-      <h2>Box 2</h2>
-      <p>This is the second styled box. It's green and also contains some content.</p>
-    </div>
-
-    <div class="box box3">
-      <h2>Box 3</h2>
-      <p>This is the third styled box. It's yellow with black text for contrast.</p>
-    </div>
-  </div>
-
 </body>
 </html>
