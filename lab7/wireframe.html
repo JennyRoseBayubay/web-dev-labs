@@ -1,0 +1,167 @@
+
+You sent
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean & Brew - Wireframe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f0f0; /* Light grey background for the whole page */
+            display: flex;
+            flex-direction: column; /* Stack header, main, footer vertically */
+            min-height: 100vh; /* Ensure body takes full viewport height */
+        }
+
+        .page-container {
+            width: 80%; /* Adjust width for the main content area */
+            max-width: 900px; /* Max width to prevent it from getting too wide */
+            margin: 20px auto; /* Center the container and add some margin */
+            background-color: #fff; /* White background for the main content box */
+            border: 1px solid #ddd; /* Light border around the main content */
+            border-radius: 8px; /* Slightly rounded corners for the main box */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+            overflow: hidden; /* Ensures rounded corners clip content */
+        }
+
+        /* Header Section */
+        header {
+            background-color: #333; /* Dark grey similar to wireframe */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .main-hero {
+            background-color: #555; /* Darker grey for the hero section */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .main-hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+
+        .main-hero p {
+            font-size: 1.1em;
+            margin-top: 0;
+        }
+
+        /* Main Content */
+        main {
+            padding: 30px;
+            flex-grow: 1; /* Allow main content to take up available space */
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee; /* Underline for section titles */
+            padding-bottom: 5px;
+        }
+
+        .journey-text {
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .values-container {
+            display: flex;
+            justify-content: space-around; /* Distribute items with space */
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+            gap: 15px; /* Space between items */
+            margin-top: 20px;
+        }
+
+        .value-item {
+            background-color: #e0e0e0; /* Light grey for value items */
+            color: #333;
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Space between icon and text */
+            min-width: 180px; /* Ensure items have a minimum width */
+            justify-content: center; /* Center content within the item */
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #e0e0e0; /* Light grey for footer */
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px; /* Space above the footer */
+        }
+
+        footer a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        footer a:hover {
+            background-color: #d0d0d0;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <!-- Header Area -->
+        <header>
+            WIREFRAME
+        </header>
+
+        <!-- Main Navigation/Hero Area -->
+        <div class="main-hero">
+            <h1>About Bean & Brew</h1>
+            <p>Passion. People. Coffee.</p>
+        </div>
+
+        <!-- Main Content Area -->
+        <main>
+            <section class="journey">
+                <h2 class="section-title">Our Journey</h2>
+                <p class="journey-text">
+                    Founded by two sisters with a dream and a love for coffee, Bean & Brew has grown into a
+                    cozy destination for caffeine lovers, remote workers, and friends catching up.
+                </p>
+            </section>
+
+            <section class="values">
+                <h2 class="section-title">Our Values</h2>
+                <div class="values-container">
+                    <div class="value-item">
+                        <!-- Assuming simple text for icons as per wireframe -->
+                        <span>•</span>Quality Beans
+                    </div>
+                    <div class="value-item">
+                        <span>•</span>Friendly Service
+                    </div>
+                    <div class="value-item">
+                        <span>•</span>Sustainable Sourcing
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Area -->
+        <footer>
+            <a href="#">Back to Home</a>
+        </footer>
+    </div>
+</body>
+</html>
