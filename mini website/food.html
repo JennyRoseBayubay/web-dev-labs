@@ -1,82 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-
-#myHeader {
-  background-color: lightblue;
-  color: black;
-  padding: 40px;
-  text-align: center;
-  margin: 0;
-}
-
-
-.navbar {
-  background-color: hsl(0, 0%, 20%);
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  padding: 10px 0;
-}
-
-
-.navbar a {
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-
-section {
-  padding: 40px;
-  max-width: 800px;
-  margin: auto;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profile</title>
+  <link rel="stylesheet" href="style.css"> <!-- Your external CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
+  <!-- Header -->
+  <header>
+    <h2>FOOD SELECTION</h2>
+    <p>LIST OF FOODS</p>
+  </header>
 
-<div class="navbar">
-  <a href="#about">About</a>
-  <a href="#menu">Menu</a>
-  <a href="#contact">Contact</a>
-</div>
+  <!-- Main Container -->
+  <div class="container">
 
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h3>SELECTIONS</h3>
+      <ul>
+        <li>
+          About: Intro
+          <ul>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </li>
+        <!-- You can add more items here like Menu, Contact, etc. -->
+      </ul>
+    </div>
 
-<h1 id="myHeader">Food Selection</h1>
+    <!-- Content Area -->
+    <div class="content">
+      <!-- About Section -->
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          A tagline for a Filipino cuisine encyclopedia could be 
+          <strong>"A Culinary Journey Across the Archipelago, From Island Flavors to Ancestral Roots"</strong>, 
+          emphasizing regional diversity and rich history.
+        </p>
+        <p>
+          The "regional" aspect of Filipino cuisine refers to the distinct dishes and cooking styles found across 
+          different islands and provinces, such as spicy Bicolano dishes, lechon from Cebu, or the vegetable-centric 
+          Ilocano cuisine.
+        </p>
+        <p>
+          The "disease" aspect relates to potential public health concerns like high fat and cholesterol levels in 
+          the Filipino diet, which the country's Food Safety Act aims to address by setting standards for food 
+          quality and consumption.
+        </p>
+      </section>
+    </div>
 
+  </div>
 
-<section id="about">
-  <h2>About</h2>
-  <p>
-    A tagline for a Filipino cuisine encyclopedia could be 
-    <strong>"A Culinary Journey Across the Archipelago, From Island Flavors to Ancestral Roots"</strong>, 
-    emphasizing regional diversity and rich history.
-  </p>
-  <p>
-    The "regional" aspect of Filipino cuisine refers to the distinct dishes and cooking styles found across 
-    different islands and provinces, such as spicy Bicolano dishes, lechon from Cebu, or the vegetable-centric 
-    Ilocano cuisine.
-  </p>
-  <p>
-    The "disease" aspect relates to potential public health concerns like high fat and cholesterol levels in 
-    the Filipino diet, which the country's Food Safety Act aims to address by setting standards for food 
-    quality and consumption.
-  </p>
-</section>
-
-    </ul>
 </body>
 </html>
