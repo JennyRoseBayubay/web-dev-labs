@@ -4,10 +4,104 @@
     <meta charset="UTF-8">
     <title>Mindanao Dishes</title>
     <style>
-        /* Use same styles as other pages */
+        /* ==== GLOBAL STYLES ==== */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #e0ffe0, #fff7e6);
+            color: #2e2e2e;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1b5e20;
+            margin-top: 40px;
+            font-size: 2.5rem;
+        }
+
+        /* ==== NAVIGATION BAR ==== */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(135deg, #43cea2, #185a9d);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 0 0 12px 12px;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            padding: 15px 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        /* ==== CONTAINER ==== */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* ==== DISH CARDS ==== */
+        .dish {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        .dish:hover {
+            transform: scale(1.02);
+        }
+
+        .dish img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #e0f2f1;
+        }
+
+        .dish strong {
+            font-size: 1.3rem;
+            color: #1b5e20;
+        }
+
+        /* ==== FOOTER ==== */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #dcedc8;
+            color: #33691e;
+            font-size: 0.9rem;
+            border-top: 1px solid #c5e1a5;
+        }
     </style>
 </head>
 <body>
+
+    <!-- NAVIGATION -->
     <nav>
         <ul>
             <li><a href="luzon.html">Luzon</a></li>
@@ -16,31 +110,53 @@
         </ul>
     </nav>
 
-    <h1>Mindanao Dishes</h1>
+    <h1>Mga Putaheng Mindanao</h1>
 
-    <div class="dish">
-        <strong>Pastil (Maguindanao)</strong><br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Pastil_by_Bryan_Valle.jpg" alt="Pastil">
+    <div class="container">
+        <div class="dish">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Pastil_by_Bryan_Valle.jpg" alt="Pastil">
+            <div>
+                <strong>Pastil (Maguindanao)</strong><br>
+                Kanin na may shredded chicken o beef, nakabalot sa dahon ng saging. Perfect on-the-go meal!
+            </div>
+        </div>
+
+        <div class="dish">
+            <img src="https://www.kawalingpinoy.com/wp-content/uploads/2021/05/beef-kurma-5.jpg" alt="Beef Kulma">
+            <div>
+                <strong>Beef Kulma (Tausug)</strong><br>
+                Masaganang curry-style dish na may gata, mani, at pampalasa — influensyang Muslim.
+            </div>
+        </div>
+
+        <div class="dish">
+            <img src="https://tribune.net.ph/wp-content/uploads/2023/06/Piassak.jpg" alt="Piassak">
+            <div>
+                <strong>Piassak (Sulu)</strong><br>
+                Spicy beef dish na may toasted coconut, karaniwang inihahain sa kasalan at pista.
+            </div>
+        </div>
+
+        <div class="dish">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Satti_dish.jpg" alt="Satti">
+            <div>
+                <strong>Satti (Zamboanga)</strong><br>
+                BBQ sticks na may spicy sauce at rice cubes — maanghang, malasa, at kakaiba!
+            </div>
+        </div>
+
+        <div class="dish">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Sinuglaw.jpg" alt="Sinuglaw">
+            <div>
+                <strong>Sinuglaw (Davao)</strong><br>
+                Halo ng sinugba (inihaw) at kinilaw — perfect balance ng smoke at citrus flavors!
+            </div>
+        </div>
     </div>
 
-    <div class="dish">
-        <strong>Beef Kulma (Tausug)</strong><br>
-        <img src="https://www.kawalingpinoy.com/wp-content/uploads/2021/05/beef-kurma-5.jpg" alt="Beef Kulma">
-    </div>
+    <footer>
+        Tuklasin ang mga natatanging putahe ng Mindanao — isang yaman ng lasa, kultura, at kasaysayan. 💚
+    </footer>
 
-    <div class="dish">
-        <strong>Piassak (Sulu)</strong><br>
-        <img src="https://tribune.net.ph/wp-content/uploads/2023/06/Piassak.jpg" alt="Piassak">
-    </div>
-
-    <div class="dish">
-        <strong>Satti (Zamboanga)</strong><br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Satti_dish.jpg" alt="Satti">
-    </div>
-
-    <div class="dish">
-        <strong>Sinuglaw (Davao)</strong><br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Sinuglaw.jpg" alt="Sinuglaw">
-    </div>
 </body>
 </html>
