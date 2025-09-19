@@ -4,50 +4,104 @@
     <meta charset="UTF-8">
     <title>Luzon Dishes</title>
     <style>
+        /* ==== GLOBAL STYLES ==== */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #fff8f0;
-            color: #333;
-            padding: 20px;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #fff0e6, #ffe6cc);
+            color: #3e2723;
+            margin: 0;
+            padding: 0;
         }
 
+        h1 {
+            text-align: center;
+            color: #b30000;
+            margin-top: 40px;
+            font-size: 2.5rem;
+        }
+
+        /* ==== NAVIGATION BAR ==== */
         nav ul {
             list-style: none;
+            margin: 0;
             padding: 0;
-            margin: 0 0 20px 0;
-            background-color: #b30000;
-            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 0 0 12px 12px;
         }
 
         nav li {
-            float: left;
+            margin: 0;
         }
 
         nav a {
             display: block;
+            padding: 15px 25px;
             color: white;
-            text-align: center;
-            padding: 10px 20px;
             text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background 0.3s, transform 0.2s;
         }
 
         nav a:hover {
-            background-color: #800000;
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
         }
 
+        /* ==== CONTAINER ==== */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* ==== DISH CARDS ==== */
         .dish {
-            margin-bottom: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.2s ease;
         }
 
-        img {
+        .dish:hover {
+            transform: scale(1.02);
+        }
+
+        .dish img {
             width: 200px;
             height: 150px;
             object-fit: cover;
-            border: 1px solid #ccc;
+            border-radius: 10px;
+            border: 3px solid #ffe6cc;
+        }
+
+        .dish strong {
+            font-size: 1.3rem;
+            color: #b30000;
+        }
+
+        /* ==== FOOTER (optional) ==== */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffccbc;
+            color: #5d4037;
+            font-size: 0.9rem;
+            border-top: 1px solid #d7ccc8;
         }
     </style>
 </head>
 <body>
+
+    <!-- NAVIGATION -->
     <nav>
         <ul>
             <li><a href="luzon.html">Luzon</a></li>
@@ -56,31 +110,53 @@
         </ul>
     </nav>
 
-    <h1>Luzon Dishes</h1>
+    <h1>Mga Putaheng Luzon</h1>
 
-    <div class="dish">
-        <strong>Pinakbet (Ilocos Region)</strong><br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Pinakbet.jpg/800px-Pinakbet.jpg" alt="Pinakbet">
+    <div class="container">
+        <div class="dish">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Pinakbet.jpg/800px-Pinakbet.jpg" alt="Pinakbet">
+            <div>
+                <strong>Pinakbet (Ilocos Region)</strong><br>
+                Isang gulay na may bagoong na kilala sa rehiyong Ilocos.
+            </div>
+        </div>
+
+        <div class="dish">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Bagnet.jpg" alt="Bagnet">
+            <div>
+                <strong>Bagnet (Ilocos Norte)</strong><br>
+                Malutong na pritong baboy, parang lechon kawali, pero mas crispy!
+            </div>
+        </div>
+
+        <div class="dish">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Laing_Bicol.jpg" alt="Laing">
+            <div>
+                <strong>Laing (Bicol Region)</strong><br>
+                Ginatang dahon ng gabi na may sili — creamy at maanghang.
+            </div>
+        </div>
+
+        <div class="dish">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Bicol_Express.jpg" alt="Bicol Express">
+            <div>
+                <strong>Bicol Express (Bicol Region)</strong><br>
+                Baboy sa gata na may maanghang na sili, isang Bicolano classic!
+            </div>
+        </div>
+
+        <div class="dish">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Pancit_Batil_Patung.jpg" alt="Pancit Batil Patung">
+            <div>
+                <strong>Pancit Batil Patung (Cagayan)</strong><br>
+                Pansit na may sabaw at itlog na niluluto sa ibabaw — kakaiba at masarap!
+            </div>
+        </div>
     </div>
 
-    <div class="dish">
-        <strong>Bagnet (Ilocos Norte)</strong><br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Bagnet.jpg" alt="Bagnet">
-    </div>
+    <footer>
+        Alamin at tikman ang yaman ng kulturang Pilipino sa bawat kagat! 🇵🇭
+    </footer>
 
-    <div class="dish">
-        <strong>Laing (Bicol Region)</strong><br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Laing_Bicol.jpg" alt="Laing">
-    </div>
-
-    <div class="dish">
-        <strong>Bicol Express (Bicol Region)</strong><br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Bicol_Express.jpg" alt="Bicol Express">
-    </div>
-
-    <div class="dish">
-        <strong>Pancit Batil Patung (Cagayan)</strong><br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Pancit_Batil_Patung.jpg" alt="Pancit Batil Patung">
-    </div>
 </body>
 </html>
