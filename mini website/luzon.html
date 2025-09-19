@@ -4,8 +4,100 @@
     <meta charset="UTF-8">
     <title>Luzon Dishes</title>
     <style>
-        /* [same styles as before] */
-        /* No changes needed to the CSS */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #fce4ec, #e3f2fd);
+            color: #3b3b3b;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #c2185b;
+            margin: 50px 0 30px;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            margin-bottom: 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(to right, #ec407a, #42a5f5);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 0 0 12px 12px;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            padding: 15px 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+
+        .dish {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        .dish:hover {
+            transform: scale(1.02);
+        }
+
+        .dish img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #f8bbd0;
+        }
+
+        .dish strong {
+            font-size: 1.3rem;
+            color: #c2185b;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 10px;
+            background-color: #f8bbd0;
+            color: #4e342e;
+            font-size: 0.95rem;
+            border-top: 1px solid #e1bee7;
+        }
     </style>
 </head>
 <body>
@@ -13,10 +105,9 @@
     <!-- NAVIGATION -->
     <nav>
         <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="luzon.html">Luzon</a></li>
-            <li><a href="visayas.html">Visayas</a></li>
-            <li><a href="mindanao.html">Mindanao</a></li>
+            <li><a href="#">Luzon</a></li>
+            <li><a href="#">Visayas</a></li>
+            <li><a href="#">Mindanao</a></li>
         </ul>
     </nav>
 
@@ -26,7 +117,7 @@
         <div class="dish">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Pinakbet.jpg/800px-Pinakbet.jpg" alt="Pakbet">
             <div>
-                <strong>Pakbet (Ilocos Region)</strong><br>
+                <strong>Pakbet (Ilocos Region)</strong>
                 Isang gulay na may bagoong na kilala sa rehiyong Ilocos.
             </div>
         </div>
@@ -34,7 +125,7 @@
         <div class="dish">
             <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Bagnet.jpg" alt="Bagnet">
             <div>
-                <strong>Bagnet (Ilocos Norte)</strong><br>
+                <strong>Bagnet (Ilocos Norte)</strong>
                 Malutong na pritong baboy, parang lechon kawali, pero mas crispy!
             </div>
         </div>
@@ -42,7 +133,7 @@
         <div class="dish">
             <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Laing_Bicol.jpg" alt="Laing">
             <div>
-                <strong>Laing (Bicol Region)</strong><br>
+                <strong>Laing (Bicol Region)</strong>
                 Ginatang dahon ng gabi na may sili — creamy at maanghang.
             </div>
         </div>
@@ -50,7 +141,7 @@
         <div class="dish">
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Bicol_Express.jpg" alt="Bicol Express">
             <div>
-                <strong>Bicol Express (Bicol Region)</strong><br>
+                <strong>Bicol Express (Bicol Region)</strong>
                 Baboy sa gata na may maanghang na sili, isang Bicolano classic!
             </div>
         </div>
@@ -58,7 +149,7 @@
         <div class="dish">
             <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Pancit_Batil_Patung.jpg" alt="Pancit Batil Patung">
             <div>
-                <strong>Pancit Batil Patung (Cagayan)</strong><br>
+                <strong>Pancit Batil Patung (Cagayan)</strong>
                 Pansit na may sabaw at itlog na niluluto sa ibabaw — kakaiba at masarap!
             </div>
         </div>
