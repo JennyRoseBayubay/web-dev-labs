@@ -19,41 +19,11 @@
             font-size: 2.5rem;
         }
 
-        /* Main nav (top-level site nav) */
-        .main-nav {
-            background: #f06292;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .main-nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        .main-nav li a {
-            display: block;
-            padding: 14px 20px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1rem;
-            transition: background 0.3s, transform 0.2s;
-        }
-
-        .main-nav li a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            transform: scale(1.05);
-        }
-
-        /* Regional nav (Luzon, Visayas, Mindanao) */
-        .regional-nav {
+        nav {
             margin-bottom: 30px;
         }
 
-        .regional-nav ul {
+        nav ul {
             list-style: none;
             margin: 0;
             padding: 0;
@@ -64,11 +34,11 @@
             border-radius: 0 0 12px 12px;
         }
 
-        .regional-nav li {
+        nav li {
             margin: 0;
         }
 
-        .regional-nav a {
+        nav a {
             display: block;
             padding: 15px 25px;
             color: white;
@@ -78,7 +48,7 @@
             transition: background 0.3s, transform 0.2s;
         }
 
-        .regional-nav a:hover {
+        nav a:hover {
             background-color: rgba(255, 255, 255, 0.2);
             transform: scale(1.05);
         }
@@ -132,17 +102,8 @@
 </head>
 <body>
 
-    <!-- MAIN NAVIGATION -->
-    <nav class="main-nav">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- REGIONAL NAVIGATION -->
-    <nav class="regional-nav">
+    <!-- NAVIGATION -->
+    <nav>
         <ul>
             <li><a href="#">Luzon</a></li>
             <li><a href="#">Visayas</a></li>
