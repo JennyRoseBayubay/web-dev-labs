@@ -1,21 +1,23 @@
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #c41616;
-  color: #4150cf;
-  padding: 20px;
-}
-
-header, nav, main, section, article, footer {
-  display: block;
-}
-
 nav ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    background-color: #b30000;
+    overflow: hidden;
 }
 
-nav ul li {
-  display: inline;
-  margin-right: 15px;
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #800000;
 }
