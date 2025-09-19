@@ -4,10 +4,104 @@
     <meta charset="UTF-8">
     <title>Visayas Dishes</title>
     <style>
-        /* Use same styles as Luzon page */
+        /* ==== GLOBAL STYLES ==== */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #fff0e6, #ffe6cc);
+            color: #3e2723;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #b30000;
+            margin-top: 40px;
+            font-size: 2.5rem;
+        }
+
+        /* ==== NAVIGATION BAR ==== */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 0 0 12px 12px;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            padding: 15px 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        /* ==== CONTAINER ==== */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* ==== DISH CARDS ==== */
+        .dish {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        .dish:hover {
+            transform: scale(1.02);
+        }
+
+        .dish img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #ffe6cc;
+        }
+
+        .dish strong {
+            font-size: 1.3rem;
+            color: #b30000;
+        }
+
+        /* ==== FOOTER ==== */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffccbc;
+            color: #5d4037;
+            font-size: 0.9rem;
+            border-top: 1px solid #d7ccc8;
+        }
     </style>
 </head>
 <body>
+
+    <!-- NAVIGATION -->
     <nav>
         <ul>
             <li><a href="luzon.html">Luzon</a></li>
@@ -16,31 +110,53 @@
         </ul>
     </nav>
 
-    <h1>Visayas Dishes</h1>
+    <h1>Mga Putaheng Visayas</h1>
 
-    <div class="dish">
-        <strong>Lechon (Cebu)</strong><br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Lechon_Cebu.jpg" alt="Lechon">
+    <div class="container">
+        <div class="dish">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Lechon_Cebu.jpg" alt="Lechon">
+            <div>
+                <strong>Lechon (Cebu)</strong><br>
+                Ang sikat na inihaw na baboy ng Cebu — crispy sa labas, juicy sa loob!
+            </div>
+        </div>
+
+        <div class="dish">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/La_Paz_Batchoy.jpg" alt="Batchoy">
+            <div>
+                <strong>Batchoy (Iloilo)</strong><br>
+                Mainit-init na sabaw na may laman-loob, chicharon, at itlog — perfect comfort food!
+            </div>
+        </div>
+
+        <div class="dish">
+            <img src="https://panlasangpinoy.com/wp-content/uploads/2018/10/KBL-Kadyos-Baboy-Langka-Recipe.jpg" alt="KBL">
+            <div>
+                <strong>KBL (Negros Occidental)</strong><br>
+                Kadyos, Baboy, at Langka — isang maasim-asim na sinabawang putaheng Ilonggo.
+            </div>
+        </div>
+
+        <div class="dish">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Piaya.jpg" alt="Piyaya">
+            <div>
+                <strong>Piyaya (Negros Occidental)</strong><br>
+                Matamis at malutong-lutong na flatbread na may muscovado — paboritong pasalubong!
+            </div>
+        </div>
+
+        <div class="dish">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Chicken_Inasal.jpg" alt="Chicken Inasal">
+            <div>
+                <strong>Chicken Inasal (Bacolod)</strong><br>
+                Manok na inihaw na may suka, toyo, kalamansi, at atsuete — simple pero napakasarap!
+            </div>
+        </div>
     </div>
 
-    <div class="dish">
-        <strong>Batchoy (Iloilo)</strong><br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/La_Paz_Batchoy.jpg" alt="Batchoy">
-    </div>
+    <footer>
+        Tuklasin ang mga natatanging lasa ng Visayas. Tara, kain tayo! 🍽️
+    </footer>
 
-    <div class="dish">
-        <strong>KBL (Negros Occidental)</strong><br>
-        <img src="https://panlasangpinoy.com/wp-content/uploads/2018/10/KBL-Kadyos-Baboy-Langka-Recipe.jpg" alt="KBL">
-    </div>
-
-    <div class="dish">
-        <strong>Piyaya (Negros Occidental)</strong><br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Piaya.jpg" alt="Piyaya">
-    </div>
-
-    <div class="dish">
-        <strong>Chicken Inasal (Bacolod)</strong><br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Chicken_Inasal.jpg" alt="Chicken Inasal">
-    </div>
 </body>
 </html>
