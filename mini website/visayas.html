@@ -1,219 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Visayas Dishes</title>
-    <style>
-        /* ==== GLOBAL STYLES ==== */
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to right, #f1f8e9, #fffde7); /* light green to light yellow */
-            color: #33691e;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <title>Visayas Dishes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f1f8e9, #fffde7);
+      color: #33691e;
+      margin: 0;
+      padding: 0;
+    }
 
-        h1 {
-            text-align: center;
-            color: #fbc02d; /* sunflower yellow */
-            margin-top: 40px;
-            font-size: 2.5rem;
-        }
+    h1 {
+      text-align: center;
+      color: #fbc02d;
+      margin-top: 40px;
+      font-size: 2.5rem;
+    }
 
-        /* ==== NAVIGATION BAR ==== */
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            background: linear-gradient(135deg, #aed581, #fdd835); /* green to yellow gradient */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            border-radius: 0 0 12px 12px;
-        }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(135deg, #aed581, #fdd835);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 0 0 12px 12px;
+    }
 
-        nav li {
-            margin: 0;
-        }
+    nav li {
+      margin: 0;
+    }
 
-        nav a {
-            display: block;
-            padding: 15px 25px;
-            color: #1b5e20;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: background 0.3s, transform 0.2s;
-        }
+    nav a {
+      display: block;
+      padding: 15px 25px;
+      color: #1b5e20;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: background 0.3s, transform 0.2s;
+    }
 
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            transform: scale(1.05);
-        }
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
 
-        /* ==== CONTAINER ==== */
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
 
-        /* ==== DISH CARDS ==== */
-        .dish {
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            padding: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            transition: transform 0.2s ease;
-        }
+    .dish {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      padding: 20px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      transition: transform 0.2s ease;
+    }
 
-        .dish:hover {
-            transform: scale(1.02);
-        }
+    .dish:hover {
+      transform: scale(1.02);
+    }
 
-        .dish img {
-            width: 200px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-            border: 3px solid #dcedc8; /* pale green border */
-        }
+    .dish img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 3px solid #dcedc8;
+    }
 
-        .dish strong {
-            font-size: 1.3rem;
-            color: #689f38; /* medium green */
-        }
+    .dish strong {
+      font-size: 1.3rem;
+      color: #689f38;
+    }
 
-        .dish a {
-            color: #689f38;
-            text-decoration: none;
-        }
+    .dish a {
+      color: #689f38;
+      text-decoration: none;
+    }
 
-        .dish a:hover {
-            text-decoration: underline;
-        }
+    .dish a:hover {
+      text-decoration: underline;
+    }
 
-        /* ==== FOOTER ==== */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #e6ee9c; /* light lime green */
-            color: #33691e;
-            font-size: 0.95rem;
-            border-top: 1px solid #c5e1a5;
-        }
-    </style>
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #e6ee9c;
+      color: #33691e;
+      font-size: 0.95rem;
+      border-top: 1px solid #c5e1a5;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <ul>
-            <li><a href="luzon.html">Luzon</a></li>
-            <li><a href="visayas.html">Visayas</a></li>
-            <li><a href="mindanao.html">Mindanao</a></li>
-        </ul>
-    </nav>
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="luzon.html">Luzon</a></li>
+      <li><a href="visayas.html">Visayas</a></li>
+      <li><a href="mindanao.html">Mindanao</a></li>
+    </ul>
+  </nav>
 
-    <h1>Mga Putaheng Visayas</h1>
+  <h1>Mga Putaheng Visayas</h1>
 
-    <div class="container">
-        <div class="dish">
-            <img src="https://authenticfoodquest.com/wp-content/uploads/2016/11/RoastedPig_BestLechonInCebu_AuthenticFoodQuest.jpg" 
-                 decoding="async" 
-                 width="200" 
-                 height="150" 
-                 class="" 
-                 alt="Roasted Pig Best Lechon In Cebu by Authentic Food Quest" 
-                 data-pin-description="Best Lechon in Cebu: Top 12 Restaurants to Taste “ The Best Pig Ever” (According to Anthony Bourdain)" 
-                 data-pin-title="Best Lechon in Cebu: Top 12 Restaurants to Taste “ The Best Pig Ever” (According to Anthony Bourdain)"
-                 style="object-fit: cover; border-radius: 10px; border: 3px solid #dcedc8;">
-            <div>
-                <strong><a href="https://authenticfoodquest.com/cebu-lechon-bourdain/" target="_blank" rel="noopener noreferrer">Lechon (Cebu)</a></strong><br>
-                Ang sikat na inihaw na baboy ng Cebu — crispy sa labas, juicy sa loob!
-            </div>
-        </div>
+  <div class="container">
 
+    <!-- Lechon -->
     <div class="dish">
-        <div class="dish">
-            <img 
-                data-perfmatters-preload 
-                decoding="async" 
-                width="200" 
-                height="150" 
-                src="https://panlasangpinoy.com/wp-content/uploads/2011/10/Batchoy.jpg" 
-                alt="Batchoy" 
-                class="wp-image-26822" 
-                srcset="https://panlasangpinoy.com/wp-content/uploads/2011/10/Batchoy.jpg 640w, https://panlasangpinoy.com/wp-content/uploads/2011/10/Batchoy-300x199.jpg 300w, https://panlasangpinoy.com/wp-content/uploads/2011/10/Batchoy-90x60.jpg 90w, https://panlasangpinoy.com/wp-content/uploads/2011/10/Batchoy-540x359.jpg 540w, https://panlasangpinoy.com/wp-content/uploads/2011/10/Batchoy-141x94.jpg 141w" 
-                sizes="(min-width: 1200px) 730px, (min-width: 1080px) 650px, (min-width: 1024px) 630px, (min-width: 768px) calc(100vw - 40px), calc(100vw - 20px)" 
-                style="object-fit: cover; border-radius: 10px; border: 3px solid #dcedc8;">
-            <div>
-                <strong><a href="https://panlasangpinoy.com/batchoy/" target="_blank" rel="noopener noreferrer">Batchoy (Iloilo)</a></strong><br>
-        Mainit-init na sabaw na may laman-loob, chicharon, at itlog — perfect comfort food!
+      <img src="https://authenticfoodquest.com/wp-content/uploads/2016/11/RoastedPig_BestLechonInCebu_AuthenticFoodQuest.jpg"
+           alt="Roasted Pig Best Lechon In Cebu">
+      <div>
+        <strong><a href="https://authenticfoodquest.com/cebu-lechon-bourdain/" target="_blank" rel="noopener noreferrer">Lechon (Cebu)</a></strong><br>
+        Ang sikat na inihaw na baboy ng Cebu — crispy sa labas, juicy sa loob!
+      </div>
     </div>
-</div>
 
-            <div>
-                <strong><a href="https://panlasangpinoy.com/batchoy/" target="_blank" rel="noopener noreferrer">Batchoy (Iloilo)</a></strong><br>
-                Mainit-init na sabaw na may laman-loob, chicharon, at itlog — perfect comfort food!
-            </div>
-        </div>
+    <!-- Batchoy -->
+    <div class="dish">
+      <img src="https://panlasangpinoy.com/wp-content/uploads/2011/10/Batchoy.jpg"
+           alt="Batchoy">
+      <div>
+        <strong><a href="https://panlasangpinoy.com/batchoy/" target="_blank" rel="noopener noreferrer">Batchoy (Iloilo)</a></strong><br>
+        Mainit-init na sabaw na may laman-loob, chicharon, at itlog — perfect comfort food!
+      </div>
+    </div>
 
-        <div class="dish">
-            <div class="dish">
-                <img 
-                    width="200" 
-                    height="150" 
-                    src="https://images.yummy.ph/yummy/uploads/2023/10/kblrecipe-small-2.jpg" 
-                    class="attachment-large size-large wp-image-240102" 
-                    alt="kadyos, langka, and baboy stew or kbl" 
-                    loading="lazy" 
-                    srcset="https://images.yummy.ph/yummy/uploads/2023/10/kblrecipe-small-2.jpg 640w, https://images.yummy.ph/yummy/uploads/2023/10/kblrecipe-small-2-300x169.jpg 300w, https://images.yummy.ph/yummy/uploads/2023/10/kblrecipe-small-2-480x270.jpg 480w, https://images.yummy.ph/yummy/uploads/2023/10/kblrecipe-small-2-539x303.jpg 539w" 
-                    sizes="(max-width: 640px) 100vw, 640px"
-                    style="object-fit: cover; border-radius: 10px; border: 3px solid #dcedc8;">
-                <div>
+    <!-- KBL -->
+    <div class="dish">
+      <img src="https://images.yummy.ph/yummy/uploads/2023/10/kblrecipe-small-2.jpg"
+           alt="Kadyos, Langka, Baboy">
+      <div>
         <strong><a href="https://www.yummy.ph/recipe/kadyos-baboy-at-langka-kbl-recipe-a1793-20200117" target="_blank" rel="noopener noreferrer">KBL (Negros Occidental)</a></strong><br>
         Kadyos, Baboy, at Langka — isang maasim-asim na sinabawang putaheng Ilonggo.
+      </div>
     </div>
-</div>
 
-        <div class="dish">
-            <div class="dish">
-                <img 
-                    src="https://steemitimages.com/640x0/https://i.ytimg.com/vi/PtvX67wS0RQ/maxresdefault.jpg" 
-                    srcset="https://steemitimages.com/640x0/https://i.ytimg.com/vi/PtvX67wS0RQ/maxresdefault.jpg 1x, https://steemitimages.com/1280x0/https://i.ytimg.com/vi/PtvX67wS0RQ/maxresdefault.jpg 2x" 
-                    width="200" 
-                    height="150" 
-                    style="object-fit: cover; border-radius: 10px; border: 3px solid #dcedc8;" 
-                    alt="Unknown Visayan Dish">
-                <div>
+    <!-- Unknown Visayan Dish (YouTube) -->
+    <div class="dish">
+      <img src="https://steemitimages.com/640x0/https://i.ytimg.com/vi/PtvX67wS0RQ/maxresdefault.jpg"
+           alt="Bagong Visayan Dish">
+      <div>
         <strong><a href="https://www.youtube.com/watch?v=PtvX67wS0RQ" target="_blank" rel="noopener noreferrer">Bagong Putaheng Visayas</a></strong><br>
         Isang masarap na putahe mula sa Visayas — panoorin ang video para malaman kung paano ito lutuin!
-    </div>
-</div>
-
-            <div>
-                <strong><a href="https://steemit.com/food/@jezmacher/6-promoting-negros-food-category-the-bacolod-city-famous-delicacy-the-piaya" target="_blank" rel="noopener noreferrer">Piyaya (Negros Occidental)</a></strong><br>
-                Matamis at malutong-lutong na flatbread na may muscovado — paboritong pasalubong!
-            </div>
-        </div>
-
-        <div class="dish">
-            <img id="video_player" class="lookbook-img" src="./img/lookbook/images/lookbook-img-44.jpg" alt="Chicken Inasal">
-            <div>
-                <strong><a href="https://bacolodchickeninasal.com/" target="_blank" rel="noopener noreferrer">Chicken Inasal (Bacolod)</a></strong><br>
-                Manok na inihaw na may suka, toyo, kalamansi, at atsuete — simple pero napakasarap!
-            </div>
-        </div>
+      </div>
     </div>
 
-    <footer>
-        Tuklasin ang mga natatanging lasa ng Visayas. Tara, kain tayo! 🍽️
-    </footer>
+    <!-- Piyaya -->
+    <div class="dish">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Piaya.jpg"
+           alt="Piyaya">
+      <div>
+        <strong><a href="https://steemit.com/food/@jezmacher/6-promoting-negros-food-category-the-bacolod-city-famous-delicacy-the-piaya" target="_blank" rel="noopener noreferrer">Piyaya (Negros Occidental)</a></strong><br>
+        Matamis at malutong-lutong na flatbread na may muscovado — paboritong pasalubong!
+      </div>
+    </div>
+
+    <!-- Chicken Inasal -->
+    <div class="dish">
+      <img src="./img/lookbook/images/lookbook-img-44.jpg"
+           alt="Chicken Inasal">
+      <div>
+        <strong><a href="https://bacolodchickeninasal.com/" target="_blank" rel="noopener noreferrer">Chicken Inasal (Bacolod)</a></strong><br>
+        Manok na inihaw na may suka, toyo, kalamansi, at atsuete — simple pero napakasarap!
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Tuklasin ang mga natatanging lasa ng Visayas. Tara, kain tayo! 🍽️
+  </footer>
 
 </body>
 </html>
