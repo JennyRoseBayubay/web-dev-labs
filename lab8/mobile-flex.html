@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mobile-First Flexbox</title>
   <style>
-    /* Base styles: Vertical stacking for mobile */
+   
     .container {
       display: flex;
-      flex-direction: column; /* Stack boxes vertically by default */
-      gap: 10px; /* Space between boxes */
+      flex-direction: column; 
+      gap: 10px; 
       padding: 20px;
     }
 
@@ -20,15 +20,15 @@
       border-radius: 5px;
     }
 
-    /* Box colors (for visibility) */
+    
     .box1 { background-color: #ff5733; }
     .box2 { background-color: #33ff57; }
     .box3 { background-color: #3357ff; }
 
-    /* Media query: Horizontal layout for screens ≥768px */
+   
     @media (min-width: 768px) {
       .container {
-        flex-direction: row; /* Arrange boxes side-by-side */
+        flex-direction: row; 
       }
     }
   </style>
