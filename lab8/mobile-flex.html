@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile-First Flexbox</title>
+  <style>
+    /* Base styles: Vertical stacking for mobile */
+    .container {
+      display: flex;
+      flex-direction: column; /* Stack boxes vertically by default */
+      gap: 10px; /* Space between boxes */
+      padding: 20px;
+    }
+
+    .box {
+      padding: 20px;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    /* Box colors (for visibility) */
+    .box1 { background-color: #ff5733; }
+    .box2 { background-color: #33ff57; }
+    .box3 { background-color: #3357ff; }
+
+    /* Media query: Horizontal layout for screens ≥768px */
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row; /* Arrange boxes side-by-side */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+  </div>
+</body>
+</html>
