@@ -3,13 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Flexible Two-Column Layout</title>
+  <title>Find Your Way - Cloud Aesthetic</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #aee1f9, #f0f9ff);
+      background-image: url('https://www.transparenttextures.com/patterns/cloudy-day.png'); 
+      background-repeat: repeat;
+      background-size: cover;
+      color: #333;
+      min-height: 100vh;
+    }
+
     .two-column-container {
       display: flex;
       flex-direction: column; 
       gap: 20px; 
-      padding: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .text-section,
@@ -18,14 +40,32 @@
     }
 
     .text-section {
-      background-color: #f0f0f0;
-      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      backdrop-filter: blur(5px);
+    }
+
+    .text-section h2 {
+      font-size: 2em;
+      color: #005f87;
+      margin-bottom: 10px;
+    }
+
+    .text-section h3 {
+      color: #3b7ca5;
+      margin-top: 15px;
+    }
+
+    .text-section p {
+      margin-bottom: 10px;
+      line-height: 1.6;
     }
 
     .image-section img {
       width: 100%; 
       height: auto;
-      border-radius: 5px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     @media (min-width: 768px) {
@@ -46,7 +86,6 @@
       <h2>Find Your Way!!!!</h2>
       <p>Go where you want to go. Wherever you're going, we'll get you there.</p>
 
- 
       <h3>Adventure Awaits</h3>
       <p>Discover new paths, explore hidden gems, and experience the thrill of the unknown. Let the journey shape you.</p>
 
@@ -57,7 +96,7 @@
       <p>There's no better time than now. Pack your bags, take that first step, and find your way.</p>
     </div>
     <div class="image-section">
-      <img src="images/7.webp" alt="Sample Image Aesthetic background"/>
+      <img src="images/7.webp" alt="Cloudy Aesthetic Background"/>
     </div>
   </div>
 </body>
