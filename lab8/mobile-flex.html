@@ -1,13 +1,28 @@
-j<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mobile-First Flexbox</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
       font-family: sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-color: #f0f0f0;
     }
 
@@ -19,24 +34,30 @@ j<!DOCTYPE html>
     }
 
     .box {
+      width: 200px;
+      height: 120px;
       padding: 20px;
       color: white;
       text-align: center;
       border-radius: 5px;
-      background-image: url('https://source.unsplash.com/400x300/?dogs'); ad 
+      background-image: url('https://source.unsplash.com/400x300/?dogs');
       background-size: cover;
       background-position: center;
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
-    /* Optional: Add overlay for better text visibility */
+
     .box::before {
       content: '';
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+      background-color: rgba(0, 0, 0, 0.4);
       z-index: 0;
     }
 
@@ -47,6 +68,15 @@ j<!DOCTYPE html>
     .box span {
       position: relative;
       z-index: 1;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    .box i {
+      position: relative;
+      z-index: 1;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
     }
 
     @media (min-width: 768px) {
@@ -58,9 +88,18 @@ j<!DOCTYPE html>
 </head>
 <body>
   <div class="container">
-    <div class="box box1"><span>I</span></div>
-    <div class="box box2"><span>Love</span></div>
-    <div class="box box3"><span>Dogs</span></div>
+    <div class="box box1">
+      <i class="fas fa-paw"></i>
+      <span>I</span>
+    </div>
+    <div class="box box2">
+      <i class="fas fa-bone"></i>
+      <span>Love</span>
+    </div>
+    <div class="box box3">
+      <i class="fas fa-dog"></i>
+      <span>Dogs</span>
+    </div>
   </div>
 </body>
 </html>
