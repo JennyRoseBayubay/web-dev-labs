@@ -61,10 +61,14 @@
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
     }
 
+    .navbar-center {
+      margin: 0 auto;
+    }
+
     .navbar-brand {
       font-weight: 600;
       color: #ff85a2 !important;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
 
     .image-gallery {
@@ -95,11 +99,9 @@
 </head>
 <body>
 
-  
-  <nav class="navbar navbar-expand-lg navbar-custom">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">MySite</a>
-    </div>
+ 
+  <nav class="navbar navbar-expand-lg navbar-custom justify-content-center">
+    <a class="navbar-brand navbar-center text-center" href="#">MySite</a>
   </nav>
 
   
@@ -107,16 +109,14 @@
     <button class="btn btn-custom" onclick="showImages()">Click Me</button>
   </div>
 
-  
+ 
   <div class="alert alert-custom mt-4 text-center">
     <strong>Success!</strong> This is a custom Bootstrap alert.
   </div>
 
- 
+  
   <div class="image-gallery" id="gallery">
-    <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=400&q=80" alt="Sunset" />
-    <img src="https://images.unsplash.com/photo-1516594798947-e65505dbb29d?auto=format&fit=crop&w=400&q=80" alt="Mountains" />
-    <img src="images/quotefortoday.jpg" alt="Aesthetic" />
+   <img src="images/quotefortoday.jpg" alt="Aesthetic" />
   </div>
 
   
