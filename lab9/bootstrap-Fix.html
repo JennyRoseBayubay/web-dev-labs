@@ -1,22 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Grid Fixed</title>
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Yourself</title>
+
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #fcefee, #e0f7fa);
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content-box {
+      background-color: white;
+      padding: 3rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .word {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #333;
+      margin: 1rem 0;
+    }
+
+    .word:first-child {
+      color: #e91e63;
+    }
+
+    .word:last-child {
+      color: #00bcd4;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">Love</div>
-            <div class="col-md-6">Yourself</div>
-        </div>
+  <div class="content-box">
+    <div class="row">
+      <div class="col-md-6 word">Love</div>
+      <div class="col-md-6 word">Yourself</div>
     </div>
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
