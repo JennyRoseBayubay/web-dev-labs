@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Love Yourself</title>
 
   
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
   <style>
     body {
@@ -25,7 +24,7 @@
       border-radius: 15px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
       text-align: center;
-      max-width: 600px;
+      max-width: 700px;
       width: 100%;
     }
 
@@ -43,6 +42,27 @@
     .word:last-child {
       color: #00bcd4;
     }
+
+    .image-row {
+      margin-top: 2rem;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .image-row img {
+      border-radius: 12px;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-row img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
   </style>
 </head>
 <body>
@@ -51,9 +71,19 @@
       <div class="col-md-6 word">Love</div>
       <div class="col-md-6 word">Yourself</div>
     </div>
+
+    
+    <div class="image-row">
+      <a href="https://unsplash.com/photos/a-person-standing-in-a-field-at-sunset-4yCVTqt4RaA" target="_blank">
+        <img src="https://images.unsplash.com/photo-1536766768598-e09213fdcf22?auto=format&fit=crop&w=400&q=80" alt="Love">
+      </a>
+      <a href="https://unsplash.com/photos/person-sitting-on-rock-looking-at-mountains-u9cG4cuJ6bU" target="_blank">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Yourself">
+      </a>
+    </div>
   </div>
 
-
+  
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
