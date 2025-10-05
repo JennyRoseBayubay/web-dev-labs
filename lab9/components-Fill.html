@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aesthetic Bootstrap UI</title>
 
-  
+ 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
   
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
@@ -61,34 +61,30 @@
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
     }
 
-    .navbar-center {
-      margin: 0 auto;
-    }
-
     .navbar-brand {
       font-weight: 600;
       color: #ff85a2 !important;
-      font-size: 1.8rem;
+      font-size: 2rem;
+      margin: 0 auto;
     }
 
     .image-gallery {
       display: none;
-      margin-top: 30px;
+      margin-top: 40px;
       text-align: center;
       animation: fadeIn 1s ease-in-out forwards;
     }
 
     .image-gallery img {
-      width: 250px;
+      max-width: 90%;
       height: auto;
-      margin: 10px;
-      border-radius: 15px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s ease;
     }
 
     .image-gallery img:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
 
     @keyframes fadeIn {
@@ -101,7 +97,7 @@
 
  
   <nav class="navbar navbar-expand-lg navbar-custom justify-content-center">
-    <a class="navbar-brand navbar-center text-center" href="#">MySite</a>
+    <a class="navbar-brand text-center" href="#">MySite</a>
   </nav>
 
   
@@ -114,12 +110,12 @@
     <strong>Success!</strong> This is a custom Bootstrap alert.
   </div>
 
-  
+ 
   <div class="image-gallery" id="gallery">
-   <img src="images/quotefortoday.jpg" alt="Aesthetic" />
+    <img src="images/quotefortoday.jpg" alt="Aesthetic" class="img-fluid" />
   </div>
 
-  
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
   
