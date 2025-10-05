@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bootstrap Grid Example</title>
 
-  
+ 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
   
@@ -13,14 +13,22 @@
 
   <style>
     body {
-      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      background: linear-gradient(135deg, #fce38a, #f38181, #95e1d3);
+      background-size: 600% 600%;
+      animation: gradientBG 15s ease infinite;
       font-family: 'Poppins', sans-serif;
       padding: 40px 0;
     }
 
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     .container {
       max-width: 960px;
-      background-color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.9);
       padding: 40px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -38,7 +46,7 @@
     }
 
     .grid-box {
-      background: #f7f9fc;
+      background: rgba(255, 255, 255, 0.8);
       border-radius: 12px;
       padding: 30px 20px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -48,45 +56,45 @@
     }
 
     .grid-box:hover {
-      background: #e3f2fd;
+      background: rgba(255, 255, 255, 1);
       transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Bootstrap Grid Example</h1>
+    <h1>Free Websites to Use</h1>
 
     <div class="row text-center">
       <div class="col-md-4">
-        <div class="grid-box">Column 1</div>
+        <div class="grid-box">Netflix</div>
       </div>
       <div class="col-md-4">
-        <div class="grid-box">Column 2</div>
+        <div class="grid-box">Youtube</div>
       </div>
       <div class="col-md-4">
-        <div class="grid-box">Column 3</div>
+        <div class="grid-box">Moviesjoy.is</div>
       </div>
     </div>
 
     <div class="row text-center">
       <div class="col-md-6">
-        <div class="grid-box">Column 1 (Half Width)</div>
+        <div class="grid-box">Kisskh</div>
       </div>
       <div class="col-md-6">
-        <div class="grid-box">Column 2 (Half Width)</div>
+        <div class="grid-box">Iwanttfc</div>
       </div>
     </div>
 
     <div class="row text-center">
       <div class="col-md-12">
-        <div class="grid-box">Full Width Column</div>
+        <div class="grid-box">Tiktok/Reels</div>
       </div>
     </div>
   </div>
 
-
+  
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
