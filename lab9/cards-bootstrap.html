@@ -1,94 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aesthetic Bootstrap Cards</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background: linear-gradient(to right, #f8f9fa, #e9ecef);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aesthetic Bootstrap Cards</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        .card {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-        }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
 
-        .card-img-top {
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            height: 200px;
-            object-fit: cover;
-        }
+    .card-img-top {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      height: 200px;
+      object-fit: cover;
+    }
 
-        .container {
-            margin-top: 60px;
-        }
+    .container {
+      margin-top: 60px;
+    }
 
-        .card-title {
-            font-weight: 600;
-        }
+    .card-title {
+      font-weight: 600;
+    }
 
-        .btn-custom {
-            background-color: #6c63ff;
-            color: white;
-            border: none;
-        }
+    .btn-custom {
+      background-color: #6c63ff;
+      color: white;
+      border: none;
+    }
 
-        .btn-custom:hover {
-            background-color: #574fd6;
-        }
-    </style>
+    .btn-custom:hover {
+      background-color: #574fd6;
+    }
+
+    .collapse-content {
+      margin-top: 10px;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <h2 class="text-center mb-5">Our Featured Cards</h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://source.unsplash.com/400x200/?nature" class="card-img-top" alt="Nature">
-                    <div class="card-body">
-                        <h5 class="card-title">Beautiful Nature</h5>
-                        <p class="card-text">Explore the serene beauty of untouched nature and peaceful landscapes.</p>
-                        <a href="#" class="btn btn-custom">Read More</a>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <h2 class="text-center mb-5">Our Favorite Kpop Stars</h2>
+    <div class="row g-4">
 
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://source.unsplash.com/400x200/?technology" class="card-img-top" alt="Tech">
-                    <div class="card-body">
-                        <h5 class="card-title">Modern Technology</h5>
-                        <p class="card-text">Stay ahead with the latest innovations in the world of tech and gadgets.</p>
-                        <a href="#" class="btn btn-custom">Discover</a>
-                    </div>
-                </div>
+      
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/bts jeon jungkook.jpg" class="card-img-top" alt="Bts Jeon Jungkook">
+          <div class="card-body">
+            <h5 class="card-title">About Bts Jeon Jungkook</h5>
+            <p class="card-text">Jeon Jungkook is a South Korean singer-songwriter, dancer, rapper, producer and composer under Big Hit Entertainment. He is best known as the main vocalist, lead dancer, center, and maknae of the worldwide sensational boy group BTS.</p>
+            <a class="btn btn-custom" data-bs-toggle="collapse" href="#jungkookMore" role="button" aria-expanded="false" aria-controls="jungkookMore">
+              Read More
+            </a>
+            <div class="collapse collapse-content" id="jungkookMore">
+              <p>
+                Born on September 1, 1997, in Busan, South Korea, Jungkook debuted with BTS in 2013. Known for his strong stage presence and versatile vocals, he has captivated fans worldwide. Outside BTS, he’s released solo tracks like "Euphoria," "Still With You," and "Seven" — showing his individual artistry. Jungkook also participates in songwriting, choreography, and production. His passion for art, fitness, and fashion has made him a Gen Z icon globally.
+              </p>
             </div>
-
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://source.unsplash.com/400x200/?travel" class="card-img-top" alt="Travel">
-                    <div class="card-body">
-                        <h5 class="card-title">Adventure Travel</h5>
-                        <p class="card-text">Embark on thrilling adventures and discover new places around the globe.</p>
-                        <a href="#" class="btn btn-custom">Explore</a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/bts park jimin.webp" class="card-img-top" alt="Bts Park Jimin">
+          <div class="card-body">
+            <h5 class="card-title">Bts Park Jimin</h5>
+            <p class="card-text">Park Jimin is a South Korean singer-songwriter, dancer, composer, and producer under Big Hit Entertainment HYBE Labels. He is best known as the lead vocalist and one of the main dancers of the worldwide sensation boy group BTS.</p>
+            <a class="btn btn-custom" data-bs-toggle="collapse" href="#jiminMore" role="button" aria-expanded="false" aria-controls="jiminMore">
+              Read More
+            </a>
+            <div class="collapse collapse-content" id="jiminMore">
+              <p>
+                Jimin was born on October 13, 1995, in Busan, South Korea. He studied contemporary dance at Busan High School of Arts and later joined Big Hit. Known for his expressive and emotional performances, Jimin has released solo tracks like "Lie," "Serendipity," and "Like Crazy." His stage presence, powerful vocals, and graceful dance moves have earned him immense admiration from fans around the world.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+   
+      <div class="col-md-4">
+        <div class="card">
+          <img src="images/bts kim taehyung.jpg" class="card-img-top" alt="Bts Kim Taehyung">
+          <div class="card-body">
+            <h5 class="card-title">Bts Kim Taehyung</h5>
+            <p class="card-text">Kim Taehyung, known under his stage name V, is a South Korean singer-songwriter, dancer, composer, producer, and actor under Big Hit Entertainment and HYBE Labels. He is best known as one of the vocalists and visuals of the worldwide sensation boy group BTS.</p>
+            <a class="btn btn-custom" data-bs-toggle="collapse" href="#taehyungMore" role="button" aria-expanded="false" aria-controls="taehyungMore">
+              Read More
+            </a>
+            <div class="collapse collapse-content" id="taehyungMore">
+              <p>
+                Born on December 30, 1995, in Daegu, South Korea, Taehyung is known for his deep, soulful voice and artistic charisma. He has released solo tracks like "Stigma," "Singularity," and "Inner Child." V is also a talented photographer and actor, having starred in the historical drama *Hwarang*. His fashion sense, warm personality, and unique artistry make him a standout star in and outside of BTS.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
