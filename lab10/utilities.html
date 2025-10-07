@@ -1,37 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Utility Playground</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌟 Utility Playground 🌟</title>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(-45deg, #ffecd2, #fcb69f, #a18cd1, #fbc2eb);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      width: 100%;
+    }
+
+    h1 {
+      font-weight: 600;
+      text-align: center;
+      color: #6a1b9a;
+      margin-bottom: 30px;
+    }
+
+    .highlight-box {
+      background-color: #fff3cd;
+      border-left: 5px solid #ffc107;
+      padding: 20px;
+      border-radius: 10px;
+      font-weight: 500;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .responsive-text {
+      background-color: #e8eaf6;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #1a237e;
+    }
+
+    .small-screen-text {
+      background-color: #f8d7da;
+      color: #721c24;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+      font-size: 1rem;
+    }
+
+    
+    .responsive-text,
+    .small-screen-text {
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container mt-5">
-        
-        <h1 class="text-center mt-4">Welcome to the Utility Playground</h1>
+  <div class="container">
+    <h1>🌈 Welcome to the Utility Playground</h1>
 
-        
-        <div class="bg-warning p-4 mb-3">
-            This is a box with a warning background color, padding of 4 units, and a bottom margin of 3 units.
-            It showcases Bootstrap's background, padding, and margin utilities.
-        </div>
-
-        
-        <p class="d-none d-md-block">
-            This paragraph is hidden on extra-small and small screens (d-none),
-            but it becomes visible on medium screens (md) and larger (d-md-block).
-            Try resizing your browser window to see its responsiveness!
-        </p>
-
-        <p class="d-block d-md-none text-danger mt-3">
-            (You're seeing this text because you're on a small screen where the responsive paragraph above is hidden.)
-        </p>
+   
+    <div class="highlight-box mb-4">
+      This is a box with a warning background color, padding, and margin.
+      It showcases Bootstrap's utility classes like <code>bg-warning</code>, <code>p-4</code>, and <code>mb-3</code>.
     </div>
 
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <p class="responsive-text d-none d-md-block">
+      This paragraph is hidden on extra-small and small screens (<code>d-none</code>),
+      but becomes visible on medium and larger screens (<code>d-md-block</code>).
+      Resize your browser window to see it disappear!
+    </p>
+
+    
+    <p class="small-screen-text d-block d-md-none">
+      📱 You're seeing this because you're on a small screen!
+      The paragraph above is hidden on smaller viewports using <code>d-none d-md-block</code>.
+    </p>
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
