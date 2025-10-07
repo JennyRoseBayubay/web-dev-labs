@@ -1,38 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alert and Button Showcase</title>
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alert and Button Showcase</title>
+
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+   
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(-45deg, #e3f2fd, #fce4ec, #ede7f6, #f3e5f5);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      max-width: 800px;
+      width: 100%;
+    }
+
+    h1 {
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: #6a1b9a;
+    }
+
+    .btn {
+      margin: 5px;
+    }
+
+    .alert {
+      font-size: 1rem;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Bootstrap Alert Showcase</h1>
-        
-        <div class="alert alert-success" role="alert">
-            <strong>Success!</strong> This alert indicates a successful or positive action.
-        </div>
-        
-        <div class="alert alert-danger" role="alert">
-            <strong>Danger!</strong> This alert indicates a dangerous or potentially negative action.
-        </div>
-        
-        <div class="alert alert-warning" role="alert">
-            <strong>Warning!</strong> This alert indicates a potentially dangerous situation.
-        </div>
-        <h1>Bootstrap Button Showcase</h1>
-        
-        <button type="button" class="btn btn-primary">Primary</button>
-       
-        <button type="button" class="btn btn-secondary">Secondary</button>
-        
-        <button type="button" class="btn btn-outline-primary">Outline Primary</button>
-    </div>
+
+  <div class="container">
+    <h1 class="text-center">💫 Bootstrap Alert & Button Showcase 💫</h1>
+
     
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="alert alert-success d-flex align-items-center" role="alert">
+      <i class="bi bi-check-circle-fill mr-2"></i>
+      <strong>Success!</strong>&nbsp; This alert indicates a successful or positive action.
+    </div>
+
+    <div class="alert alert-danger d-flex align-items-center" role="alert">
+      <i class="bi bi-x-circle-fill mr-2"></i>
+      <strong>Danger!</strong>&nbsp; This alert indicates a dangerous or potentially negative action.
+    </div>
+
+    <div class="alert alert-warning d-flex align-items-center" role="alert">
+      <i class="bi bi-exclamation-triangle-fill mr-2"></i>
+      <strong>Warning!</strong>&nbsp; This alert indicates a potentially dangerous situation.
+    </div>
+
+    
+    <h3 class="mt-4">Buttons with Icons</h3>
+
+    <button type="button" class="btn btn-success">
+      <i class="bi bi-hand-thumbs-up-fill"></i> Like
+    </button>
+
+    <button type="button" class="btn btn-danger">
+      <i class="bi bi-hand-thumbs-down-fill"></i> Dislike
+    </button>
+
+    <button type="button" class="btn btn-warning text-white">
+      <i class="bi bi-exclamation-circle-fill"></i> Warning
+    </button>
+
+    <button type="button" class="btn btn-primary">
+      <i class="bi bi-star-fill"></i> Favorite
+    </button>
+
+    <button type="button" class="btn btn-outline-dark">
+      <i class="bi bi-share-fill"></i> Share
+    </button>
+
+    <button type="button" class="btn btn-secondary">
+      <i class="bi bi-info-circle-fill"></i> Info
+    </button>
+  </div>
+
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
