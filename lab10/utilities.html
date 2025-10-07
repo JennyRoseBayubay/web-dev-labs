@@ -7,12 +7,10 @@
 
   
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-
+ 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
-    
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(-45deg, #ffecd2, #fcb69f, #a18cd1, #fbc2eb);
@@ -74,7 +72,14 @@
       font-size: 1rem;
     }
 
-    
+    .highlight-blue {
+      background-color: #d0ebff;
+      color: #0b5394;
+      padding: 8px 12px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+
     .responsive-text,
     .small-screen-text {
       transition: all 0.3s ease-in-out;
@@ -86,19 +91,20 @@
   <div class="container">
     <h1>🌈 Welcome to Our Program</h1>
 
-     <img src="images/summer-youth-program.jpg" class="card-img-top" alt="For all">
-   
+    <img src="images/summer-youth-program.jpg" class="card-img-top" alt="For all">
+
     <p class="responsive-text d-none d-md-block">
-    Summer youth programs offer structured activities, learning, and engagement for young people during the summer months, focusing on various aspects like academic enrichment, sports, cultural immersion, work experience, and character building.
+      <span class="highlight-blue">
+        Summer youth programs offer structured activities, learning, and engagement for young people during the summer months, focusing on various aspects like academic enrichment, sports, cultural immersion, work experience, and character building.
+      </span>
     </p>
 
-    
     <p class="small-screen-text d-block d-md-none">
       These programs are designed to provide supervision and keep youth safe and engaged, often involving partnerships with schools, government agencies, community organizations, and private businesses to provide a range of opportunities for personal and professional growth. 
     </p>
   </div>
 
-  
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
