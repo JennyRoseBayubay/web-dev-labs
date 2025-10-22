@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cafe Menu</title>
+    <style>
+        .menu-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Menu</h1>
+
+    <div class="menu-item">
+        <h2>Coffee</h2>
+        <p>Delicious coffee - $2.50</p>
+        <button onclick="orderItem('Coffee')">Order Now</button>
+    </div>
+
+    <div class="menu-item">
+        <h2>Sandwich</h2>
+        <p>Fresh sandwich - $5.00</p>
+        <button onclick="orderItem('Sandwich')">Order Now</button>
+    </div>
+
+    <div class="menu-item">
+        <h2>Cake</h2>
+        <p>Sweet cake - $4.00</p>
+        <button onclick="orderItem('Cake')">Order Now</button>
+    </div>
+
+    <script>
+        function orderItem(item) {
+            alert("You ordered " + item + "!");
+            
+        }
+    </script>
+</body>
