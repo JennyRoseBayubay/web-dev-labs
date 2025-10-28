@@ -194,6 +194,39 @@
             link.classList.add('active');
         });
     });
+    
+    <script>
+    const toggleBtn = document.querySelector('.toggle-theme');
+    const body = document.body;
+
+    // Load saved theme on page load
+    if(localStorage.getItem('theme') === 'dark') body.classList.add('dark-mode');
+
+    toggleBtn.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+
+    // Dish search filter
+    const searchInput = document.getElementById('searchInput');
+    if(searchInput) {
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            document.querySelectorAll('.dish').forEach(dish => {
+                const text = dish.textContent.toLowerCase();
+                dish.style.display = text.includes(query) ? 'flex' : 'none';
+            });
+        });
+    }
+
+    // Highlight active nav link
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
 </script>
 </body>
 </html>
