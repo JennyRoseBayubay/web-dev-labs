@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luzon Dishes</title>
+<style>
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to right, #cde7f0, #fff9c4);
+        color: #2b2b2b;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    
+    body.dark-mode {
+        background: #2c2c2c;
+        color: #f1f1f1;
+    }
+
+    h1 { text-align: center; color: #0d47a1; margin: 40px 0; font-size: 2.5rem; }
+    nav {
+        background: linear-gradient(to right, #1976d2, #ffeb3b);
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    nav ul { list-style: none; display: flex; justify-content: center; }
+    nav li { margin: 0; }
+    nav a {
+        display: block;
+        padding: 15px 25px;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background 0.3s, transform 0.2s;
+    }
+    nav a.active { background-color: rgba(255,255,255,0.3); border-radius: 8px; }
+    nav a:hover { transform: scale(1.05); }
+
+    .toggle-theme {
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        background: #0d47a1;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+    .search-box { margin-bottom: 30px; text-align: center; }
+    .search-box input {
+        padding: 10px 15px;
+        width: 250px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+    }
+
+    .dish {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        padding: 20px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .dish:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    .dish img {
+        width: 200px; height: 150px;
+        object-fit: cover; border-radius: 10px;
+        border: 3px solid #fff176;
+    }
+    .dish strong { font-size: 1.3rem; color: #0d47a1; }
+    .dish a { color: #1565c0; text-decoration: none; }
+    .dish a:hover { text-decoration: underline; }
+
+    footer {
+        text-align: center; padding: 20px;
+        background-color: #fffde7; color: #0d47a1;
+        font-size: 0.9rem; border-top: 1px solid #bbdefb;
+    }
+
+    @media (max-width: 768px) {
+        .dish { flex-direction: column; align-items: flex-start; }
+        .dish img { width: 100%; height: auto; }
+    }
+</style>
+</head>
+<body>
+
+<button class="toggle-theme">Toggle Dark Mode</button>
+
+
+<nav>
+    <ul>
+        <li><a href="luzon.html" class="active">Luzon</a></li>
+        <li><a href="visayas.html">Visayas</a></li>
+        <li><a href="mindanao.html">Mindanao</a></li>
+    </ul>
+</nav>
+
+<h1>Mga Putaheng Luzon</h1>
+
+<div class="container">
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search dishes...">
+    </div>
+
+    <div class="dish">
+        <img src="images/Pinakbet-Ilocano.jpg" alt="Pinakbet-Ilocano">
+        <div><strong><a href="https://panlasangpinoy.com/pakbet/" target="_blank">Pinakbet Ilocano</a></strong></div>
+    </div>
+    <div class="dish">
+        <img src="images/bagnet-ibagnet.webp" alt="Bagnet-Ilocos">
+        <div><strong><a href="https://panlasangpinoy.com/bagnet-recipe/" target="_blank">Bagnet Ilocos Norte</a></strong></div>
+    </div>
+    <div class="dish">
+        <img src="images/Laing.jpg" alt="Laing-Bicol">
+        <div><strong><a href="https://panlasangpinoy.com/laing-recipe/" target="_blank">Laing Bicol Region</a></strong></div>
+    </div>
+</div>
+
+<footer>
+    Alamin at tikman ang yaman ng kulturang Pilipino sa bawat kagat! 🇵🇭
+</footer>
+
+<script>
+    
+    const toggleBtn = document.querySelector('.toggle-theme');
+    toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+
+    
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', function() {
+        const query = this.value.toLowerCase();
+        document.querySelectorAll('.dish').forEach(dish => {
+            const text = dish.textContent.toLowerCase();
+            dish.style.display = text.includes(query) ? 'flex' : 'none';
+        });
+    });
+
+    
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+</script>
+</body>
+</html>
