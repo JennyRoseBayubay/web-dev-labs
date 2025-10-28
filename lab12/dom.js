@@ -12,7 +12,7 @@
     <script src="dom.js"></script>
 </body>
 </html>
-You sent
+
 document.addEventListener('DOMContentLoaded', function() {
     const changeButton = document.getElementById('change-button');
     const pageTitle = document.getElementById('page-title');
