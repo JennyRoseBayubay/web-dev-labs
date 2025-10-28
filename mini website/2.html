@@ -14,19 +14,20 @@
         transition: background 0.3s, color 0.3s;
     }
 
-    
+
     body.dark-mode {
         background: #2c2c2c;
         color: #f1f1f1;
     }
 
-    h1 { text-align: center; color: #0d47a1; margin: 40px 0; font-size: 2.5rem; }
+    h1 { text-align: center; color: #0d47a1; margin: 40px 0; font-size: 2.5rem; letter-spacing: 1px; }
+
     nav {
         background: linear-gradient(to right, #1976d2, #ffeb3b);
         border-radius: 0 0 12px 12px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    nav ul { list-style: none; display: flex; justify-content: center; }
+    nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; }
     nav li { margin: 0; }
     nav a {
         display: block;
@@ -34,14 +35,18 @@
         color: #fff;
         font-weight: bold;
         text-decoration: none;
-        transition: background 0.3s, transform 0.2s;
+        transition: all 0.3s ease;
+        border-radius: 8px;
     }
-    nav a.active { background-color: rgba(255,255,255,0.3); border-radius: 8px; }
-    nav a:hover { transform: scale(1.05); }
+    nav a.active { background-color: rgba(255,255,255,0.3); }
+    nav a:hover {
+        transform: scale(1.05);
+        background-color: rgba(255,255,255,0.2);
+    }
 
     .toggle-theme {
         position: fixed;
-        top: 10px;
+        top: 15px;
         right: 20px;
         background: #0d47a1;
         color: #fff;
@@ -49,7 +54,10 @@
         padding: 10px 15px;
         border-radius: 8px;
         cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        transition: transform 0.2s;
     }
+    .toggle-theme:hover { transform: scale(1.05); }
 
     .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
     .search-box { margin-bottom: 30px; text-align: center; }
@@ -59,6 +67,12 @@
         border-radius: 8px;
         border: 1px solid #ccc;
         font-size: 1rem;
+        transition: border 0.3s, box-shadow 0.3s;
+    }
+    .search-box input:focus {
+        outline: none;
+        border-color: #0d47a1;
+        box-shadow: 0 0 5px rgba(13,71,161,0.5);
     }
 
     .dish {
@@ -70,7 +84,10 @@
         display: flex;
         align-items: center;
         gap: 20px;
-        transition: transform 0.3s, box-shadow 0.3s;
+        transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    }
+    body.dark-mode .dish {
+        background: #3c3c3c;
     }
     .dish:hover {
         transform: scale(1.03);
@@ -80,20 +97,32 @@
         width: 200px; height: 150px;
         object-fit: cover; border-radius: 10px;
         border: 3px solid #fff176;
+        transition: transform 0.3s, border 0.3s;
+    }
+    .dish img:hover {
+        transform: scale(1.05);
+        border-color: #ffd54f;
     }
     .dish strong { font-size: 1.3rem; color: #0d47a1; }
-    .dish a { color: #1565c0; text-decoration: none; }
-    .dish a:hover { text-decoration: underline; }
+    .dish a {
+        color: #1565c0;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    .dish a:hover { text-decoration: underline; color: #0d47a1; }
 
     footer {
         text-align: center; padding: 20px;
         background-color: #fffde7; color: #0d47a1;
         font-size: 0.9rem; border-top: 1px solid #bbdefb;
     }
+    body.dark-mode footer { background-color: #222; color: #f1f1f1; border-top: 1px solid #555; }
 
     @media (max-width: 768px) {
         .dish { flex-direction: column; align-items: flex-start; }
         .dish img { width: 100%; height: auto; }
+        nav ul { flex-direction: column; }
+        nav li { margin-bottom: 5px; }
     }
 </style>
 </head>
@@ -138,8 +167,13 @@
 <script>
     
     const toggleBtn = document.querySelector('.toggle-theme');
+    const body = document.body;
+
+    if(localStorage.getItem('theme') === 'dark') body.classList.add('dark-mode');
+
     toggleBtn.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
+        body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
     });
 
     
