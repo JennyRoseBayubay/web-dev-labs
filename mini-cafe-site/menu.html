@@ -1,40 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Cafe Menu</title>
-    <style>
-        .menu-item {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Menu ☕</title>
+
+
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+  >
+
+  
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" 
+    rel="stylesheet"
+  >
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f8e1ba, #f6d6ad);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 60px;
+    }
+
+    h1 {
+      color: #5b3a29;
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .menu-card {
+      background: #fff;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .menu-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 35px rgba(0,0,0,0.25);
+    }
+
+    .menu-image {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .card-body h2 {
+      color: #5b3a29;
+      font-weight: 600;
+    }
+
+    .btn-order {
+      background: #8b5e3c;
+      color: white;
+      border-radius: 10px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .btn-order:hover {
+      background: #70482d;
+      transform: scale(1.05);
+      box-shadow: 0 3px 10px rgba(139, 94, 60, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      color: #5b3a29;
+      margin-top: 50px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <h1>Our Menu</h1>
 
-    <div class="menu-item">
-        <h2>Coffee</h2>
-        <p>Delicious coffee - $2.50</p>
-        <button onclick="orderItem('Coffee')">Order Now</button>
+  <h1>☕ Welcome to Café Aroma</h1>
+
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+
+      
+      <div class="col-md-4">
+        <div class="menu-card card">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Coffee" class="menu-image">
+          <div class="card-body text-center">
+            <h2>Coffee</h2>
+            <p class="text-muted mb-2">Rich and aromatic brew</p>
+            <p class="fw-bold">$2.50</p>
+            <button class="btn btn-order" onclick="orderItem('Coffee')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4">
+        <div class="menu-card card">
+          <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141" alt="Sandwich" class="menu-image">
+          <div class="card-body text-center">
+            <h2>Sandwich</h2>
+            <p class="text-muted mb-2">Fresh and flavorful</p>
+            <p class="fw-bold">$5.00</p>
+            <button class="btn btn-order" onclick="orderItem('Sandwich')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4">
+        <div class="menu-card card">
+          <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87" alt="Cake" class="menu-image">
+          <div class="card-body text-center">
+            <h2>Cake</h2>
+            <p class="text-muted mb-2">Sweet and delightful</p>
+            <p class="fw-bold">$4.00</p>
+            <button class="btn btn-order" onclick="orderItem('Cake')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
 
-    <div class="menu-item">
-        <h2>Sandwich</h2>
-        <p>Fresh sandwich - $5.00</p>
-        <button onclick="orderItem('Sandwich')">Order Now</button>
-    </div>
+  <footer>
+    © 2025 Café Aroma • Made with ❤️ & Coffee
+  </footer>
 
-    <div class="menu-item">
-        <h2>Cake</h2>
-        <p>Sweet cake - $4.00</p>
-        <button onclick="orderItem('Cake')">Order Now</button>
-    </div>
+  
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
 
-    <script>
-        function orderItem(item) {
-            alert("You ordered " + item + "!");
-            
-        }
-    </script>
+  <script>
+    function orderItem(item) {
+      alert("☕ Thank you! You ordered " + item + ".");
+    }
+  </script>
+
 </body>
+</html>
