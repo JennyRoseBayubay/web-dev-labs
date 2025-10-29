@@ -1,131 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luzon Dishes</title>
-<style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-        font-family: 'Segoe UI', sans-serif;
-        background: linear-gradient(to right, #cde7f0, #fff9c4);
-        color: #2b2b2b;
-        transition: background 0.3s, color 0.3s;
-        scroll-behavior: smooth;
-    }
-    body.dark-mode {
-        background: #2c2c2c;
-        color: #f1f1f1;
-    }
+    <meta charset="UTF-8">
+    <title>Philippine Dishes: Luzon, Visayas & Mindanao</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
 
-    h1 { text-align: center; color: #0d47a1; margin: 40px 0; font-size: 2.5rem; letter-spacing: 1px; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fffde7;
+        }
 
-    nav {
-        background: linear-gradient(to right, #1976d2, #ffeb3b);
-        border-radius: 0 0 12px 12px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        transition: all 0.3s ease;
-    }
-    nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; }
-    nav li { margin: 0; }
-    nav a {
-        display: block;
-        padding: 15px 25px;
-        color: #fff;
-        font-weight: bold;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        border-radius: 8px;
-    }
-    nav a.active { background-color: rgba(255,255,255,0.3); }
-    nav a:hover {
-        transform: scale(1.05);
-        background-color: rgba(255,255,255,0.2);
-    }
+        
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(to right, #1976d2, #ffeb3b, #ec407a, #ffa726);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
 
-    .toggle-theme {
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            padding: 15px 25px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .dish {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        .dish:hover {
+            transform: scale(1.02);
+        }
+
+        .dish img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #fff176;
+        }
+
+        .dish strong {
+            font-size: 1.3rem;
+        }
+
+        .dish a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .dish a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #fffde7;
+            color: #0d47a1;
+            font-size: 0.9rem;
+            border-top: 1px solid #bbdefb;
+        }
+
+        
+        #luzon {
+            background: linear-gradient(to right, #cde7f0, #fff9c4);
+            color: #0d47a1;
+        }
+
+        #luzon .dish img {
+            border-color: #fff176;
+        }
+
+        #luzon .dish strong a {
+            color: #1565c0;
+        }
+
+        #visayas {
+            background: linear-gradient(to right, #f8bbd0, #bbdefb);
+            color: #1565c0;
+        }
+
+        #visayas .dish img {
+            border-color: #f48fb1;
+        }
+
+        #visayas .dish strong a {
+            color: #ec407a;
+        }
+
+        #mindanao {
+            background: linear-gradient(to right, #fff3e0, #ffe082);
+            color: #ef6c00;
+        }
+
+        #mindanao .dish img {
+            border-color: #ffcc80;
+        }
+
+        #mindanao .dish strong a {
+            color: #fb8c00;
+        }
+        
+        
+        body.dark-mode {
+    background: #2c2c2c !important;
+    color: #f1f1f1 !important;
+        }
+        body.dark-mode nav {
+        background: linear-gradient(to right, #444, #666) !important;
+        }
+        body.dark-mode .dish {
+        background: #3c3c3c !important;
+        }
+        body.dark-mode footer {
+        background: #222 !important;
+        color: #fff !important;
+        }
+
+        
+        .toggle-theme {
         position: fixed;
         top: 15px;
         right: 20px;
         background: #0d47a1;
-        color: #fff;
+        color: white;
         border: none;
         padding: 10px 15px;
         border-radius: 8px;
         cursor: pointer;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        transition: transform 0.2s;
+        font-weight: bold;
         z-index: 1000;
-    }
-    .toggle-theme:hover { transform: scale(1.05); }
+        transition: transform 0.2s;
+        }
+        .toggle-theme:hover {
+        transform: scale(1.05);
+        }
 
-    .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-
-    .search-box { margin-bottom: 30px; text-align: center; }
-    .search-box input {
+        
+        .search-box {
+        margin-bottom: 30px;
+        text-align: center;
+        }
+        .search-box input {
         padding: 10px 15px;
         width: 250px;
         border-radius: 8px;
         border: 1px solid #ccc;
         font-size: 1rem;
         transition: border 0.3s, box-shadow 0.3s;
-    }
-    .search-box input:focus {
+        }
+        .search-box input:focus {
         outline: none;
         border-color: #0d47a1;
         box-shadow: 0 0 5px rgba(13,71,161,0.5);
-    }
+        }
 
-    .dish {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-        padding: 20px;
-        margin-bottom: 30px;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    body.dark-mode .dish { background: #3c3c3c; }
-    .dish.visible {
-        opacity: 1;
-        transform: translateY(0);
-        transition: all 0.8s ease;
-    }
-    .dish:hover {
-        transform: scale(1.03);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    }
-    .dish img {
-        width: 200px; height: 150px;
-        object-fit: cover; border-radius: 10px;
-        border: 3px solid #fff176;
-        transition: transform 0.3s, border 0.3s;
-    }
-    .dish img:hover {
-        transform: scale(1.05);
-        border-color: #ffd54f;
-    }
-    .dish strong { font-size: 1.3rem; color: #0d47a1; }
-    .dish a {
-        color: #1565c0;
-        text-decoration: none;
-        transition: color 0.3s;
-    }
-    .dish a:hover { text-decoration: underline; color: #0d47a1; }
-
-    footer {
-        text-align: center; padding: 20px;
-        background-color: #fffde7; color: #0d47a1;
-        font-size: 0.9rem; border-top: 1px solid #bbdefb;
-        transition: background 0.3s, color 0.3s;
-    }
-    body.dark-mode footer { background-color: #222; color: #f1f1f1; border-top: 1px solid #555; }
-
-    #scrollTop {
+        
+        #scrollTop {
         position: fixed;
         bottom: 20px;
         left: 20px;
@@ -139,123 +216,223 @@
         box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         display: none;
         z-index: 1000;
-    }
+        }
 
-    @media (max-width: 768px) {
-        .dish { flex-direction: column; align-items: flex-start; }
-        .dish img { width: 100%; height: auto; }
-        nav ul { flex-direction: column; }
-        nav li { margin-bottom: 5px; }
-    }
-</style>
+
+    </style>
 </head>
 <body>
 
-<button class="toggle-theme">🌙 Dark Mode</button>
-<button id="scrollTop">⬆️ Top</button>
+    
+    <nav>
+        <ul>
+            <li><a href="#luzon">Luzon</a></li>
+            <li><a href="#visayas">Visayas</a></li>
+            <li><a href="#mindanao">Mindanao</a></li>
+        </ul>
+    </nav>
 
-<nav>
-    <ul>
-        <li><a href="luzon.html" class="active">Luzon</a></li>
-        <li><a href="visayas.html">Visayas</a></li>
-        <li><a href="mindanao.html">Mindanao</a></li>
-    </ul>
-</nav>
-
-<h1>Mga Putaheng Luzon</h1>
-
-<div class="container">
     <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Search dishes...">
+    <input type="text" id="searchInput" placeholder="Search dishes...">
     </div>
-
-    <div class="dish">
-        <img src="images/Pinakbet-Ilocano.jpg" alt="Pinakbet-Ilocano">
-        <div><strong><a href="https://panlasangpinoy.com/pakbet/" target="_blank">Pinakbet Ilocano</a></strong></div>
-    </div>
-    <div class="dish">
-        <img src="images/bagnet-ibagnet.webp" alt="Bagnet-Ilocos">
-        <div><strong><a href="https://panlasangpinoy.com/bagnet-recipe/" target="_blank">Bagnet Ilocos Norte</a></strong></div>
-    </div>
-    <div class="dish">
-        <img src="images/Laing.jpg" alt="Laing-Bicol">
-        <div><strong><a href="https://panlasangpinoy.com/laing-recipe/" target="_blank">Laing Bicol Region</a></strong></div>
-    </div>
-</div>
-
-<footer>
-    Alamin at tikman ang yaman ng kulturang Pilipino sa bawat kagat! 🇵🇭
-</footer>
-
-<script>
-    
-    const toggleBtn = document.querySelector('.toggle-theme');
-    const body = document.body;
-
-    if(localStorage.getItem('theme') === 'dark') {
-        body.classList.add('dark-mode');
-        toggleBtn.textContent = '☀️ Light Mode';
-    }
-
-    toggleBtn.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        const mode = body.classList.contains('dark-mode') ? 'dark' : 'light';
-        toggleBtn.textContent = mode === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
-        localStorage.setItem('theme', mode);
-    });
 
     
-    const searchInput = document.getElementById('searchInput');
-    searchInput.addEventListener('input', function() {
+    <section id="luzon">
+        <h1>Mga Putaheng Luzon</h1>
+        <div class="container">
+            <div class="dish">
+                <img src="images/Pinakbet-Ilocano.jpg" alt="Pinakbet-Ilocano">
+                <div>
+                    <strong><a href="https://panlasangpinoy.com/pakbet/" target="_blank">Pinakbet Ilocano</a></strong>
+                </div>
+            </div>
+
+            <div class="dish">
+                <img src="images/bagnet-ibagnet.webp" alt="Bagnet Ilocos Norte">
+                <div>
+                    <strong><a href="https://panlasangpinoy.com/bagnet-recipe/" target="_blank">Bagnet Ilocos Norte</a></strong>
+                </div>
+            </div>
+
+            <div class="dish">
+                <img src="images/Laing.jpg" alt="Laing Bicol Region">
+                <div>
+                    <strong><a href="https://panlasangpinoy.com/laing-recipe/" target="_blank">Laing Bicol Region</a></strong>
+                </div>
+            </div>
+
+            <div class="dish">
+                <img src="images/Bicol-Express-1.webp" alt="Bicol Express">
+                <div>
+                    <strong><a href="https://panlasangpinoy.com/bicol-express/" target="_blank">Bicol Express Bicol Region</a></strong>
+                </div>
+            </div>
+
+            <div class="dish">
+                <img src="images/Pancit-Batil-Patong-Cagayan.jpg" alt="Pancit Batil Patong">
+                <div>
+                    <strong><a href="https://panlasangpinoy.com/pancit-batil-patung-recipe/" target="_blank">Pancit Batil Patung Cagayan</a></strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="visayas">
+        <h1>Mga Putaheng Visayas</h1>
+        <div class="container">
+            <div class="dish">
+                <img src="images/RoastedPig_BestLechonInCebu_AuthenticFoodQuest.webp" alt="Lechon Cebu">
+                <div>
+                    <strong><a href="https://www.zoytotheworld.com/blog/cebu-food-trip-house-of-lechon/" target="_blank">Lechon in Cebu</a></strong>
+                </div>
+            </div>
+
+            <div class="dish">
+                <img src="images/kblrecipe-small-2 (1).jpg" alt="KBL">
+                <div>
+                    <strong><a href="https://panlasangpinoy.com/kbl-kadyos-baboy-at-langka/" target="_blank">Kadyos, Baboy, Langka (KBL)</a></strong>
+                </div>
+            </div>
+
+            <div class="dish">
+                <img src="images/S5Eokt4BcQdk2bRb9gatmwEsdvNEZvoPLVhETnW16kprZRGSHLm9B4qwVBgoNpc1aFdi9WE.jpg" alt="Piaya Bacolod">
+                <div>
+                    <strong><a href="https://steemit.com/food/@jezmacher/6-promoting-negros-food-category-the-bacolod-city-famous-delicacy-the-piaya" target="_blank">Piaya Bacolod</a></strong>
+                </div>
+            </div>
+
+            <div class="dish">
+                <img src="images/Batchoy (1).jpg" alt="Batchoy Iloilo">
+                <div>
+                    <strong><a href="https://panlasangpinoy.com/batchoy/" target="_blank">Batchoy in Iloilo</a></strong>
+                </div>
+            </div>
+
+            <div class="dish">
+                <img src="images/Inasal.jpg" alt="Chicken Inasal">
+                <div>
+                    <strong><a href="https://panlasangpinoy.com/grilled-chicken-inasal-recipe/" target="_blank">Chicken Inasal</a></strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="mindanao">
+        <h1>Mga Putaheng Mindanao</h1>
+        <div class="container">
+            <div class="dish">
+                <img src="images/Easy-Chicken-Pastil_feature-image.jpg" alt="Pastil Maguindanao">
+                <div>
+                    <strong><a href="https://yummykitchentv.com/easy-chicken-pastil/" target="_blank">Pastil (Maguindanao)</a></strong>
+                </div>
+            </div>
+
+            <div class="dish">
+                <img src="images/tausug beef kulma.jpg" alt="Beef Kulma">
+                <div>
+                    <strong><a href="https://pepper.ph/recipes/cheat-tausug-beef-kulma" target="_blank">Beef Kulma (Tausug)</a></strong>
+                </div>
+            </div>
+
+            <div class="dish">
+                <img src="images/Satti-de-Zamboanga-FoodwithMae-6.webp" alt="Satti Zamboanga">
+                <div>
+                    <strong><a href="http://www.foodwithmae.com/recipe-view/beef-bbq-with-spicy-gravy-satti-de-zamboanga/" target="_blank">Satti (Zamboanga)</a></strong>
+                </div>
+            </div>
+
+            <div class="dish">
+                <img src="images/sinuglaw-recipe-730x487.webp" alt="Sinuglaw Davao">
+                <div>
+                    <strong><a href="https://panlasangpinoy.com/sinuglaw-recipe/" target="_blank">Sinuglaw (Davao)</a></strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        Alamin at tikman ang yaman ng kulturang Pilipino sa bawat kagat! 🇵🇭
+        <script>
+
+const toggleBtn = document.createElement("button");
+toggleBtn.textContent = "🌙 Dark Mode";
+toggleBtn.className = "toggle-theme";
+document.body.appendChild(toggleBtn);
+
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    toggleBtn.textContent = "☀️ Light Mode";
+}
+
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const mode = document.body.classList.contains("dark-mode") ? "dark" : "light";
+    toggleBtn.textContent = mode === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode";
+    localStorage.setItem("theme", mode);
+});
+
+
+const searchInput = document.getElementById("searchInput");
+if (searchInput) {
+    searchInput.addEventListener("input", function () {
         const query = this.value.toLowerCase();
-        document.querySelectorAll('.dish').forEach(dish => {
+        document.querySelectorAll(".dish").forEach(dish => {
             const text = dish.textContent.toLowerCase();
-            dish.style.display = text.includes(query) ? 'flex' : 'none';
+            dish.style.display = text.includes(query) ? "flex" : "none";
         });
     });
+}
 
-    
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
-        });
-    });
 
-    
-    const fadeEls = document.querySelectorAll('.dish');
-    const fadeIn = () => {
-        fadeEls.forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 50) {
-                el.classList.add('visible');
-            }
-        });
-    };
-    window.addEventListener('scroll', fadeIn);
-    fadeIn();
+const scrollTopBtn = document.createElement("button");
+scrollTopBtn.id = "scrollTop";
+scrollTopBtn.textContent = "⬆️ Top";
+document.body.appendChild(scrollTopBtn);
 
-    
-    const nav = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.style.transform = 'scale(0.98)';
-            nav.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
-        } else {
-            nav.style.transform = 'scale(1)';
-            nav.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+window.addEventListener("scroll", () => {
+    scrollTopBtn.style.display = window.scrollY > 200 ? "block" : "none";
+});
+
+scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+
+const fadeEls = document.querySelectorAll(".dish");
+fadeEls.forEach(el => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(20px)";
+    el.style.transition = "all 1s ease-out";
+});
+
+const fadeIn = () => {
+    fadeEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
         }
     });
+};
+window.addEventListener("scroll", fadeIn);
+fadeIn();
 
-    
-    const scrollTopBtn = document.getElementById('scrollTop');
-    window.addEventListener('scroll', () => {
-        scrollTopBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
-    });
-    scrollTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+
+const nav = document.querySelector("nav");
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+        nav.style.transform = "scale(0.98)";
+        nav.style.boxShadow = "0 4px 15px rgba(0,0,0,0.2)";
+    } else {
+        nav.style.transform = "scale(1)";
+        nav.style.boxShadow = "0 4px 8px rgba(0,0,0,0.1)";
+    }
+});
 </script>
+
+    </footer>
+
 </body>
 </html>
