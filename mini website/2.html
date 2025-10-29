@@ -229,4 +229,110 @@
     });
 </script>
 </body>
+    <!-- BEAUTIFUL JAVASCRIPT DESIGN -->
+    <script>
+        // 🌙🌞 Light/Dark Mode Toggle
+        const toggleButton = document.createElement("button");
+        toggleButton.innerText = "🌙 Dark Mode";
+        toggleButton.style.position = "fixed";
+        toggleButton.style.bottom = "20px";
+        toggleButton.style.right = "20px";
+        toggleButton.style.background = "#8e24aa";
+        toggleButton.style.color = "white";
+        toggleButton.style.border = "none";
+        toggleButton.style.borderRadius = "30px";
+        toggleButton.style.padding = "10px 20px";
+        toggleButton.style.fontSize = "1rem";
+        toggleButton.style.cursor = "pointer";
+        toggleButton.style.boxShadow = "0 4px 10px rgba(0,0,0,0.2)";
+        toggleButton.style.zIndex = "1000";
+        document.body.appendChild(toggleButton);
+
+        let darkMode = false;
+        toggleButton.addEventListener("click", () => {
+            darkMode = !darkMode;
+            if (darkMode) {
+                document.body.style.background = "linear-gradient(to right, #1f1f1f, #333)";
+                document.body.style.color = "#f1f1f1";
+                toggleButton.innerText = "☀️ Light Mode";
+                toggleButton.style.background = "#f06292";
+                document.querySelectorAll(".dish, .container, footer, nav").forEach(el => {
+                    el.style.background = "rgba(255,255,255,0.08)";
+                    el.style.color = "#f1f1f1";
+                    el.style.boxShadow = "0 0 20px rgba(255,255,255,0.1)";
+                });
+            } else {
+                location.reload(); 
+            }
+        });
+
+        
+        const fadeInElements = document.querySelectorAll(".dish, .container, h1, h2, p");
+        fadeInElements.forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(20px)";
+            el.style.transition = "all 1s ease-out";
+        });
+
+        const fadeInOnScroll = () => {
+            fadeInElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 50) {
+                    el.style.opacity = "1";
+                    el.style.transform = "translateY(0)";
+                }
+            });
+        };
+        window.addEventListener("scroll", fadeInOnScroll);
+        fadeInOnScroll();
+
+        
+        document.querySelectorAll(".dish").forEach(card => {
+            card.addEventListener("mouseover", () => {
+                card.style.boxShadow = "0 0 25px rgba(255, 193, 7, 0.8)";
+            });
+            card.addEventListener("mouseout", () => {
+                card.style.boxShadow = "0 2px 12px rgba(0,0,0,0.08)";
+            });
+        });
+
+        
+        const topBtn = document.createElement("button");
+        topBtn.innerText = "⬆️ Top";
+        topBtn.style.position = "fixed";
+        topBtn.style.bottom = "20px";
+        topBtn.style.left = "20px";
+        topBtn.style.background = "#f06292";
+        topBtn.style.color = "white";
+        topBtn.style.border = "none";
+        topBtn.style.borderRadius = "30px";
+        topBtn.style.padding = "10px 20px";
+        topBtn.style.fontSize = "1rem";
+        topBtn.style.cursor = "pointer";
+        topBtn.style.display = "none";
+        topBtn.style.boxShadow = "0 4px 10px rgba(0,0,0,0.2)";
+        topBtn.style.zIndex = "1000";
+        document.body.appendChild(topBtn);
+
+        window.addEventListener("scroll", () => {
+            topBtn.style.display = window.scrollY > 200 ? "block" : "none";
+        });
+
+        topBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+
+        const nav = document.querySelector("nav");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                nav.style.transform = "scale(0.98)";
+                nav.style.boxShadow = "0 4px 15px rgba(0,0,0,0.2)";
+            } else {
+                nav.style.transform = "scale(1)";
+                nav.style.boxShadow = "0 4px 8px rgba(0,0,0,0.1)";
+            }
+        });
+    </script>
+
 </html>
