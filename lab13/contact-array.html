@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aesthetic Contact Form ✨</title>
+
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+      background-attachment: fixed;
+      padding: 2rem;
+    }
+
+    
+    .form-container {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 2rem 2.5rem;
+      width: 340px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .form-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      color: #333;
+      font-weight: 600;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      color: #444;
+      font-weight: 500;
+      margin-top: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      background: #fffaf6;
+      font-size: 1rem;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    textarea:focus {
+      border-color: #f9a1bc;
+      box-shadow: 0 0 0 4px rgba(249, 161, 188, 0.2);
+      background: #fff;
+    }
+
+    textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #f6a192, #f5c0aa);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(246, 161, 146, 0.3);
+    }
+
+    
+    .entries-container {
+      margin-top: 2rem;
+      width: 360px;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.6s ease;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    li {
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      padding: 12px 14px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      color: #444;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    li:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(135deg, #fff, #f9f9f9);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-container">
+    <h2>🌸 Contact Us</h2>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name">
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Write your message..."></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="entries-container">
+    <h2>💌 Entries</h2>
+    <ul id="entries"></ul>
+  </div>
+
+  <script>
+    const contactForm = document.getElementById('contactForm');
+    const entriesList = document.getElementById('entries');
+    let entries = [];
+
+    contactForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !message) return alert('Please fill in all fields ✨');
+
+      entries.push({ name, message });
+      displayEntries();
+
+      document.getElementById('name').value = '';
+      document.getElementById('message').value = '';
+    });
+
+    function displayEntries() {
+      entriesList.innerHTML = '';
+      entries.forEach(entry => {
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${entry.name}</strong>: ${entry.message}`;
+        entriesList.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>
