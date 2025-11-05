@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aesthetic Email Validator ✨</title>
+
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+      background-attachment: fixed;
+    }
+
+    
+    .container {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 2.5rem 2.8rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 340px;
+      transition: all 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      margin-bottom: 1.2rem;
+      color: #333;
+      font-weight: 600;
+    }
+
+    
+    label {
+      display: block;
+      text-align: left;
+      font-weight: 500;
+      color: #444;
+      margin-bottom: 0.5rem;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 12px 14px;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      background-color: #fffaf6;
+      font-size: 1rem;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    input[type="email"]:focus {
+      border-color: #f9a1bc;
+      box-shadow: 0 0 0 4px rgba(249, 161, 188, 0.2);
+      background-color: #fff;
+    }
+
+    
+    button {
+      margin-top: 1.2rem;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #f6a192, #f5c0aa);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(246, 161, 146, 0.3);
+    }
+
+    
+    #errorMessage, #successMessage {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      animation: fadeIn 0.4s ease;
+    }
+
+    #errorMessage {
+      color: #e74c3c;
+    }
+
+    #successMessage {
+      color: #27ae60;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>💌 Email Validator</h2>
+    <form id="emailForm">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="example@mail.com" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="errorMessage"></p>
+    <p id="successMessage"></p>
+  </div>
+
+  <script>
+    document.getElementById('emailForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const email = document.getElementById('email').value.trim();
+      const errorMessage = document.getElementById('errorMessage');
+      const successMessage = document.getElementById('successMessage');
+
+      if (email.includes('@') && email.includes('.')) {
+        successMessage.textContent = "✅ Email accepted!";
+        errorMessage.textContent = "";
+      } else {
+        errorMessage.textContent = "⚠️ Invalid email format. Please include '@' and '.'";
+        successMessage.textContent = "";
+      }
+    });
+  </script>
+</body>
+</html>
