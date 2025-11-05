@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aesthetic Feedback Form ✨</title>
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+      background-attachment: fixed;
+      color: #333;
+      padding: 2rem;
+    }
+
+    
+    .container {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      width: 360px;
+      text-align: center;
+      transition: all 0.3s ease;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      margin-bottom: 1.2rem;
+      font-weight: 600;
+      color: #444;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      font-weight: 500;
+      color: #555;
+      margin-top: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      background: #fffaf6;
+      font-size: 1rem;
+      outline: none;
+      resize: none;
+      transition: all 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #f9a1bc;
+      box-shadow: 0 0 0 4px rgba(249, 161, 188, 0.2);
+      background: #fff;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #f6a192, #f5c0aa);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(246, 161, 146, 0.3);
+    }
+
+    
+    .error {
+      color: #e74c3c;
+      margin-top: 1rem;
+      font-weight: 500;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .success {
+      color: #27ae60;
+      margin-top: 1rem;
+      font-weight: 500;
+      animation: fadeIn 0.4s ease;
+    }
+
+    
+    #feedbackList {
+      list-style: none;
+      margin-top: 1rem;
+      padding-left: 0;
+      width: 100%;
+      text-align: left;
+    }
+
+    #feedbackList li {
+      background: rgba(255, 255, 255, 0.7);
+      border-left: 4px solid #f6a192;
+      border-radius: 10px;
+      padding: 10px 15px;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: #444;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>💌 Feedback Form</h2>
+    <form id="feedbackForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="message">Feedback Message:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="errorMessage" class="error"></div>
+    <div id="successMessage" class="success"></div>
+
+    <h2 style="margin-top:1.5rem;">🌿 Previous Feedback</h2>
+    <ul id="feedbackList"></ul>
+  </div>
+
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const errorMessageDiv = document.getElementById('errorMessage');
+      const successMessageDiv = document.getElementById('successMessage');
+      const feedbackList = document.getElementById('feedbackList');
+
+      errorMessageDiv.textContent = '';
+      successMessageDiv.textContent = '';
+
+      if (name === '') {
+        errorMessageDiv.textContent = '⚠️ Name cannot be empty.';
+        return;
+      }
+
+      if (!isValidEmail(email)) {
+        errorMessageDiv.textContent = '⚠️ Please enter a valid email address.';
+        return;
+      }
+
+      if (message.length <= 5) {
+        errorMessageDiv.textContent = '⚠️ Message must be longer than 5 characters.';
+        return;
+      }
+
+      successMessageDiv.textContent = '✅ Feedback submitted successfully!';
+
+      const newFeedbackItem = document.createElement('li');
+      newFeedbackItem.innerHTML = `<strong>${name}</strong> (${email}): ${message}`;
+      feedbackList.appendChild(newFeedbackItem);
+
+      document.getElementById('feedbackForm').reset();
+    });
+
+    function isValidEmail(email) {
+      const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+      return emailRegex.test(email);
+    }
+  </script>
+</body>
+</html>
