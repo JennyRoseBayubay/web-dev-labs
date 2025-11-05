@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aesthetic Feedbacks 🌷</title>
+
+  <style>
+   
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    }
+
+    
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      width: 340px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 1.2rem;
+      font-weight: 600;
+    }
+
+    
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #fffaf5;
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+      color: #444;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    li:hover {
+      background: #ffe5d4;
+      transform: translateY(-3px);
+    }
+
+    
+    button {
+      margin-top: 1.2rem;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #f6a192, #f5c0aa);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(246, 161, 146, 0.3);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h2>🌸 Customer Feedback</h2>
+    <ul id="feedbackList"></ul>
+    <button onclick="addFeedback()">Add Feedback</button>
+  </div>
+
+  <script>
+    
+    let feedbacks = ["Great coffee!", "Nice ambiance"];
+    const feedbackList = document.getElementById("feedbackList");
+
+    
+    function displayFeedbacks() {
+      feedbackList.innerHTML = "";
+      for (let i = 0; i < feedbacks.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = feedbacks[i];
+        feedbackList.appendChild(li);
+      }
+    }
+
+    
+    function addFeedback() {
+      const newFeedbacks = ["Lovely staff!", "Peaceful vibes", "Excellent service!"];
+      const randomFeedback = newFeedbacks[Math.floor(Math.random() * newFeedbacks.length)];
+      feedbacks.push(randomFeedback);
+      displayFeedbacks();
+    }
+
+    
+    displayFeedbacks();
+  </script>
+</body>
+</html>
