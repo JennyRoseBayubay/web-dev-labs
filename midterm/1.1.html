@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic Digital Clock</title>
+
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+        }
+
+        
+        .bubble {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            filter: blur(20px);
+            animation: float 10s infinite ease-in-out;
+        }
+
+        .bubble:nth-child(1) { top: 10%; left: 15%; animation-duration: 12s; }
+        .bubble:nth-child(2) { bottom: 10%; right: 20%; animation-duration: 9s; }
+        .bubble:nth-child(3) { top: 50%; right: 10%; animation-duration: 11s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-40px); }
+        }
+
+       
+        .clock-container {
+            background: rgba(255, 255, 255, 0.25);
+            padding: 40px 60px;
+            border-radius: 25px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+            text-align: center;
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        #clock {
+            font-size: 80px;
+            color: #ffffff;
+            font-weight: 600;
+            text-shadow: 0 0 20px rgba(255,255,255,0.7);
+            letter-spacing: 3px;
+        }
+
+        #date {
+            font-size: 22px;
+            margin-top: 10px;
+            color: #ffffff;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+   
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+    
+    <div class="clock-container">
+        <div id="clock">00:00:00</div>
+        <div id="date">Loading...</div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+
+            
+            let hours = String(now.getHours()).padStart(2, '0');
+            let minutes = String(now.getMinutes()).padStart(2, '0');
+            let seconds = String(now.getSeconds()).padStart(2, '0');
+
+            document.getElementById('clock').textContent =
+                `${hours}:${minutes}:${seconds}`;
+
+            
+            const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+            let day = days[now.getDay()];
+            let month = months[now.getMonth()];
+            let date = now.getDate();
+            let year = now.getFullYear();
+
+            document.getElementById('date').textContent =
+                `${day}, ${month} ${date}, ${year}`;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
+</body>
+</html>
