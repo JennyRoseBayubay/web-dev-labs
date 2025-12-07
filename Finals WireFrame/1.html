@@ -23,7 +23,7 @@ background:linear-gradient(135deg,#eef2ff,#fdf2f8);
 color:var(--dark);
 }
 
-
+/* HEADER */
 header{
 background:#fff;
 padding:15px 40px;
@@ -37,7 +37,7 @@ nav li.right{margin-left:auto}
 nav a{text-decoration:none;color:var(--dark);font-weight:500}
 nav a:hover{color:var(--primary)}
 
-
+/* HEADLINE */
 .headline{text-align:center;padding:70px 20px}
 .headline h1{
 font-size:48px;
@@ -52,7 +52,7 @@ background:#fff;border-radius:18px;
 box-shadow:0 20px 40px rgba(91,108,255,.15);
 }
 
-
+/* MODULE BUTTONS */
 .learning-modules{text-align:center;padding:60px 40px}
 .module-buttons{
 display:grid;
@@ -71,10 +71,6 @@ transition:.3s;
 box-shadow:0 10px 25px rgba(0,0,0,.07);
 }
 
-.module-buttons button img{
-width:50px;display:block;margin:auto auto 10px;
-}
-
 .module-buttons button:hover{
 transform:translateY(-6px);
 border-color:var(--primary);
@@ -85,7 +81,7 @@ background:linear-gradient(135deg,var(--primary),var(--secondary));
 color:#fff;
 }
 
-
+/* CONTENT */
 .content-section{
 display:grid;
 grid-template-columns:2fr 1fr;
@@ -100,11 +96,18 @@ padding:35px;
 box-shadow:0 20px 45px rgba(0,0,0,.08);
 }
 
-.module-header{
-display:flex;align-items:center;gap:20px;
+/* IMAGE */
+.card-img-top{
+width:100%;
+max-height:260px;
+object-fit:cover;
+border-radius:14px;
+margin-bottom:20px;
 }
 
-.module-header img{width:60px}
+/* HEADER TEXT */
+.module-header h3{font-size:22px}
+.module-header p{color:var(--gray)}
 
 .interactive-content{
 margin:30px 0;
@@ -112,6 +115,7 @@ padding:40px;
 border-radius:16px;
 background:linear-gradient(135deg,#eef2ff,#fdf2f8);
 text-align:center;
+font-weight:500;
 }
 
 .module-content ul{list-style:none}
@@ -124,7 +128,7 @@ padding:12px 0;
 
 .time{color:var(--primary);font-weight:600}
 
-
+/* QUICK ACTIONS */
 .quick-actions{
 background:#fff;
 padding:30px;
@@ -140,6 +144,7 @@ border:none;
 background:#eef2ff;
 margin-bottom:12px;
 cursor:pointer;
+font-weight:500;
 }
 
 .quick-actions button:hover{
@@ -152,7 +157,7 @@ background:linear-gradient(135deg,var(--primary),var(--secondary));
 color:#fff;
 }
 
-
+/* FOOTER */
 footer{
 background:#fff;
 text-align:center;
@@ -196,27 +201,29 @@ footer p{font-size:14px;color:var(--gray)}
 <p>Choose from specialized technical programs</p>
 
 <div class="module-buttons">
-<button class="active" data-module="wire"><img src="wire.png">Wire Splice & Joints</button>
-<button data-module="wood"><img src="woodworking.png">Woodworking</button>
-<img src="pictures/wireplice and joints.gif" class="card-img-top" alt="Wiresplice and Joints">
-<button data-module="metal"><img src="metal.png">Metal Sheets</button>
-<button data-module="masonry"><img src="masonry.png">Masonry</button>
-<button data-module="miniature"><img src="miniature.png">Miniature</button>
+<button class="active" data-module="wire">Wire Splice & Joints</button>
+<button data-module="wood">Woodworking</button>
+<button data-module="metal">Metal Sheets</button>
+<button data-module="masonry">Masonry</button>
+<button data-module="miniature">Miniature</button>
 </div>
 </section>
 
 <section class="content-section">
 
 <div class="module-content">
+
+<img id="moduleImage"
+     src="picture/wiresplice and joints.jpg"
+     class="card-img-top"
+     alt="Wiresplice and Joints">
+
 <div class="module-header">
-<img id="moduleImage" src="wire.png">
-<div>
 <h3 id="moduleTitle">Wire Splice and Joints</h3>
 <p id="moduleDesc">Learn basic and advanced wiring techniques</p>
 </div>
-</div>
 
-<div class="interactive-content" id="moduleInteractive">
+<div class="interactive-content">
 Interactive Learning Content
 </div>
 
@@ -246,7 +253,7 @@ const modules={
 wire:{
 title:"Wire Splice and Joints",
 desc:"Learn basic and advanced wiring techniques",
-img:"wire.png",
+img:"picture/wireplice and joints.jpg",
 lessons:[
 ["Introduction to Wiring","12 min"],
 ["Splice Techniques","18 min"],
@@ -256,7 +263,7 @@ lessons:[
 wood:{
 title:"Woodworking",
 desc:"Master basic carpentry and wood crafting skills",
-img:"woodworking.png",
+img:"picture/woodworking.jpg",
 lessons:[
 ["Tools & Safety","10 min"],
 ["Measuring & Cutting","20 min"],
@@ -266,7 +273,7 @@ lessons:[
 metal:{
 title:"Metal Sheets",
 desc:"Learn metal cutting and sheet fabrication",
-img:"metal.png",
+img:"picture/metal sheets.jpg",
 lessons:[
 ["Metal Types","15 min"],
 ["Cutting Methods","20 min"],
@@ -276,7 +283,7 @@ lessons:[
 masonry:{
 title:"Masonry",
 desc:"Build strong structures using masonry techniques",
-img:"masonry.png",
+img:"picture/masonry.jpg",
 lessons:[
 ["Materials Overview","10 min"],
 ["Mixing Cement","15 min"],
@@ -286,7 +293,7 @@ lessons:[
 miniature:{
 title:"Miniature",
 desc:"Create scaled models and miniature projects",
-img:"miniature.png",
+img:"picture/miniature.jpg",
 lessons:[
 ["Design Planning","12 min"],
 ["Model Construction","20 min"],
@@ -306,6 +313,7 @@ const m=modules[key];
 title.textContent=m.title;
 desc.textContent=m.desc;
 img.src=m.img;
+img.alt=m.title;
 list.innerHTML="";
 m.lessons.forEach(l=>{
 list.innerHTML+=`<li>${l[0]}<span class="time">${l[1]}</span></li>`;
