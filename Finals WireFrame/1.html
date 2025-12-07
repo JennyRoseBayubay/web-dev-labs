@@ -5,245 +5,168 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Interactive Learning Platform</title>
 
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+--primary:#5b6cff;
+--secondary:#ff7eb3;
+--dark:#1f2933;
+--gray:#6b7280;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#eef2ff,#fdf2f8);
+color:var(--dark);
 }
 
 
-:root {
-    --primary: #5b6cff;
-    --secondary: #ff7eb3;
-    --dark: #1f2933;
-    --gray: #6b7280;
+header{
+background:#fff;
+padding:15px 40px;
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+position:sticky;top:0;
+}
+
+nav ul{display:flex;list-style:none;align-items:center}
+nav li{margin-right:30px}
+nav li.right{margin-left:auto}
+nav a{text-decoration:none;color:var(--dark);font-weight:500}
+nav a:hover{color:var(--primary)}
+
+
+.headline{text-align:center;padding:70px 20px}
+.headline h1{
+font-size:48px;
+background:linear-gradient(90deg,var(--primary),var(--secondary));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+.headline p{color:var(--gray);margin:15px 0 35px}
+.preview{
+max-width:700px;margin:auto;padding:50px;
+background:#fff;border-radius:18px;
+box-shadow:0 20px 40px rgba(91,108,255,.15);
 }
 
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #eef2ff, #fdf2f8);
-    color: var(--dark);
+.learning-modules{text-align:center;padding:60px 40px}
+.module-buttons{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;margin-top:30px
+}
+
+.module-buttons button{
+background:#fff;
+border-radius:16px;
+padding:20px;
+border:2px solid transparent;
+cursor:pointer;
+font-weight:500;
+transition:.3s;
+box-shadow:0 10px 25px rgba(0,0,0,.07);
+}
+
+.module-buttons button img{
+width:50px;display:block;margin:auto auto 10px;
+}
+
+.module-buttons button:hover{
+transform:translateY(-6px);
+border-color:var(--primary);
+}
+
+.module-buttons .active{
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:#fff;
 }
 
 
-header {
-    background: #fff;
-    padding: 15px 40px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
+.content-section{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:30px;
+padding:60px 40px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
+.module-content{
+background:#fff;
+border-radius:20px;
+padding:35px;
+box-shadow:0 20px 45px rgba(0,0,0,.08);
 }
 
-nav ul li {
-    margin-right: 30px;
+.module-header{
+display:flex;align-items:center;gap:20px;
 }
 
-nav ul li.right {
-    margin-left: auto;
+.module-header img{width:60px}
+
+.interactive-content{
+margin:30px 0;
+padding:40px;
+border-radius:16px;
+background:linear-gradient(135deg,#eef2ff,#fdf2f8);
+text-align:center;
 }
 
-nav a {
-    text-decoration: none;
-    font-weight: 500;
-    color: var(--dark);
+.module-content ul{list-style:none}
+.module-content li{
+display:flex;
+justify-content:space-between;
+border-bottom:1px solid #eee;
+padding:12px 0;
 }
 
-nav a:hover {
-    color: var(--primary);
+.time{color:var(--primary);font-weight:600}
+
+
+.quick-actions{
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 20px 45px rgba(0,0,0,.08);
 }
 
-
-.headline {
-    text-align: center;
-    padding: 70px 20px;
+.quick-actions button{
+width:100%;
+padding:14px;
+border-radius:12px;
+border:none;
+background:#eef2ff;
+margin-bottom:12px;
+cursor:pointer;
 }
 
-.headline h1 {
-    font-size: 48px;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.quick-actions button:hover{
+background:var(--primary);
+color:#fff;
 }
 
-.headline p {
-    color: var(--gray);
-    margin: 15px 0 35px;
-}
-
-.preview {
-    max-width: 700px;
-    margin: auto;
-    padding: 50px;
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 20px 40px rgba(91,108,255,0.15);
-}
-
-
-.learning-modules {
-    padding: 60px 40px;
-    text-align: center;
-}
-
-.module-buttons {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.module-buttons button {
-    background: #fff;
-    border-radius: 16px;
-    border: 2px solid transparent;
-    padding: 20px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.07);
-}
-
-.module-buttons button img {
-    width: 50px;
-    display: block;
-    margin: 0 auto 10px;
-}
-
-.module-buttons button:hover {
-    transform: translateY(-6px);
-    border-color: var(--primary);
-}
-
-.module-buttons .active {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: #fff;
+.primary{
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:#fff;
 }
 
 
-.content-section {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
-    padding: 60px 40px;
+footer{
+background:#fff;
+text-align:center;
+padding:30px;
+margin-top:60px;
 }
 
+footer ul{display:flex;justify-content:center;list-style:none;margin-bottom:10px}
+footer li{margin:0 15px}
+footer a{text-decoration:none;color:var(--dark)}
+footer p{font-size:14px;color:var(--gray)}
 
-.module-content {
-    background: #fff;
-    border-radius: 20px;
-    padding: 35px;
-    box-shadow: 0 20px 45px rgba(0,0,0,0.08);
-}
-
-.module-header {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.module-header img {
-    width: 60px;
-}
-
-.interactive-content {
-    margin: 30px 0;
-    padding: 40px;
-    background: linear-gradient(135deg, #eef2ff, #fdf2f8);
-    border-radius: 16px;
-    text-align: center;
-}
-
-
-.module-content ul {
-    list-style: none;
-}
-
-.module-content li {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #eee;
-    padding: 12px 0;
-}
-
-.time {
-    color: var(--primary);
-    font-weight: 600;
-}
-
-
-.quick-actions {
-    background: #fff;
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 20px 45px rgba(0,0,0,0.08);
-}
-
-.quick-actions button {
-    width: 100%;
-    margin-bottom: 12px;
-    padding: 14px;
-    border-radius: 12px;
-    border: none;
-    cursor: pointer;
-    background: #eef2ff;
-}
-
-.quick-actions button:hover {
-    background: var(--primary);
-    color: #fff;
-}
-
-.primary {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: #fff;
-}
-
-
-footer {
-    background: #fff;
-    text-align: center;
-    padding: 30px;
-    margin-top: 60px;
-}
-
-footer ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin-bottom: 10px;
-}
-
-footer li {
-    margin: 0 15px;
-}
-
-footer a {
-    text-decoration: none;
-    color: var(--dark);
-}
-
-footer p {
-    font-size: 14px;
-    color: var(--gray);
-}
-
-
-@media (max-width: 900px) {
-    .content-section {
-        grid-template-columns: 1fr;
-    }
+@media(max-width:900px){
+.content-section{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -253,11 +176,11 @@ footer p {
 <header>
 <nav>
 <ul>
-    <li><a href="#">Dashboard</a></li>
-    <li><a href="#">Progress</a></li>
-    <li><a href="#">Certificate</a></li>
-    <li><a href="#">Support</a></li>
-    <li class="right"><a href="#">🔔</a></li>
+<li><a href="#">Dashboard</a></li>
+<li><a href="#">Progress</a></li>
+<li><a href="#">Certificate</a></li>
+<li><a href="#">Support</a></li>
+<li class="right"><a href="#">🔔</a></li>
 </ul>
 </nav>
 </header>
@@ -273,55 +196,131 @@ footer p {
 <p>Choose from specialized technical programs</p>
 
 <div class="module-buttons">
-    <button class="active">
-        <img src="wire.png">Wire Splice & Joints
-    </button>
-    <button><img src="woodworking.png">Woodworking</button>
-    <button><img src="metal.png">Metal Sheets</button>
-    <button><img src="masonry.png">Masonry</button>
-    <button><img src="miniature.png">Miniature</button>
+<button class="active" data-module="wire"><img src="wire.png">Wire Splice & Joints</button>
+<button data-module="wood"><img src="woodworking.png">Woodworking</button>
+<button data-module="metal"><img src="metal.png">Metal Sheets</button>
+<button data-module="masonry"><img src="masonry.png">Masonry</button>
+<button data-module="miniature"><img src="miniature.png">Miniature</button>
 </div>
 </section>
 
 <section class="content-section">
 
 <div class="module-content">
-    <div class="module-header">
-        <img src="wire.png">
-        <div>
-            <h3>Wire Splice and Joints</h3>
-            <p>Learn basic and advanced wiring techniques</p>
-        </div>
-    </div>
+<div class="module-header">
+<img id="moduleImage" src="wire.png">
+<div>
+<h3 id="moduleTitle">Wire Splice and Joints</h3>
+<p id="moduleDesc">Learn basic and advanced wiring techniques</p>
+</div>
+</div>
 
-    <div class="interactive-content">
-        Interactive Learning Content
-    </div>
+<div class="interactive-content" id="moduleInteractive">
+Interactive Learning Content
+</div>
 
-    <ul>
-        <li>Introduction to Wiring <span class="time">12 min</span></li>
-        <li>Splice Techniques <span class="time">18 min</span></li>
-        <li>Safety Procedures <span class="time">25 min</span></li>
-    </ul>
+<ul id="moduleList"></ul>
 </div>
 
 <div class="quick-actions">
-    <h3>Quick Actions</h3>
-    <button class="primary">Continue Learning</button>
-    <button>Take Assessment</button>
-    <button>Download Resources</button>
+<h3>Quick Actions</h3>
+<button class="primary">Continue Learning</button>
+<button>Take Assessment</button>
+<button>Download Resources</button>
 </div>
 
 </section>
 
 <footer>
 <ul>
-    <li><a href="#">Privacy Policy</a></li>
-    <li><a href="#">Terms of Service</a></li>
-    <li><a href="#">Contact Support</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms of Service</a></li>
+<li><a href="#">Contact Support</a></li>
 </ul>
 <p>© 2025 Interactive Learning Platform</p>
 </footer>
+
+<script>
+const modules={
+wire:{
+title:"Wire Splice and Joints",
+desc:"Learn basic and advanced wiring techniques",
+img:"wire.png",
+lessons:[
+["Introduction to Wiring","12 min"],
+["Splice Techniques","18 min"],
+["Safety Procedures","25 min"]
+]
+},
+wood:{
+title:"Woodworking",
+desc:"Master basic carpentry and wood crafting skills",
+img:"woodworking.png",
+lessons:[
+["Tools & Safety","10 min"],
+["Measuring & Cutting","20 min"],
+["Wood Assembly","30 min"]
+]
+},
+metal:{
+title:"Metal Sheets",
+desc:"Learn metal cutting and sheet fabrication",
+img:"metal.png",
+lessons:[
+["Metal Types","15 min"],
+["Cutting Methods","20 min"],
+["Bending Techniques","25 min"]
+]
+},
+masonry:{
+title:"Masonry",
+desc:"Build strong structures using masonry techniques",
+img:"masonry.png",
+lessons:[
+["Materials Overview","10 min"],
+["Mixing Cement","15 min"],
+["Brick Laying","30 min"]
+]
+},
+miniature:{
+title:"Miniature",
+desc:"Create scaled models and miniature projects",
+img:"miniature.png",
+lessons:[
+["Design Planning","12 min"],
+["Model Construction","20 min"],
+["Detailing & Finish","18 min"]
+]
+}
+};
+
+const buttons=document.querySelectorAll(".module-buttons button");
+const title=document.getElementById("moduleTitle");
+const desc=document.getElementById("moduleDesc");
+const img=document.getElementById("moduleImage");
+const list=document.getElementById("moduleList");
+
+function loadModule(key){
+const m=modules[key];
+title.textContent=m.title;
+desc.textContent=m.desc;
+img.src=m.img;
+list.innerHTML="";
+m.lessons.forEach(l=>{
+list.innerHTML+=`<li>${l[0]}<span class="time">${l[1]}</span></li>`;
+});
+}
+
+buttons.forEach(btn=>{
+btn.addEventListener("click",()=>{
+buttons.forEach(b=>b.classList.remove("active"));
+btn.classList.add("active");
+loadModule(btn.dataset.module);
+});
+});
+
+loadModule("wire");
+</script>
 
 </body>
 </html>
