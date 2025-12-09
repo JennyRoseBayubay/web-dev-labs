@@ -8,260 +8,444 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+*{margin:0;padding:0;box-sizing:border-box}
+
 :root{
-  --purple:#6a5acd;
-  --pink:#ff7eb3;
-  --blue:#4facfe;
-  --glass:rgba(255,255,255,0.25);
+--primary:#5b6cff;
+--secondary:#ff7eb3;
+--dark:#1f2933;
+--gray:#6b7280;
+--light:#f8f9ff;
 }
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
-
 
 body{
-  background:linear-gradient(135deg,#c471f5,#fa71cd);
-  min-height:100vh;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#eef2ff,#fdf2f8);
+color:var(--dark);
+line-height:1.6;
 }
 
 
-nav{
-  background:white;
-  padding:15px 40px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+header{
+background:#fff;
+padding:18px 40px;
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+position:sticky;
+top:0;
+z-index:10;
 }
 
 nav ul{
-  display:flex;
-  list-style:none;
-  gap:25px;
+display:flex;
+list-style:none;
+align-items:center;
+}
+nav li{margin-right:25px}
+nav li.right{margin-left:auto}
+nav a{
+text-decoration:none;
+color:var(--dark);
+font-weight:500;
+transition:.3s;
+}
+nav a:hover{color:var(--primary)}
+
+
+.headline{
+text-align:center;
+padding:80px 20px 60px;
+}
+.headline h1{
+font-size:50px;
+background:linear-gradient(90deg,var(--primary),var(--secondary));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+.headline p{
+color:var(--gray);
+margin:18px 0 28px;
+font-size:18px;
 }
 
-nav ul li{
-  cursor:pointer;
-  font-weight:500;
-}
-
-nav ul li:hover{
-  color:var(--purple);
-}
-
-
-.hero{
-  text-align:center;
-  padding:80px 20px;
-  color:white;
-}
-
-.hero h1{
-  font-size:3rem;
-  margin-bottom:10px;
-}
-
-.hero p{
-  max-width:650px;
-  margin:auto;
-  opacity:0.9;
-}
-
-.hero .cta{
-  display:inline-block;
-  margin-top:30px;
-  padding:15px 40px;
-  border-radius:50px;
-  background:linear-gradient(45deg,var(--blue),#00f2fe);
-  color:white;
-  text-decoration:none;
-  font-weight:600;
-  transition:0.3s;
-}
-
-.hero .cta:hover{
-  transform:translateY(-5px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+.preview{
+max-width:720px;
+margin:auto;
+padding:25px;
+background:#fff;
+border-radius:20px;
+box-shadow:0 25px 50px rgba(91,108,255,.15);
+font-weight:500;
 }
 
 
-.section{
-  padding:50px 60px;
+.learning-modules{
+padding:60px 40px 20px;
+text-align:center;
 }
 
-.cards{
-  display:flex;
-  gap:30px;
-  justify-content:center;
-  flex-wrap:wrap;
+.module-buttons{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:35px;
+}
+
+.module-buttons button{
+background:#fff;
+border-radius:22px;
+border:2px solid transparent;
+padding:15px;
+cursor:pointer;
+font-weight:500;
+transition:.35s;
+box-shadow:0 15px 30px rgba(0,0,0,.1);
+}
+
+.module-buttons button img{
+width:100%;
+height:150px;
+object-fit:cover;
+border-radius:18px;
+margin-bottom:12px;
+}
+
+.module-buttons button:hover{
+transform:translateY(-10px);
+border-color:var(--primary);
+}
+
+.module-buttons .active{
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:#fff;
+}
+
+
+.content-section{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:35px;
+padding:60px 40px;
+}
+
+.module-content{
+background:#fff;
+padding:35px;
+border-radius:28px;
+box-shadow:0 25px 60px rgba(0,0,0,.1);
+}
+
+.card-img-top{
+width:100%;
+max-height:300px;
+object-fit:cover;
+border-radius:22px;
+margin-bottom:25px;
+}
+
+.module-content h3{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.module-content p{
+color:var(--gray);
+margin-bottom:20px;
+}
+
+.interactive-content{
+background:linear-gradient(135deg,#eef2ff,#fdf2f8);
+padding:30px;
+border-radius:18px;
+margin:25px 0;
+text-align:center;
+font-weight:600;
+}
+
+.module-content ul{
+list-style:none;
+}
+
+.module-content li{
+display:flex;
+justify-content:space-between;
+padding:14px 0;
+border-bottom:1px solid #eee;
+}
+
+.time{
+color:var(--primary);
+font-weight:600;
+}
+
+
+.quick-actions{
+background:#fff;
+padding:30px;
+border-radius:28px;
+box-shadow:0 25px 60px rgba(0,0,0,.1);
+}
+
+.quick-actions h3{
+margin-bottom:15px;
+}
+
+.quick-actions button{
+width:100%;
+margin-bottom:14px;
+padding:15px;
+border-radius:16px;
+border:none;
+cursor:pointer;
+background:#eef2ff;
+font-weight:500;
+transition:.3s;
+}
+
+.quick-actions button:hover{
+background:var(--primary);
+color:#fff;
+}
+
+.primary{
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:#fff;
+}
+
+
+.cards-section{
+padding:60px 40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 }
 
 .card{
-  background:var(--glass);
-  backdrop-filter:blur(15px);
-  border-radius:20px;
-  width:300px;
-  padding:30px;
-  text-align:center;
-  color:#fff;
-  box-shadow:0 15px 30px rgba(0,0,0,0.25);
-  transition:0.4s;
+background:#fff;
+padding:30px;
+border-radius:26px;
+text-align:center;
+box-shadow:0 25px 55px rgba(0,0,0,.1);
+transition:.4s;
 }
 
 .card:hover{
-  transform:translateY(-10px) scale(1.02);
+transform:translateY(-10px);
 }
 
-.card h2{
-  margin-bottom:15px;
-}
-
-.card p{
-  font-size:0.9rem;
-  opacity:0.9;
+.image-placeholder{
+height:150px;
+background:linear-gradient(135deg,#5b6cff,#ff7eb3);
+border-radius:18px;
+margin-bottom:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+font-weight:700;
+font-size:1.3em;
 }
 
 .card button{
-  margin-top:20px;
-  padding:12px 30px;
-  border:none;
-  border-radius:30px;
-  background:linear-gradient(45deg,#ff9966,#ff5e62);
-  color:white;
-  font-weight:600;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.card button:hover{
-  background:linear-gradient(45deg,#ff5e62,#ff9966);
-}
-
-
-.learning{
-  background:white;
-  border-radius:25px;
-  padding:40px;
-  margin:60px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.2);
-}
-
-.learning img{
-  width:100%;
-  border-radius:15px;
-  margin-bottom:25px;
-}
-
-.learning h2{
-  color:#333;
-  margin-bottom:10px;
-}
-
-.learning p{
-  color:#555;
-}
-
-
-.actions{
-  position:fixed;
-  right:25px;
-  top:35%;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-.actions button{
-  padding:12px;
-  border-radius:50%;
-  border:none;
-  background:var(--purple);
-  color:white;
-  cursor:pointer;
-  box-shadow:0 8px 20px rgba(0,0,0,0.3);
-}
-
-.actions button:hover{
-  background:var(--pink);
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+border:none;
+color:#fff;
+padding:12px 26px;
+border-radius:25px;
+cursor:pointer;
 }
 
 
 footer{
-  background:white;
-  padding:20px;
-  text-align:center;
-  font-size:0.85rem;
-  margin-top:50px;
+background:#fff;
+text-align:center;
+padding:35px;
+margin-top:50px;
 }
 
+footer ul{
+display:flex;
+justify-content:center;
+list-style:none;
+margin-bottom:12px;
+}
+
+footer li{margin:0 18px}
+
+footer a{
+text-decoration:none;
+color:var(--dark);
+font-weight:500;
+}
+
+footer p{
+font-size:14px;
+color:var(--gray);
+}
+
+
+@media(max-width:900px){
+.content-section{grid-template-columns:1fr}
+}
 </style>
 </head>
 
 <body>
 
-
+<header>
 <nav>
-  <h3>Interactive Learning</h3>
-  <ul>
-    <li>Dashboard</li>
-    <li>Progress</li>
-    <li>Certificate</li>
-    <li>Support</li>
-  </ul>
+<ul>
+<li><a href="#">Dashboard</a></li>
+<li><a href="#">Progress</a></li>
+<li><a href="#">Certificate</a></li>
+<li><a href="#">Support</a></li>
+<li class="right"><a href="#">🔔</a></li>
+</ul>
 </nav>
+</header>
 
+<section class="headline">
+<h1>Interactive Learning Platform</h1>
+<p>Enhance your technical skills through immersive and guided learning</p>
+<div class="preview">Select a module below to start learning</div>
+</section>
 
-<div class="hero">
-  <h1>Interactive Learning Platform</h1>
-  <p>Enhance your technical skills through immersive and guided learning experiences.</p>
-  <a href="#modules" class="cta">Start Learning</a>
+<section class="learning-modules">
+<div class="module-buttons">
+<button class="active" data-module="wire"><img src="pictures/wireplice and joints.gif">Wire Splice & Joints</button>
+<button data-module="wood"><img src="pictures/woodworking.jpg">Woodworking</button>
+<button data-module="metal"><img src="pictures/Metalsheets.webp">Metal Sheets</button>
+<button data-module="masonry"><img src="pictures/masonry.jpg">Masonry</button>
+<button data-module="miniature"><img src="pictures/miniature.jpg">Miniature</button>
+</div>
+</section>
+
+<section class="content-section">
+<div class="module-content">
+<img id="moduleImage" class="card-img-top" src="pictures/wireplice and joints.gif">
+<h3 id="moduleTitle">Wire Splice & Joints</h3>
+<p id="moduleDesc">Learn basic and advanced wiring techniques</p>
+
+<div class="interactive-content">
+Interactive Learning Content Area
 </div>
 
-
-<div class="section" id="modules">
-  <div class="cards">
-    <div class="card">
-      <h2>Modules</h2>
-      <p>Step-by-step learning modules with visuals and explanations.</p>
-      <button>Start</button>
-    </div>
-    <div class="card">
-      <h2>Tutorials</h2>
-      <p>Hands-on tutorials to improve your practical skills.</p>
-      <button>Start</button>
-    </div>
-    <div class="card">
-      <h2>Assessment</h2>
-      <p>Test your knowledge and track your progress.</p>
-      <button>Start</button>
-    </div>
-  </div>
+<ul id="moduleList"></ul>
 </div>
 
+<div class="quick-actions">
+<h3>Quick Actions</h3>
+<button class="primary">Continue Learning</button>
+<button>Take Assessment</button>
+<button>Download Resources</button>
+</div>
+</section>
 
-<div class="learning">
-  <img src="https://i.imgur.com/qkdpN.jpg" alt="Wire Splicing">
-  <h2>Wire Splice & Joints</h2>
-  <p>Learn basic and advanced wiring techniques including proper wire splicing and safety practices.</p>
+<section class="cards-section">
+<div class="card">
+<div class="image-placeholder">Modules</div>
+<h3>Modules</h3>
+<button>Start</button>
 </div>
 
-
-<div class="actions">
-  <button>▶</button>
-  <button>📄</button>
-  <button>⚙</button>
+<div class="card">
+<div class="image-placeholder">Tutorials</div>
+<h3>Tutorials</h3>
+<button>Start</button>
 </div>
 
+<div class="card">
+<div class="image-placeholder">Assessment</div>
+<h3>Assessment</h3>
+<button>Start</button>
+</div>
+</section>
 
 <footer>
-  Privacy Policy • Terms of Service • Contact Support <br>
-  © 2025 Interactive Learning Platform
+<ul>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms of Service</a></li>
+<li><a href="#">Contact Support</a></li>
+</ul>
+<p>© 2025 Interactive Learning Platform</p>
 </footer>
+
+<script>
+const modules={
+wire:{
+title:"Wire Splice & Joints",
+desc:"Learn basic and advanced wiring techniques",
+img:"pictures/wireplice and joints.gif",
+lessons:[
+["Intro to Wiring","12 min"],
+["Splicing Techniques","18 min"],
+["Electrical Safety","25 min"]
+]},
+wood:{
+title:"Woodworking",
+desc:"Master basic carpentry and wood crafting skills",
+img:"pictures/woodworking.jpg",
+lessons:[
+["Tools & Safety","10 min"],
+["Measuring & Cutting","20 min"],
+["Wood Assembly","30 min"]
+]},
+metal:{
+title:"Metal Sheets",
+desc:"Learn metal cutting and sheet fabrication",
+img:"pictures/Metalsheets.webp",
+lessons:[
+["Metal Types","15 min"],
+["Cutting Methods","20 min"],
+["Bending Techniques","25 min"]
+]},
+masonry:{
+title:"Masonry",
+desc:"Build strong structures using masonry techniques",
+img:"pictures/masonry.jpg",
+lessons:[
+["Materials Overview","10 min"],
+["Mixing Cement","15 min"],
+["Brick Laying","30 min"]
+]},
+miniature:{
+title:"Miniature",
+desc:"Create scaled models and miniature projects",
+img:"pictures/miniature.jpg",
+lessons:[
+["Design Planning","12 min"],
+["Model Construction","20 min"],
+["Detailing & Finish","18 min"]
+]}
+};
+
+const buttons=document.querySelectorAll(".module-buttons button");
+const title=document.getElementById("moduleTitle");
+const desc=document.getElementById("moduleDesc");
+const img=document.getElementById("moduleImage");
+const list=document.getElementById("moduleList");
+
+function loadModule(key){
+const m=modules[key];
+title.textContent=m.title;
+desc.textContent=m.desc;
+img.src=m.img;
+list.innerHTML="";
+m.lessons.forEach(l=>{
+list.innerHTML+=`<li>${l[0]}<span class="time">${l[1]}</span></li>`;
+});
+}
+
+buttons.forEach(btn=>{
+btn.addEventListener("click",()=>{
+buttons.forEach(b=>b.classList.remove("active"));
+btn.classList.add("active");
+loadModule(btn.dataset.module);
+});
+});
+
+loadModule("wire");
+</script>
 
 </body>
 </html>
-
