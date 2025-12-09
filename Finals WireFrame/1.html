@@ -8,11 +8,11 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
 :root{
---primary:#5b6cff;
---secondary:#ff7eb3;
+--primary:#5b6cff;   /* Blue */
+--secondary:#ff7eb3; /* Pink */
 --dark:#1f2933;
 --gray:#6b7280;
---bg-gradient:linear-gradient(135deg,#eef2ff,#fdf2f8);
+--bg-gradient:linear-gradient(135deg,#5b6cff33,#ff7eb333);
 --card-shadow:0 25px 55px rgba(0,0,0,.1);
 }
 
@@ -27,7 +27,7 @@ body::before{
 content:"";
 position:absolute;
 width:600px;height:600px;
-background:radial-gradient(circle,#ff7eb3,transparent 70%);
+background:radial-gradient(circle,var(--secondary),transparent 70%);
 top:-150px;
 right:-150px;
 opacity:0.3;
@@ -38,7 +38,7 @@ body::after{
 content:"";
 position:absolute;
 width:500px;height:500px;
-background:radial-gradient(circle,#5b6cff,transparent 70%);
+background:radial-gradient(circle,var(--primary),transparent 70%);
 bottom:-150px;
 left:-100px;
 opacity:0.2;
@@ -91,7 +91,7 @@ transition:.4s;
 }
 .module-buttons button:hover{
 transform:translateY(-10px);
-border-color:var(--primary);
+border-image: linear-gradient(135deg,var(--primary),var(--secondary)) 1;
 box-shadow:0 20px 40px rgba(0,0,0,.15);
 }
 .module-buttons .active{
@@ -123,11 +123,13 @@ border-bottom:1px solid #eee;font-weight:500;
 
 .quick-actions{background:rgba(255,255,255,0.95);padding:35px;border-radius:25px;box-shadow:var(--card-shadow)}
 .quick-actions button{
-width:100%;margin-bottom:15px;padding:16px;border-radius:20px;border:none;cursor:pointer;background:var(--bg-gradient);font-weight:600;transition:.3s;
+width:100%;margin-bottom:15px;padding:16px;border-radius:20px;border:none;cursor:pointer;
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+font-weight:600;transition:.3s;
+color:#fff;
 }
 .quick-actions button:hover{
-background:linear-gradient(135deg,var(--primary),var(--secondary));
-color:#fff;
+background:linear-gradient(135deg,var(--secondary),var(--primary));
 }
 
 
