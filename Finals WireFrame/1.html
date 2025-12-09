@@ -2,198 +2,98 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Interactive Learning Platform</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
-body{
-font-family:'Poppins',sans-serif;
-background:linear-gradient(135deg,#eef2ff,#fdf2f8);
-}
+*{box-sizing:border-box}
+body{font-family:Poppins,sans-serif;background:linear-gradient(135deg,#eef2ff,#fdf2f8)}
+.hero{text-align:center;padding:90px 20px}
+.hero h1{font-size:3rem;font-weight:700;background:linear-gradient(90deg,#5b6cff,#ff7eb3);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-card{background:#fff;border-radius:20px;padding:25px;box-shadow:0 20px 50px rgba(0,0,0,.1);max-width:700px;margin:auto}
 
+.module-btn{border-radius:20px;border:none;box-shadow:0 12px 25px rgba(0,0,0,.15);transition:.3s}
+.module-btn img{height:150px;object-fit:cover}
+.module-btn:hover{transform:translateY(-6px)}
+.module-btn.active{outline:3px solid #fff;color:#fff}
 
-.hero{
-padding:90px 20px;
-text-align:center;
-}
-.hero h1{
-font-size:3rem;
-font-weight:700;
-background:linear-gradient(90deg,#5b6cff,#ff7eb3);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-.hero-card{
-background:#fff;
-border-radius:20px;
-padding:25px;
-box-shadow:0 20px 50px rgba(0,0,0,.1);
-max-width:700px;
-margin:auto;
-}
+.content-card{border-radius:25px;box-shadow:0 20px 45px rgba(0,0,0,.15);color:#fff}
+.lesson-list li{display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.4);padding:10px 0}
 
+.bg-wire{background:linear-gradient(135deg,#4f6bff,#ff7eb3)}
+.bg-wood{background:linear-gradient(135deg,#facc15,#22c55e);color:#1f2933}
+.bg-metal{background:linear-gradient(135deg,#fb923c,#ef4444)}
+.bg-masonry{background:linear-gradient(135deg,#a855f7,#ec4899)}
+.bg-miniature{background:linear-gradient(135deg,#22c55e,#3b82f6)}
 
-.module-btn{
-border-radius:20px;
-border:none;
-box-shadow:0 12px 25px rgba(0,0,0,.15);
-transition:.3s;
-}
-.module-btn img{
-height:150px;
-object-fit:cover;
-}
-.module-btn:hover{
-transform:translateY(-8px);
-}
-.module-btn.active{
-outline:4px solid rgba(255,255,255,.8);
-color:#fff;
-}
-
-
-.content-card{
-border-radius:25px;
-box-shadow:0 20px 45px rgba(0,0,0,.15);
-color:#fff;
-}
-.lesson-list li{
-display:flex;
-justify-content:space-between;
-border-bottom:1px solid rgba(255,255,255,.4);
-padding:12px 0;
-}
-
-
-.bg-wire{background:linear-gradient(135deg,#4f6bff,#ff7eb3);}
-.bg-wood{background:linear-gradient(135deg,#facc15,#22c55e); color:#1f2933;}
-.bg-metal{background:linear-gradient(135deg,#fb923c,#ef4444);}
-.bg-masonry{background:linear-gradient(135deg,#a855f7,#ec4899);}
-.bg-miniature{background:linear-gradient(135deg,#22c55e,#3b82f6);}
-
-
-footer{
-background:#fff;
-padding:35px;
-text-align:center;
-margin-top:60px;
-}
+footer{background:#888;color:#fff;padding:25px;text-align:center;margin-top:50px}
+footer a{color:#fff;text-decoration:none;margin:0 10px}
 </style>
 </head>
 
 <body>
 
-
-<nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
-<div class="container">
-<a class="navbar-brand fw-bold">Learning Platform</a>
-</div>
+<nav class="navbar bg-white shadow-sm fixed-top">
+<div class="container fw-bold">Learning Platform</div>
 </nav>
-
 
 <section class="hero mt-5 pt-5">
 <h1>Interactive Learning Platform</h1>
-<p class="text-muted fs-5">Enhance your technical skills through immersive learning</p>
-<div class="hero-card mt-4">Select a module below</div>
+<p class="text-muted">Enhance your technical skills through immersive learning</p>
+<div class="hero-card">Select a module below</div>
 </section>
 
-
 <section class="container my-5">
-<div class="row g-4 text-center">
-
-<button class="col-md-4 col-lg-2 module-btn bg-wire active p-3" data-module="wire">
-<img src="pictures/wireplice and joints.gif" class="w-100 rounded mb-2">Wire Splice
-</button>
-
-<button class="col-md-4 col-lg-2 module-btn bg-wood p-3" data-module="wood">
-<img src="pictures/woodworking.jpg" class="w-100 rounded mb-2">Woodworking
-</button>
-
-<button class="col-md-4 col-lg-2 module-btn bg-metal p-3" data-module="metal">
-<img src="pictures/Metalsheets.webp" class="w-100 rounded mb-2">Metal Sheets
-</button>
-
-<button class="col-md-4 col-lg-2 module-btn bg-masonry p-3" data-module="masonry">
-<img src="pictures/masonry.jpg" class="w-100 rounded mb-2">Masonry
-</button>
-
-<button class="col-md-4 col-lg-2 module-btn bg-miniature p-3" data-module="miniature">
-<img src="pictures/miniature.jpg" class="w-100 rounded mb-2">Miniature
-</button>
-
+<div class="row g-3 text-center">
+<button class="col module-btn bg-wire active p-3" data-module="wire"><img src="pictures/wireplice and joints.gif" class="w-100 rounded mb-2">Wire</button>
+<button class="col module-btn bg-wood p-3" data-module="wood"><img src="pictures/woodworking.jpg" class="w-100 rounded mb-2">Wood</button>
+<button class="col module-btn bg-metal p-3" data-module="metal"><img src="pictures/Metalsheets.webp" class="w-100 rounded mb-2">Metal</button>
+<button class="col module-btn bg-masonry p-3" data-module="masonry"><img src="pictures/masonry.jpg" class="w-100 rounded mb-2">Masonry</button>
+<button class="col module-btn bg-miniature p-3" data-module="miniature"><img src="pictures/miniature.jpg" class="w-100 rounded mb-2">Miniature</button>
 </div>
 </section>
 
-
 <section class="container my-5">
-<div class="row g-4">
-<div class="col-lg-8">
-<div class="card content-card p-4 bg-wire" id="contentCard">
+<div class="content-card bg-wire p-4" id="contentCard">
 <img id="moduleImage" class="img-fluid rounded mb-3">
 <h3 id="moduleTitle"></h3>
 <p id="moduleDesc"></p>
 <ul id="moduleList" class="list-unstyled lesson-list"></ul>
 </div>
-</div>
-</div>
 </section>
 
-
 <footer>
-<p class="text-muted small">© 2025 Interactive Learning Platform</p>
+<a href="#">Privacy</a><a href="#">Terms</a><a href="#">Support</a>
+<p class="small mt-2">© 2025 Interactive Learning Platform</p>
 </footer>
 
 <script>
 const modules={
-wire:{title:"Wire Splice & Joints",desc:"Learn basic and advanced wiring techniques",img:"pictures/wireplice and joints.gif",lessons:["Intro to Wiring","Splicing Techniques","Electrical Safety"]},
-wood:{title:"Woodworking",desc:"Master carpentry skills",img:"pictures/woodworking.jpg",lessons:["Tools","Cutting","Assembly"]},
-metal:{title:"Metal Sheets",desc:"Metal cutting and fabrication",img:"pictures/Metalsheets.webp",lessons:["Metal Types","Cutting","Bending"]},
-masonry:{title:"Masonry",desc:"Build durable structures",img:"pictures/masonry.jpg",lessons:["Materials","Mixing","Brick Laying"]},
-miniature:{title:"Miniature",desc:"Create scaled models",img:"pictures/miniature.jpg",lessons:["Planning","Construction","Detailing"]}
+wire:["Wire Splice & Joints","Learn wiring basics","pictures/wireplice and joints.gif",["Intro","Splicing","Safety"]],
+wood:["Woodworking","Carpentry skills","pictures/woodworking.jpg",["Tools","Cutting","Assembly"]],
+metal:["Metal Sheets","Metal fabrication","pictures/Metalsheets.webp",["Types","Cutting","Bending"]],
+masonry:["Masonry","Brick & cement","pictures/masonry.jpg",["Materials","Mixing","Laying"]],
+miniature:["Miniature","Scale models","pictures/miniature.jpg",["Planning","Build","Detail"]]
 };
 
-const bgMap={
-wire:"bg-wire",
-wood:"bg-wood",
-metal:"bg-metal",
-masonry:"bg-masonry",
-miniature:"bg-miniature"
-};
+const bg={wire:"bg-wire",wood:"bg-wood",metal:"bg-metal",masonry:"bg-masonry",miniature:"bg-miniature"};
+const c=document.getElementById("contentCard"),t=moduleTitle,d=moduleDesc,i=moduleImage,l=moduleList;
 
-const card=document.getElementById("contentCard");
-const title=document.getElementById("moduleTitle");
-const desc=document.getElementById("moduleDesc");
-const img=document.getElementById("moduleImage");
-const list=document.getElementById("moduleList");
-
-function loadModule(key){
-const m=modules[key];
-
-title.textContent=m.title;
-desc.textContent=m.desc;
-img.src=m.img;
-
-list.innerHTML="";
-m.lessons.forEach(l=>{
-list.innerHTML+=`<li>${l}<span>✔</span></li>`;
-});
-
-Object.values(bgMap).forEach(b=>card.classList.remove(b));
-card.classList.add(bgMap[key]);
+function load(k){
+let m=modules[k];t.textContent=m[0];d.textContent=m[1];i.src=m[2];
+l.innerHTML=m[3].map(x=>`<li>${x}<span>✔</span></li>`).join("");
+c.className="content-card p-4 "+bg[k];
 }
 
-document.querySelectorAll(".module-btn").forEach(btn=>{
-btn.addEventListener("click",()=>{
-document.querySelectorAll(".module-btn").forEach(b=>b.classList.remove("active"));
-btn.classList.add("active");
-loadModule(btn.dataset.module);
-});
+document.querySelectorAll(".module-btn").forEach(b=>b.onclick=()=>{
+document.querySelectorAll(".module-btn").forEach(x=>x.classList.remove("active"));
+b.classList.add("active");load(b.dataset.module);
 });
 
-loadModule("wire");
+load("wire");
 </script>
 
 </body>
