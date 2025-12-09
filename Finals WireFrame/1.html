@@ -7,50 +7,157 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-:root{--primary:#5b6cff;--secondary:#ff7eb3;--dark:#1f2933;--gray:#6b7280}
-body{background:linear-gradient(135deg,#eef2ff,#fdf2f8);color:var(--dark)}
+:root{
+--primary:#5b6cff;
+--secondary:#ff7eb3;
+--dark:#1f2933;
+--gray:#6b7280;
+--bg-gradient:linear-gradient(135deg,#eef2ff,#fdf2f8);
+--card-shadow:0 25px 55px rgba(0,0,0,.1);
+}
 
-header{background:#fff;padding:18px 40px;box-shadow:0 8px 25px rgba(0,0,0,.05);position:sticky;top:0;z-index:10}
-nav ul{display:flex;list-style:none;align-items:center}nav li{margin-right:25px}nav li.right{margin-left:auto}nav a{text-decoration:none;color:var(--dark);font-weight:500}nav a:hover{color:var(--primary)}
 
-.headline{text-align:center;padding:70px 20px}
-.headline h1{font-size:48px;background:linear-gradient(90deg,var(--primary),var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.headline p{color:var(--gray);margin:15px 0 30px}
-.preview{max-width:720px;margin:auto;padding:30px;background:#fff;border-radius:18px;box-shadow:0 25px 50px rgba(91,108,255,.2)}
+body{
+background:var(--bg-gradient);
+color:var(--dark);
+position:relative;
+overflow-x:hidden;
+}
+body::before{
+content:"";
+position:absolute;
+width:600px;height:600px;
+background:radial-gradient(circle,#ff7eb3,transparent 70%);
+top:-150px;
+right:-150px;
+opacity:0.3;
+border-radius:50%;
+z-index:0;
+}
+body::after{
+content:"";
+position:absolute;
+width:500px;height:500px;
+background:radial-gradient(circle,#5b6cff,transparent 70%);
+bottom:-150px;
+left:-100px;
+opacity:0.2;
+border-radius:50%;
+z-index:0;
+}
 
-.learning-modules{text-align:center;padding:60px 40px}
+
+header{
+background:#fff;padding:18px 40px;
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+position:sticky;top:0;z-index:10;
+border-radius:0 0 25px 25px;
+}
+nav ul{display:flex;list-style:none;align-items:center;position:relative;z-index:10}
+nav li{margin-right:25px}
+nav li.right{margin-left:auto}
+nav a{text-decoration:none;color:var(--dark);font-weight:500}
+nav a:hover{color:var(--primary)}
+
+
+.headline{
+text-align:center;padding:80px 20px;
+position:relative;z-index:5;
+}
+.headline h1{
+font-size:3rem;
+background:linear-gradient(90deg,var(--primary),var(--secondary));
+-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+margin-bottom:15px;
+}
+.headline p{color:var(--gray);font-size:1.1rem;margin-bottom:30px}
+.preview{
+max-width:720px;margin:auto;padding:30px;
+background:rgba(255,255,255,0.9);
+border-radius:25px;
+box-shadow:var(--card-shadow);
+font-weight:500;
+}
+
+
+.learning-modules{text-align:center;padding:60px 40px;position:relative;z-index:5}
 .module-buttons{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;margin-top:35px}
-.module-buttons button{background:#fff;border-radius:20px;border:2px solid transparent;padding:15px;cursor:pointer;font-weight:500;transition:.3s;box-shadow:0 10px 25px rgba(0,0,0,.1)}
-.module-buttons button img{width:100%;height:140px;object-fit:cover;border-radius:16px;margin-bottom:10px}
-.module-buttons button:hover{transform:translateY(-8px);border-color:var(--primary)}
-.module-buttons .active{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff}
+.module-buttons button{
+background:#fff;border-radius:25px;border:2px solid transparent;padding:15px;cursor:pointer;font-weight:500;transition:.4s;box-shadow:0 15px 30px rgba(0,0,0,.1);
+}
+.module-buttons button img{
+width:100%;height:150px;object-fit:cover;border-radius:20px;margin-bottom:10px;
+transition:.4s;
+}
+.module-buttons button:hover{
+transform:translateY(-10px);
+border-color:var(--primary);
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+.module-buttons .active{
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:#fff;
+}
 
-.content-section{display:grid;grid-template-columns:2fr 1fr;gap:30px;padding:60px 40px}
-.module-content{background:#fff;padding:35px;border-radius:24px;box-shadow:0 25px 60px rgba(0,0,0,.1)}
-.card-img-top{width:100%;max-height:300px;object-fit:cover;border-radius:20px;margin-bottom:20px}
-.interactive-content{background:linear-gradient(135deg,#eef2ff,#fdf2f8);padding:30px;border-radius:18px;margin:25px 0;text-align:center;font-weight:500}
+
+.content-section{display:grid;grid-template-columns:2fr 1fr;gap:40px;padding:60px 40px;position:relative;z-index:5}
+.module-content{
+background:rgba(255,255,255,0.95);padding:40px;border-radius:30px;box-shadow:var(--card-shadow);
+}
+.card-img-top{
+width:100%;max-height:350px;object-fit:cover;border-radius:25px;margin-bottom:25px;
+transition:.4s;
+}
+.card-img-top:hover{transform:scale(1.05);}
+.interactive-content{
+background:var(--bg-gradient);padding:30px;border-radius:25px;margin:25px 0;text-align:center;font-weight:500;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
 .module-content ul{list-style:none}
-.module-content li{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #eee}
+.module-content li{
+display:flex;justify-content:space-between;padding:15px 0;
+border-bottom:1px solid #eee;font-weight:500;
+}
 .time{color:var(--primary);font-weight:600}
 
-.quick-actions{background:#fff;padding:30px;border-radius:24px;box-shadow:0 25px 60px rgba(0,0,0,.1)}
-.quick-actions button{width:100%;margin-bottom:12px;padding:14px;border-radius:14px;border:none;cursor:pointer;background:#eef2ff;font-weight:500}
-.quick-actions button:hover{background:var(--primary);color:#fff}
-.primary{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff}
 
-.cards-section{padding:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
-.card{background:#fff;padding:25px;border-radius:22px;text-align:center;box-shadow:0 25px 55px rgba(0,0,0,.1);transition:.4s}
-.card:hover{transform:translateY(-8px)}
-.image-placeholder{height:150px;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:16px;margin-bottom:18px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.2em}
-.card button{background:linear-gradient(135deg,var(--primary),var(--secondary));border:none;color:#fff;padding:12px 24px;border-radius:25px;cursor:pointer}
+.quick-actions{background:rgba(255,255,255,0.95);padding:35px;border-radius:25px;box-shadow:var(--card-shadow)}
+.quick-actions button{
+width:100%;margin-bottom:15px;padding:16px;border-radius:20px;border:none;cursor:pointer;background:var(--bg-gradient);font-weight:600;transition:.3s;
+}
+.quick-actions button:hover{
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:#fff;
+}
 
-footer{background:#fff;text-align:center;padding:30px;margin-top:60px}
-footer ul{display:flex;justify-content:center;list-style:none;margin-bottom:10px}
+
+.cards-section{padding:60px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;position:relative;z-index:5}
+.card{
+background:rgba(255,255,255,0.95);padding:30px;border-radius:25px;text-align:center;box-shadow:var(--card-shadow);transition:.4s;
+}
+.card:hover{transform:translateY(-10px);box-shadow:0 35px 60px rgba(0,0,0,.15);}
+.image-placeholder{
+height:160px;background:linear-gradient(135deg,var(--primary),var(--secondary));
+border-radius:20px;margin-bottom:20px;
+display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.3em;
+}
+.card button{
+background:linear-gradient(135deg,var(--primary),var(--secondary));border:none;color:#fff;padding:14px 28px;border-radius:25px;cursor:pointer;transition:.3s;
+}
+.card button:hover{transform:scale(1.05);}
+
+
+footer{background:rgba(255,255,255,0.95);text-align:center;padding:40px;margin-top:60px;border-radius:25px}
+footer ul{display:flex;justify-content:center;list-style:none;margin-bottom:15px}
 footer li{margin:0 15px}
 footer a{text-decoration:none;color:var(--dark)}
 footer p{font-size:14px;color:var(--gray)}
 
-@media(max-width:900px){.content-section{grid-template-columns:1fr}.cards-section{grid-template-columns:1fr}}
+@media(max-width:900px){
+.content-section{grid-template-columns:1fr;padding:40px 20px}
+.cards-section{grid-template-columns:1fr;padding:40px 20px}
+.module-buttons{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -133,8 +240,7 @@ wire:{title:"Wire Splice & Joints",desc:"Learn basic and advanced wiring techniq
 wood:{title:"Woodworking",desc:"Master basic carpentry and wood crafting skills",img:"pictures/woodworking.jpg",lessons:[["Tools & Safety","10 min"],["Measuring & Cutting","20 min"],["Wood Assembly","30 min"]]},
 metal:{title:"Metal Sheets",desc:"Learn metal cutting and sheet fabrication",img:"pictures/Metalsheets.webp",lessons:[["Metal Types","15 min"],["Cutting Methods","20 min"],["Bending Techniques","25 min"]]},
 masonry:{title:"Masonry",desc:"Build strong structures using masonry techniques",img:"pictures/masonry.jpg",lessons:[["Materials Overview","10 min"],["Mixing Cement","15 min"],["Brick Laying","30 min"]]},
-miniature:{title:"Miniature",desc:"Create scaled models and miniature projects",img:"pictures/miniature.jpg",lessons:[["Design Planning","12 min"],["Model Construction","20 min"],["Detailing & Finish","18 min"]]}
-};
+miniature:{title:"Miniature",desc:"Create scaled models and miniature projects",img:"pictures/miniature.jpg",lessons:[["Design Planning","12 min"],["Model Construction","20 min"],["Detailing & Finish","18 min"]]}}
 const btns=document.querySelectorAll(".module-buttons button"),titleEl=document.getElementById("moduleTitle"),descEl=document.getElementById("moduleDesc"),imgEl=document.getElementById("moduleImage"),listEl=document.getElementById("moduleList");
 btns.forEach(b=>b.addEventListener("click",()=>{btns.forEach(x=>x.classList.remove("active"));b.classList.add("active");loadModule(b.dataset.module)}));
 function loadModule(k){let m=modules[k];titleEl.textContent=m.title;descEl.textContent=m.desc;imgEl.src=m.img;listEl.innerHTML=m.lessons.map(l=>`<li>${l[0]}<span class="time">${l[1]}</span></li>`).join("")}
