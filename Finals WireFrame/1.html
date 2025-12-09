@@ -5,421 +5,220 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Interactive Learning Platform</title>
 
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <style>
-
-*{margin:0;padding:0;box-sizing:border-box}
-
-:root{
---primary:#5b6cff;
---secondary:#ff7eb3;
---dark:#1f2933;
---gray:#6b7280;
---light:#f8f9ff;
-}
-
 body{
 font-family:'Poppins',sans-serif;
 background:linear-gradient(135deg,#eef2ff,#fdf2f8);
-color:var(--dark);
-line-height:1.6;
+color:#1f2933;
 }
 
 
-header{
-background:#fff;
-padding:18px 40px;
-box-shadow:0 8px 25px rgba(0,0,0,.05);
-position:sticky;
-top:0;
-z-index:10;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-align-items:center;
-}
-nav li{margin-right:25px}
-nav li.right{margin-left:auto}
-nav a{
-text-decoration:none;
-color:var(--dark);
-font-weight:500;
-transition:.3s;
-}
-nav a:hover{color:var(--primary)}
-
-
-.headline{
+.hero{
+padding:90px 20px;
 text-align:center;
-padding:80px 20px 60px;
 }
-.headline h1{
-font-size:50px;
-background:linear-gradient(90deg,var(--primary),var(--secondary));
+.hero h1{
+font-size:3rem;
+font-weight:700;
+background:linear-gradient(90deg,#5b6cff,#ff7eb3);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
-.headline p{
-color:var(--gray);
-margin:18px 0 28px;
-font-size:18px;
-}
-
-.preview{
-max-width:720px;
-margin:auto;
-padding:25px;
+.hero-card{
 background:#fff;
 border-radius:20px;
-box-shadow:0 25px 50px rgba(91,108,255,.15);
-font-weight:500;
+padding:25px;
+box-shadow:0 20px 50px rgba(0,0,0,.1);
+max-width:700px;
+margin:auto;
 }
 
 
-.learning-modules{
-padding:60px 40px 20px;
-text-align:center;
+.module-btn{
+border-radius:20px;
+overflow:hidden;
+transition:.3s;
+border:none;
+box-shadow:0 12px 25px rgba(0,0,0,.12);
 }
-
-.module-buttons{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-margin-top:35px;
-}
-
-.module-buttons button{
-background:#fff;
-border-radius:22px;
-border:2px solid transparent;
-padding:15px;
-cursor:pointer;
-font-weight:500;
-transition:.35s;
-box-shadow:0 15px 30px rgba(0,0,0,.1);
-}
-
-.module-buttons button img{
-width:100%;
+.module-btn img{
 height:150px;
 object-fit:cover;
-border-radius:18px;
-margin-bottom:12px;
 }
-
-.module-buttons button:hover{
-transform:translateY(-10px);
-border-color:var(--primary);
+.module-btn:hover{
+transform:translateY(-8px);
 }
-
-.module-buttons .active{
-background:linear-gradient(135deg,var(--primary),var(--secondary));
+.module-btn.active{
+background:linear-gradient(135deg,#5b6cff,#ff7eb3);
 color:#fff;
 }
 
 
-.content-section{
-display:grid;
-grid-template-columns:2fr 1fr;
-gap:35px;
-padding:60px 40px;
+.content-card{
+border-radius:25px;
+box-shadow:0 20px 45px rgba(0,0,0,.12);
 }
-
-.module-content{
-background:#fff;
-padding:35px;
-border-radius:28px;
-box-shadow:0 25px 60px rgba(0,0,0,.1);
-}
-
-.card-img-top{
-width:100%;
-max-height:300px;
-object-fit:cover;
-border-radius:22px;
-margin-bottom:25px;
-}
-
-.module-content h3{
-font-size:28px;
-margin-bottom:10px;
-}
-
-.module-content p{
-color:var(--gray);
-margin-bottom:20px;
-}
-
-.interactive-content{
-background:linear-gradient(135deg,#eef2ff,#fdf2f8);
-padding:30px;
-border-radius:18px;
-margin:25px 0;
-text-align:center;
-font-weight:600;
-}
-
-.module-content ul{
-list-style:none;
-}
-
-.module-content li{
+.lesson-list li{
 display:flex;
 justify-content:space-between;
-padding:14px 0;
 border-bottom:1px solid #eee;
-}
-
-.time{
-color:var(--primary);
-font-weight:600;
+padding:12px 0;
 }
 
 
-.quick-actions{
-background:#fff;
-padding:30px;
-border-radius:28px;
-box-shadow:0 25px 60px rgba(0,0,0,.1);
-}
-
-.quick-actions h3{
-margin-bottom:15px;
-}
-
-.quick-actions button{
-width:100%;
-margin-bottom:14px;
-padding:15px;
-border-radius:16px;
-border:none;
-cursor:pointer;
-background:#eef2ff;
-font-weight:500;
-transition:.3s;
-}
-
-.quick-actions button:hover{
-background:var(--primary);
-color:#fff;
-}
-
-.primary{
-background:linear-gradient(135deg,var(--primary),var(--secondary));
-color:#fff;
-}
-
-
-.cards-section{
-padding:60px 40px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-}
-
-.card{
-background:#fff;
-padding:30px;
-border-radius:26px;
-text-align:center;
-box-shadow:0 25px 55px rgba(0,0,0,.1);
-transition:.4s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-.image-placeholder{
-height:150px;
-background:linear-gradient(135deg,#5b6cff,#ff7eb3);
+.gradient-box{
+background:linear-gradient(135deg,#eef2ff,#fdf2f8);
 border-radius:18px;
-margin-bottom:18px;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#fff;
-font-weight:700;
-font-size:1.3em;
-}
-
-.card button{
-background:linear-gradient(135deg,var(--primary),var(--secondary));
-border:none;
-color:#fff;
-padding:12px 26px;
-border-radius:25px;
-cursor:pointer;
+padding:25px;
+text-align:center;
+font-weight:600;
 }
 
 
 footer{
 background:#fff;
-text-align:center;
 padding:35px;
-margin-top:50px;
-}
-
-footer ul{
-display:flex;
-justify-content:center;
-list-style:none;
-margin-bottom:12px;
-}
-
-footer li{margin:0 18px}
-
-footer a{
-text-decoration:none;
-color:var(--dark);
-font-weight:500;
-}
-
-footer p{
-font-size:14px;
-color:var(--gray);
-}
-
-
-@media(max-width:900px){
-.content-section{grid-template-columns:1fr}
+text-align:center;
+margin-top:60px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<nav>
-<ul>
-<li><a href="#">Dashboard</a></li>
-<li><a href="#">Progress</a></li>
-<li><a href="#">Certificate</a></li>
-<li><a href="#">Support</a></li>
-<li class="right"><a href="#">🔔</a></li>
-</ul>
-</nav>
-</header>
 
-<section class="headline">
+<nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+<div class="container">
+<a class="navbar-brand fw-bold" href="#">Learning Platform</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navMenu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Progress</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Certificate</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+<li class="nav-item"><a class="nav-link" href="#">🔔</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+
+<section class="hero mt-5 pt-5">
 <h1>Interactive Learning Platform</h1>
-<p>Enhance your technical skills through immersive and guided learning</p>
-<div class="preview">Select a module below to start learning</div>
+<p class="text-muted fs-5">Enhance your technical skills through immersive and guided learning</p>
+<div class="hero-card mt-4">Select a module below to start learning</div>
 </section>
 
-<section class="learning-modules">
-<div class="module-buttons">
-<button class="active" data-module="wire"><img src="pictures/wireplice and joints.gif">Wire Splice & Joints</button>
-<button data-module="wood"><img src="pictures/woodworking.jpg">Woodworking</button>
-<button data-module="metal"><img src="pictures/Metalsheets.webp">Metal Sheets</button>
-<button data-module="masonry"><img src="pictures/masonry.jpg">Masonry</button>
-<button data-module="miniature"><img src="pictures/miniature.jpg">Miniature</button>
+
+<section class="container my-5">
+<div class="row g-4 text-center">
+<button class="col-md-4 col-lg-2 module-btn active p-3" data-module="wire">
+<img src="pictures/wireplice and joints.gif" class="w-100 rounded mb-2">
+Wire Splice
+</button>
+<button class="col-md-4 col-lg-2 module-btn p-3" data-module="wood">
+<img src="pictures/woodworking.jpg" class="w-100 rounded mb-2">
+Woodworking
+</button>
+<button class="col-md-4 col-lg-2 module-btn p-3" data-module="metal">
+<img src="pictures/Metalsheets.webp" class="w-100 rounded mb-2">
+Metal Sheets
+</button>
+<button class="col-md-4 col-lg-2 module-btn p-3" data-module="masonry">
+<img src="pictures/masonry.jpg" class="w-100 rounded mb-2">
+Masonry
+</button>
+<button class="col-md-4 col-lg-2 module-btn p-3" data-module="miniature">
+<img src="pictures/miniature.jpg" class="w-100 rounded mb-2">
+Miniature
+</button>
 </div>
 </section>
 
-<section class="content-section">
-<div class="module-content">
-<img id="moduleImage" class="card-img-top" src="pictures/wireplice and joints.gif">
-<h3 id="moduleTitle">Wire Splice & Joints</h3>
-<p id="moduleDesc">Learn basic and advanced wiring techniques</p>
 
-<div class="interactive-content">
+<section class="container my-5">
+<div class="row g-4">
+<div class="col-lg-8">
+<div class="card content-card p-4">
+<img id="moduleImage" class="img-fluid rounded mb-3" src="pictures/wireplice and joints.gif">
+<h3 id="moduleTitle">Wire Splice & Joints</h3>
+<p id="moduleDesc" class="text-muted"></p>
+
+<div class="gradient-box my-4">
 Interactive Learning Content Area
 </div>
 
-<ul id="moduleList"></ul>
+<ul id="moduleList" class="list-unstyled lesson-list"></ul>
+</div>
 </div>
 
-<div class="quick-actions">
-<h3>Quick Actions</h3>
-<button class="primary">Continue Learning</button>
-<button>Take Assessment</button>
-<button>Download Resources</button>
+<div class="col-lg-4">
+<div class="card content-card p-4">
+<h4>Quick Actions</h4>
+<button class="btn btn-primary w-100 mb-2">Continue Learning</button>
+<button class="btn btn-outline-primary w-100 mb-2">Take Assessment</button>
+<button class="btn btn-outline-secondary w-100">Download Resources</button>
+</div>
+</div>
 </div>
 </section>
 
-<section class="cards-section">
-<div class="card">
-<div class="image-placeholder">Modules</div>
-<h3>Modules</h3>
-<button>Start</button>
-</div>
 
-<div class="card">
-<div class="image-placeholder">Tutorials</div>
-<h3>Tutorials</h3>
-<button>Start</button>
+<section class="container my-5">
+<div class="row g-4">
+<div class="col-md-4">
+<div class="card text-center p-4 content-card">
+<div class="gradient-box mb-3">Modules</div>
+<button class="btn btn-primary">Start</button>
 </div>
-
-<div class="card">
-<div class="image-placeholder">Assessment</div>
-<h3>Assessment</h3>
-<button>Start</button>
+</div>
+<div class="col-md-4">
+<div class="card text-center p-4 content-card">
+<div class="gradient-box mb-3">Tutorials</div>
+<button class="btn btn-primary">Start</button>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card text-center p-4 content-card">
+<div class="gradient-box mb-3">Assessment</div>
+<button class="btn btn-primary">Start</button>
+</div>
+</div>
 </div>
 </section>
+
 
 <footer>
-<ul>
-<li><a href="#">Privacy Policy</a></li>
-<li><a href="#">Terms of Service</a></li>
-<li><a href="#">Contact Support</a></li>
-</ul>
-<p>© 2025 Interactive Learning Platform</p>
+<p class="mb-2">
+<a href="#" class="me-3">Privacy Policy</a>
+<a href="#" class="me-3">Terms</a>
+<a href="#">Support</a>
+</p>
+<p class="text-muted small">© 2025 Interactive Learning Platform</p>
 </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
 const modules={
-wire:{
-title:"Wire Splice & Joints",
-desc:"Learn basic and advanced wiring techniques",
-img:"pictures/wireplice and joints.gif",
-lessons:[
-["Intro to Wiring","12 min"],
-["Splicing Techniques","18 min"],
-["Electrical Safety","25 min"]
-]},
-wood:{
-title:"Woodworking",
-desc:"Master basic carpentry and wood crafting skills",
-img:"pictures/woodworking.jpg",
-lessons:[
-["Tools & Safety","10 min"],
-["Measuring & Cutting","20 min"],
-["Wood Assembly","30 min"]
-]},
-metal:{
-title:"Metal Sheets",
-desc:"Learn metal cutting and sheet fabrication",
-img:"pictures/Metalsheets.webp",
-lessons:[
-["Metal Types","15 min"],
-["Cutting Methods","20 min"],
-["Bending Techniques","25 min"]
-]},
-masonry:{
-title:"Masonry",
-desc:"Build strong structures using masonry techniques",
-img:"pictures/masonry.jpg",
-lessons:[
-["Materials Overview","10 min"],
-["Mixing Cement","15 min"],
-["Brick Laying","30 min"]
-]},
-miniature:{
-title:"Miniature",
-desc:"Create scaled models and miniature projects",
-img:"pictures/miniature.jpg",
-lessons:[
-["Design Planning","12 min"],
-["Model Construction","20 min"],
-["Detailing & Finish","18 min"]
-]}
+wire:{title:"Wire Splice & Joints",desc:"Learn basic and advanced wiring techniques",img:"pictures/wireplice and joints.gif",lessons:[["Intro to Wiring","12 min"],["Splicing Techniques","18 min"],["Electrical Safety","25 min"]]},
+wood:{title:"Woodworking",desc:"Master carpentry skills",img:"pictures/woodworking.jpg",lessons:[["Tools","10 min"],["Cutting","20 min"],["Assembly","30 min"]]},
+metal:{title:"Metal Sheets",desc:"Metal cutting and fabrication",img:"pictures/Metalsheets.webp",lessons:[["Metal Types","15 min"],["Cutting","20 min"],["Bending","25 min"]]},
+masonry:{title:"Masonry",desc:"Build durable structures",img:"pictures/masonry.jpg",lessons:[["Materials","10 min"],["Mixing","15 min"],["Brick Laying","30 min"]]},
+miniature:{title:"Miniature",desc:"Create scaled models",img:"pictures/miniature.jpg",lessons:[["Planning","12 min"],["Construction","20 min"],["Detailing","18 min"]]}
 };
 
-const buttons=document.querySelectorAll(".module-buttons button");
+const buttons=document.querySelectorAll(".module-btn");
 const title=document.getElementById("moduleTitle");
 const desc=document.getElementById("moduleDesc");
 const img=document.getElementById("moduleImage");
@@ -432,7 +231,7 @@ desc.textContent=m.desc;
 img.src=m.img;
 list.innerHTML="";
 m.lessons.forEach(l=>{
-list.innerHTML+=`<li>${l[0]}<span class="time">${l[1]}</span></li>`;
+list.innerHTML+=`<li>${l[0]}<span class="text-primary fw-semibold">${l[1]}</span></li>`;
 });
 }
 
