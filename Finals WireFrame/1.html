@@ -6,7 +6,7 @@
 <title>Interactive Learning Platform</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+
 :root{
 --primary:#5b6cff;   /* Blue */
 --secondary:#ff7eb3; /* Pink */
@@ -17,43 +17,41 @@
 }
 
 
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+
+
 body{
-background:var(--bg-gradient);
+background:linear-gradient(135deg,#d6e0ff,#ffe0f2);
 color:var(--dark);
 position:relative;
 overflow-x:hidden;
 }
-body::before{
+body::before, body::after{
 content:"";
 position:absolute;
-width:600px;height:600px;
-background:radial-gradient(circle,var(--secondary),transparent 70%);
-top:-150px;
-right:-150px;
-opacity:0.3;
 border-radius:50%;
 z-index:0;
 }
+body::before{
+width:600px; height:600px;
+background:radial-gradient(circle,var(--secondary),transparent 70%);
+top:-150px; right:-150px; opacity:0.25;
+}
 body::after{
-content:"";
-position:absolute;
-width:500px;height:500px;
+width:500px; height:500px;
 background:radial-gradient(circle,var(--primary),transparent 70%);
-bottom:-150px;
-left:-100px;
-opacity:0.2;
-border-radius:50%;
-z-index:0;
+bottom:-150px; left:-100px; opacity:0.25;
 }
 
 
 header{
-background:#fff;padding:18px 40px;
+background:#fff;
+padding:18px 40px;
 box-shadow:0 8px 25px rgba(0,0,0,.05);
-position:sticky;top:0;z-index:10;
+position:sticky; top:0; z-index:10;
 border-radius:0 0 25px 25px;
 }
-nav ul{display:flex;list-style:none;align-items:center;position:relative;z-index:10}
+nav ul{display:flex;list-style:none;align-items:center}
 nav li{margin-right:25px}
 nav li.right{margin-left:auto}
 nav a{text-decoration:none;color:var(--dark);font-weight:500}
@@ -61,8 +59,9 @@ nav a:hover{color:var(--primary)}
 
 
 .headline{
-text-align:center;padding:80px 20px;
-position:relative;z-index:5;
+text-align:center;
+padding:80px 20px;
+position:relative; z-index:5;
 }
 .headline h1{
 font-size:3rem;
@@ -73,7 +72,7 @@ margin-bottom:15px;
 .headline p{color:var(--gray);font-size:1.1rem;margin-bottom:30px}
 .preview{
 max-width:720px;margin:auto;padding:30px;
-background:rgba(255,255,255,0.9);
+background:rgba(255,255,255,0.95);
 border-radius:25px;
 box-shadow:var(--card-shadow);
 font-weight:500;
@@ -86,8 +85,7 @@ font-weight:500;
 background:#fff;border-radius:25px;border:2px solid transparent;padding:15px;cursor:pointer;font-weight:500;transition:.4s;box-shadow:0 15px 30px rgba(0,0,0,.1);
 }
 .module-buttons button img{
-width:100%;height:150px;object-fit:cover;border-radius:20px;margin-bottom:10px;
-transition:.4s;
+width:100%;height:150px;object-fit:cover;border-radius:20px;margin-bottom:10px;transition:.4s;
 }
 .module-buttons button:hover{
 transform:translateY(-10px);
@@ -110,7 +108,7 @@ transition:.4s;
 }
 .card-img-top:hover{transform:scale(1.05);}
 .interactive-content{
-background:var(--bg-gradient);padding:30px;border-radius:25px;margin:25px 0;text-align:center;font-weight:500;
+background:linear-gradient(135deg,#d6e0ff,#ffe0f2);padding:30px;border-radius:25px;margin:25px 0;text-align:center;font-weight:500;
 box-shadow:0 10px 30px rgba(0,0,0,.05);
 }
 .module-content ul{list-style:none}
@@ -125,8 +123,7 @@ border-bottom:1px solid #eee;font-weight:500;
 .quick-actions button{
 width:100%;margin-bottom:15px;padding:16px;border-radius:20px;border:none;cursor:pointer;
 background:linear-gradient(135deg,var(--primary),var(--secondary));
-font-weight:600;transition:.3s;
-color:#fff;
+font-weight:600;transition:.3s;color:#fff;
 }
 .quick-actions button:hover{
 background:linear-gradient(135deg,var(--secondary),var(--primary));
@@ -248,5 +245,6 @@ btns.forEach(b=>b.addEventListener("click",()=>{btns.forEach(x=>x.classList.remo
 function loadModule(k){let m=modules[k];titleEl.textContent=m.title;descEl.textContent=m.desc;imgEl.src=m.img;listEl.innerHTML=m.lessons.map(l=>`<li>${l[0]}<span class="time">${l[1]}</span></li>`).join("")}
 loadModule("wire");
 </script>
+
 </body>
 </html>
